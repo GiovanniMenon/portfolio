@@ -10,8 +10,8 @@ import Link from "next/link";
 
 function NavBarComponent() {
     return (
-        <div className="fixed w-full flex justify-center p-5">
-            <NavigationMenu className="p-5 rounded-3xl backdrop-blur-sm">
+        <div className="fixed w-full flex justify-center py-4">
+            <NavigationMenu className="py-2 px-5 rounded-3xl backdrop-blur-sm border shadow-2xl">
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <Link href="" legacyBehavior passHref>
@@ -37,7 +37,7 @@ function NavBarComponent() {
                     <NavigationMenuItem>
                         <Link href="" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Resume
+                                Resumee
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
