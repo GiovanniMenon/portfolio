@@ -12,7 +12,7 @@ function Footer(){
             <Separator />
             <div className="w-full flex flex-row justify-between px-1">
                 <p>Giovanni Menon</p>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-3.5">
                     <FooterIcon link={githubLink}>
                         <svg className="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24"
                              shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round"

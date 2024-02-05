@@ -1,6 +1,7 @@
 import MainItemComponent from "@/components/main/mainItem/mainItemComponent";
 import React from 'react';
 import Footer from "@/components/footer/footer";
+import SkillComponent from "@/components/main/mainItem/skillComponent";
 
 function MainComponent(){
 
@@ -16,9 +17,17 @@ function MainComponent(){
 
     return(
         <div className="max-w-[1300px] mx-auto p-[25px] flex flex-col gap-20">
-            <MainItemComponent header="About Me"><p>{text}</p></MainItemComponent>
-            <MainItemComponent header="Project"><p>{text}</p></MainItemComponent>
-            <MainItemComponent header="Resumee"><p>{text}</p></MainItemComponent>
+
+            <MainItemComponent id="aboutMe" header="About Me">
+                                <p className="text-[#bbbbbb]">{text}</p>
+                                <SkillComponent></SkillComponent>
+            </MainItemComponent>
+            <MainItemComponent id="experience" header="Experience">
+                                <p>{text}</p>
+            </MainItemComponent>
+            <MainItemComponent id="project" header="Project">
+                                <p>{text}</p>
+            </MainItemComponent>
             <Footer></Footer>
         </div>
     )

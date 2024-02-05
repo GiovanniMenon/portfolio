@@ -1,3 +1,5 @@
+// noinspection HtmlUnknownAnchorTarget
+
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -14,30 +16,30 @@ function NavBarComponent() {
             <NavigationMenu className="py-2 px-5 rounded-3xl backdrop-blur-sm border shadow-2xl">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="" legacyBehavior passHref>
+                        <Link href="#home" legacyBehavior  passHref >
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 Home
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="" legacyBehavior passHref>
+                        <Link href="#aboutMe" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 About Me
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="" legacyBehavior passHref>
+                        <Link href="#experience" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Project
+                                Experience
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="" legacyBehavior passHref>
+                        <Link href="#project" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Resumee
+                                Project
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

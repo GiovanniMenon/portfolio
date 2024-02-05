@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${jetBrains.className}`}>{children}</body>
+    <html className="scroll-smooth" lang="en">
+      <body className={` ${jetBrains.className}`}>{children}</body>
     </html>
   );
 }
