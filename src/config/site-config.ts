@@ -9,6 +9,13 @@ export interface GridItemInterface {
   color?: string;
 }
 
+export interface ProjectItemInterface {
+  title: string;
+  link: string;
+  desc: string;
+  demo?: string;
+}
+
 export const GridItems: GridItemInterface[] = [
   {
     layout: "1x1",
@@ -135,5 +142,18 @@ export const GridItems: GridItemInterface[] = [
     layout: "1x1",
     type: "Icon",
     title: "WireShark",
+  },
+];
+
+export const Projects: ProjectItemInterface[] = [
+  {
+    title: "Arcane Oracle",
+    link: "https://github.com/GiovanniMenon/Arcane-Oracle",
+    desc: "Una descrizione",
+  },
+  {
+    title: "Open Blue",
+    link: "https://github.com/GiovanniMenon/OpenBlue",
+    desc: "Una descrizione",
   },
 ];

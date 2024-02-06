@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { GridItems } from "@/config/site-config";
-import GridItem from "@/components/main/mainItem/gridItem";
-function SkillComponent() {
+import GridItem from "@/components/main/technlogies/gridItem";
+function GridSkill() {
   return (
     <div className="flex flex-col gap-8">
       <h2 className="font-bold text-lg">Technologies</h2>
@@ -19,4 +19,4 @@ function SkillComponent() {
   );
 }
 
-export default SkillComponent;
+export default GridSkill;
