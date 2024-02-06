@@ -36,9 +36,9 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#home" legacyBehavior passHref>
               <NavigationMenuLink
-                className="px-4 py-2 text-lg text-white text-opacity-60 font-bold hover:text-opacity-90
-                hover:text-accent-foreground focus:text-opacity-100"
-                active={true}
+                className="px-4 py-2 text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+                hover:text-accent-foreground focus:text-opacity-100 focus:outline-none"
+                autoFocus={true}
               >
                 Home
               </NavigationMenuLink>
@@ -47,8 +47,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#aboutMe" legacyBehavior passHref>
               <NavigationMenuLink
-                className="px-4 py-2 text-lg text-white text-opacity-60 font-bold hover:text-opacity-90
-              hover:text-accent-foreground focus:text-opacity-100"
+                className="px-4 py-2 text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+              hover:text-accent-foreground focus:text-opacity-100 focus:outline-none"
               >
                 About Me
               </NavigationMenuLink>
@@ -57,8 +57,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#experience" legacyBehavior passHref>
               <NavigationMenuLink
-                className="px-4 py-2 text-lg text-white text-opacity-60 font-bold hover:text-opacity-90
-              hover:text-accent-foreground focus:text-opacity-100"
+                className="px-4 py-2 text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+              hover:text-accent-foreground focus:text-opacity-100 focus:outline-none"
               >
                 Experience
               </NavigationMenuLink>
@@ -67,8 +67,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#project" legacyBehavior passHref>
               <NavigationMenuLink
-                className="px-4 py-2 text-lg text-white text-opacity-60 font-bold hover:text-opacity-90
-              hover:text-accent-foreground focus:text-opacity-100"
+                className="px-4 py-2 text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+              hover:text-accent-foreground focus:text-opacity-100 focus:outline-none"
               >
                 Project
               </NavigationMenuLink>
