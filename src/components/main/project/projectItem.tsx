@@ -2,7 +2,10 @@ import { ProjectItemInterface } from "@/config/site-config";
 
 function ProjectItem({ title, link, desc }: ProjectItemInterface) {
   return (
-    <div className="flex relative flex-col bg-[rgba(114,114,114,.2)] backdrop-blur-lg rounded-md p-4 gap-4 h-[15vh] transition border border-transparent hover:border-[#bbbb] ">
+    <div
+      className="flex relative flex-col bg-[rgba(114,114,114,.2)] backdrop-blur-lg rounded-md p-4 gap-4 h-fit md:h-[20vh]
+    transition duration-150 hover:scale-[1.01] "
+    >
       <div className="flex flex-row justify-between content-center items-center">
         <h1 className="font-medium text-xl text-[--titleColor]">{title}</h1>
         <a href={link}>
@@ -33,7 +36,9 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
           </svg>
         </a>
       </div>
-      <div className="text-center text-base text-[--textColor]">{desc} </div>
+      <div className="flex flex-col text-base text-[--textColor] h-full justify-center items-center ">
+        {desc}
+      </div>
     </div>
   );
 }
