@@ -4,10 +4,10 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
   return (
     <div className="flex relative flex-col bg-[rgba(114,114,114,.2)] backdrop-blur-lg rounded-md p-4 gap-4 h-[15vh] transition border border-transparent hover:border-[#bbbb] ">
       <div className="flex flex-row justify-between content-center items-center">
-        <h1 className="font-medium text-xl">{title}</h1>
+        <h1 className="font-medium text-xl text-[--titleColor]">{title}</h1>
         <a href={link}>
           <svg
-            className="with-icon_icon__MHUeb"
+            className="with-icon_icon__MHUeb "
             data-testid="geist-icon"
             fill="none"
             height="24"
@@ -33,7 +33,7 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
           </svg>
         </a>
       </div>
-      <div className="text-center text-base text-[#bbbbbb]">{desc} </div>
+      <div className="text-center text-base text-[--textColor]">{desc} </div>
     </div>
   );
 }

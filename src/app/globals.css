@@ -33,7 +33,15 @@
     --ring: 240 4.9% 83.9%;
  
     --radius: 0.5rem;
+
+    /*Colors */
+    --green : #40cf8e;
+    --titleColor : #40cf8e;
+    --textColor : #bbbbbb;
   }
+
+
+
 }
  
 @layer base {

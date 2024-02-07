@@ -1,3 +1,5 @@
+// Skills List and interface
+
 export type GridItemLayout = "1x1" | "1x2" | "2x1" | "2x2" | "3x2" | "2x3";
 export type GridItemType = "Icon";
 
@@ -7,13 +9,6 @@ export interface GridItemInterface {
   title: string;
   icon?: string;
   color?: string;
-}
-
-export interface ProjectItemInterface {
-  title: string;
-  link: string;
-  desc: string;
-  demo?: string;
 }
 
 export const GridItems: GridItemInterface[] = [
@@ -145,15 +140,65 @@ export const GridItems: GridItemInterface[] = [
   },
 ];
 
+// Project List and interface
+export interface ProjectItemInterface {
+  title: string;
+  link: string;
+  desc: string;
+  demo?: string;
+}
 export const Projects: ProjectItemInterface[] = [
   {
     title: "Arcane Oracle",
     link: "https://github.com/GiovanniMenon/Arcane-Oracle",
-    desc: "Una descrizione",
+    desc: "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
   },
   {
     title: "Open Blue",
     link: "https://github.com/GiovanniMenon/OpenBlue",
-    desc: "Una descrizione",
+    desc: "A Flask-based web interface facilitating user interaction with the OpenAI API, enabling requests and responses powered by GPT-3.5 and GPT-4 models.",
+  },
+];
+
+// Experience List and interface
+
+export interface ExperienceItemInterface {
+  isStudy: boolean;
+  title: string;
+  start: string;
+  end: string;
+  role?: string;
+  description?: string;
+  //Study
+  location?: string;
+  vote?: number;
+}
+
+export const Experiences: ExperienceItemInterface[] = [
+  {
+    isStudy: false,
+    title: "GDS SPA",
+    role: "Intern as Software Developer",
+    start: "Aug 1 2023",
+    end: "Sept 30 2023",
+    description: "Descrizione Experiences",
+  },
+];
+
+export const Studies: ExperienceItemInterface[] = [
+  {
+    isStudy: true,
+    title: "Computer Science Degree",
+    location: "University of Padua",
+    start: "Sept 26 2021",
+    end: "Present",
+  },
+  {
+    isStudy: true,
+    title: "High School Diploma in Administration, Finance and Marketing",
+    location: "ITET Einaudi",
+    start: "Sept 2015",
+    end: "Jun 2021",
+    vote: 100,
   },
 ];
