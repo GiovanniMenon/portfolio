@@ -6,7 +6,7 @@ function GridSkill() {
     <div className="flex flex-col gap-8">
       <h2 className="font-bold text-lg">Technologies</h2>
       {/* Bento Grid*/}
-      <div className="grid mx-auto w-[80%] h-full grid-cols-10 auto-rows-[70px] gap-2.5 ">
+      <div className="grid mx-auto w-full md:w-[80%] h-full grid-cols-5 md:grid-cols-9 auto-rows-[70px] gap-2.5 ">
         {GridItems.map((item, index) => {
           return (
             <GridItem size={item.layout} key={index}>

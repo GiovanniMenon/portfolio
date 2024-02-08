@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from 'next/font/google'
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
 
 const jetBrains = JetBrains_Mono({
-  weight: '300',
-  subsets: ['latin'],
-})
+  weight: "300",
+  subsets: ["latin"],
+});
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Giovanni Menon Portfolio Websiste",

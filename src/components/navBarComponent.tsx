@@ -30,7 +30,7 @@ function NavBarComponent() {
   return (
     <div className="fixed w-full flex justify-center py-4  ">
       <NavigationMenu
-        className={`transition duration-300 px-2 py-4 md:py-4 md:px-6 rounded-2xl backdrop-blur-[10px] ${!scrolled ? "" : "bg-[rgba(114,114,114,.2)]"}`}
+        className={`mih-w-screen transition duration-300 px-2 py-4 md:py-4 md:px-6 rounded-2xl backdrop-blur-[10px] ${!scrolled ? "" : "bg-[rgba(114,114,114,.2)]"}`}
       >
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -50,7 +50,7 @@ function NavBarComponent() {
                 className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
               hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
               >
-                About Me
+                About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

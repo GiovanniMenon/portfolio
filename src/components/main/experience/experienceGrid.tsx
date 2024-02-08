@@ -26,7 +26,7 @@ function ExperienceGrid() {
       </div>
       <Separator />
       <div className="flex flex-col gap-10">
-        <h1 className="w-full font-bold text-xl">Studies</h1>
+        <h1 className="w-full font-bold text-xl ">Studies</h1>
         {Studies.map((item, index) => {
           return (
             <ExperienceItem

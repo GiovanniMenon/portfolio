@@ -1,6 +1,6 @@
 // Skills List and interface
 
-export type GridItemLayout = "1x1" | "1x2" | "2x1" | "2x2" | "3x2" | "2x3";
+export type GridItemLayout = "1x1" | "1x2" | "2x1" | "2x2" | "3x3";
 export type GridItemType = "Icon";
 
 export interface GridItemInterface {
@@ -18,7 +18,7 @@ export const GridItems: GridItemInterface[] = [
     title: "Javascript",
   },
   {
-    layout: "1x1",
+    layout: "1x2",
     type: "Icon",
     title: "TypeScript",
   },
@@ -28,7 +28,7 @@ export const GridItems: GridItemInterface[] = [
     title: "Next",
   },
   {
-    layout: "1x1",
+    layout: "2x1",
     type: "Icon",
     title: "React",
   },
@@ -43,7 +43,7 @@ export const GridItems: GridItemInterface[] = [
     title: "C++",
   },
   {
-    layout: "1x1",
+    layout: "2x1",
     type: "Icon",
     title: "Dart",
   },
@@ -59,12 +59,12 @@ export const GridItems: GridItemInterface[] = [
     title: "Flutter",
   },
   {
-    layout: "1x1",
+    layout: "3x3",
     type: "Icon",
     title: "Qt",
   },
   {
-    layout: "1x1",
+    layout: "2x2",
     type: "Icon",
     title: "flask",
   },
@@ -74,7 +74,7 @@ export const GridItems: GridItemInterface[] = [
     title: "Ollama",
   },
   {
-    layout: "1x1",
+    layout: "2x2",
     type: "Icon",
     title: "Langchain",
   },
@@ -99,7 +99,7 @@ export const GridItems: GridItemInterface[] = [
     title: "Jira",
   },
   {
-    layout: "1x1",
+    layout: "1x2",
     type: "Icon",
     title: "MySql",
   },
@@ -114,7 +114,7 @@ export const GridItems: GridItemInterface[] = [
     title: "ChromaDB",
   },
   {
-    layout: "1x1",
+    layout: "2x1",
     type: "Icon",
     title: "MinIO",
   },
@@ -124,7 +124,7 @@ export const GridItems: GridItemInterface[] = [
     title: "AmazonS3",
   },
   {
-    layout: "1x1",
+    layout: "2x1",
     type: "Icon",
     title: "PostreSQL",
   },
@@ -179,8 +179,8 @@ export const Experiences: ExperienceItemInterface[] = [
     isStudy: false,
     title: "GDS SPA",
     role: "Intern as Software Developer",
-    start: "Aug 1 2023",
-    end: "Sept 30 2023",
+    start: "Aug 2023",
+    end: "Oct 2023",
     description: "Descrizione Experiences",
   },
 ];
@@ -190,7 +190,7 @@ export const Studies: ExperienceItemInterface[] = [
     isStudy: true,
     title: "Computer Science Degree",
     location: "University of Padua",
-    start: "Sept 26 2021",
+    start: "Sept 2021",
     end: "Present",
   },
   {
