@@ -1,9 +1,15 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const variants = cva(
-  "bg-accent rounded-[10px] flex flex-col justify-center p-2 col-span-1 row-span-1",
+  "bg-[rgba(114,114,114,.2)] rounded-md flex flex-col justify-center p-2 col-span-1 row-span-1",
   {
     variants: {
       size: {
@@ -22,20 +28,28 @@ const variants = cva(
 
 type GridItemProps = {
   children: ReactNode;
+  title: string;
 } & VariantProps<typeof variants>;
 
-function GridItem({ size, children }: GridItemProps) {
+function GridItem({ size, title, children }: GridItemProps) {
   return (
-    <div
-      className={cn(
-        variants({
-          size,
-          className: "content-center items-center",
-        }),
-      )}
-    >
-      {children}
-    </div>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger
+          className={cn(
+            variants({
+              size,
+              className: "content-center items-center",
+            }),
+          )}
+        >
+          {title}
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{title}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
 
