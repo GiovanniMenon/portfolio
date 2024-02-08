@@ -15,68 +15,68 @@ export const GridItems: GridItemInterface[] = [
   {
     layout: "1x1",
     type: "Icon",
-    title: "Javascript",
+    title: "C",
   },
   {
     layout: "1x2",
+    type: "Icon",
+    title: "Qt",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "Dart",
+  },
+  {
+    layout: "2x1",
+    type: "Icon",
+    title: "Flutter",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "JavaScript",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "Html",
+  },
+  {
+    layout: "2x1",
     type: "Icon",
     title: "TypeScript",
   },
   {
     layout: "1x1",
     type: "Icon",
-    title: "Next",
+    title: "C++",
+  },
+
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "WireShark",
   },
   {
-    layout: "2x1",
+    layout: "3x3",
+    type: "Icon",
+    title: "Next.js",
+  },
+  {
+    layout: "2x2",
     type: "Icon",
     title: "React",
   },
   {
     layout: "1x1",
     type: "Icon",
-    title: "C",
+    title: "Tailwind",
   },
   {
-    layout: "1x1",
-    type: "Icon",
-    title: "C++",
-  },
-  {
-    layout: "2x1",
-    type: "Icon",
-    title: "Dart",
-  },
-  {
-    layout: "1x1",
+    layout: "2x2",
     type: "Icon",
     title: "Python",
-  },
-
-  {
-    layout: "1x1",
-    type: "Icon",
-    title: "Flutter",
-  },
-  {
-    layout: "3x3",
-    type: "Icon",
-    title: "Qt",
-  },
-  {
-    layout: "2x2",
-    type: "Icon",
-    title: "flask",
-  },
-  {
-    layout: "1x1",
-    type: "Icon",
-    title: "Ollama",
-  },
-  {
-    layout: "2x2",
-    type: "Icon",
-    title: "Langchain",
   },
   {
     layout: "1x1",
@@ -86,22 +86,47 @@ export const GridItems: GridItemInterface[] = [
   {
     layout: "1x1",
     type: "Icon",
-    title: "Git",
+    title: "Css",
+  },
+  {
+    layout: "1x2",
+    type: "Icon",
+    title: "LangChain",
   },
   {
     layout: "1x1",
+    type: "Icon",
+    title: "PostreSQL",
+  },
+  {
+    layout: "1x2",
     type: "Icon",
     title: "Github",
   },
   {
     layout: "1x1",
     type: "Icon",
-    title: "Jira",
+    title: "Git",
   },
   {
-    layout: "1x2",
+    layout: "1x1",
     type: "Icon",
-    title: "MySql",
+    title: "Flask",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "Ollama",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "ChromaDB",
+  },
+  {
+    layout: "1x1",
+    type: "Icon",
+    title: "MinIO",
   },
   {
     layout: "1x1",
@@ -111,32 +136,12 @@ export const GridItems: GridItemInterface[] = [
   {
     layout: "1x1",
     type: "Icon",
-    title: "ChromaDB",
-  },
-  {
-    layout: "2x1",
-    type: "Icon",
-    title: "MinIO",
+    title: "MySql",
   },
   {
     layout: "1x1",
     type: "Icon",
-    title: "AmazonS3",
-  },
-  {
-    layout: "2x1",
-    type: "Icon",
-    title: "PostreSQL",
-  },
-  {
-    layout: "1x1",
-    type: "Icon",
-    title: "Nmap",
-  },
-  {
-    layout: "1x1",
-    type: "Icon",
-    title: "WireShark",
+    title: "Jira",
   },
 ];
 
