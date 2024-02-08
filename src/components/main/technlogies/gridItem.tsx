@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import profilePic from "../../../../public/tecIcon/c.png";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import {
@@ -9,7 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const variants = cva(
-  "bg-[rgba(114,114,114,.2)] rounded-md flex flex-col justify-center p-2 col-span-1 row-span-1",
+  "bg-[rgba(114,114,114,.2)] rounded-md flex flex-col justify-center p-2 col-span-1 row-span-1 hover:scale-[1.03]",
   {
     variants: {
       size: {
@@ -27,11 +28,11 @@ const variants = cva(
 );
 
 type GridItemProps = {
-  children: ReactNode;
   title: string;
+  icon?: string;
 } & VariantProps<typeof variants>;
 
-function GridItem({ size, title, children }: GridItemProps) {
+function GridItem({ size, icon, title }: GridItemProps) {
   return (
     <TooltipProvider>
       <Tooltip>
@@ -39,11 +40,17 @@ function GridItem({ size, title, children }: GridItemProps) {
           className={cn(
             variants({
               size,
-              className: "content-center items-center",
+              className:
+                "content-center items-center  duration-300 ease-in-out",
             }),
           )}
         >
-          {title}
+          <Image
+            src={profilePic}
+            width={48}
+            height={48}
+            alt="Picture of the author"
+          />
         </TooltipTrigger>
         <TooltipContent>
           <p>{title}</p>

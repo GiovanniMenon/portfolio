@@ -16,6 +16,7 @@ export const GridItems: GridItemInterface[] = [
     layout: "1x1",
     type: "Icon",
     title: "C",
+    icon: "/c.png",
   },
   {
     layout: "1x2",

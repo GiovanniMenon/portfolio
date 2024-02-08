@@ -10,9 +10,12 @@ function GridSkill() {
       <div className="grid mx-auto w-full md:w-[95%] h-full grid-cols-5 md:grid-cols-9 auto-rows-[80px] gap-2.5 ">
         {GridItems.map((item, index) => {
           return (
-            <GridItem title={item.title} size={item.layout} key={index}>
-              {item.title}
-            </GridItem>
+            <GridItem
+              icon={item.icon}
+              title={item.title}
+              size={item.layout}
+              key={index}
+            ></GridItem>
           );
         })}
       </div>
