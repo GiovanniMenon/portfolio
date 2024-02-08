@@ -36,7 +36,7 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#home" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
                 hover:text-[--titleColor] focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
                 autoFocus={true}
               >
@@ -47,7 +47,7 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#aboutMe" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
               hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
               >
                 About
@@ -57,7 +57,7 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#experience" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
               hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
               >
                 Experience
@@ -67,7 +67,7 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#project" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-bold hover:text-opacity-90
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
               hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
               >
                 Project

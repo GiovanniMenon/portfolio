@@ -14,6 +14,9 @@ function GridSkill() {
               icon={item.icon}
               title={item.title}
               size={item.layout}
+              height={item.height}
+              width={item.width}
+              color={item.color}
               key={index}
             ></GridItem>
           );

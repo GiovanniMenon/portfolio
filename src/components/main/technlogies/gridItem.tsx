@@ -1,4 +1,3 @@
-import profilePic from "../../../../public/tecIcon/c.png";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -10,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const variants = cva(
-  "bg-[rgba(114,114,114,.2)] rounded-md flex flex-col justify-center p-2 col-span-1 row-span-1 hover:scale-[1.03]",
+  "bg-[rgba(114,114,114,.2)] rounded-md flex flex-col justify-center p-2 col-span-1 row-span-1 hover:scale-[1.03npm]",
   {
     variants: {
       size: {
@@ -30,9 +29,12 @@ const variants = cva(
 type GridItemProps = {
   title: string;
   icon?: string;
+  height?: number;
+  width?: number;
+  color?: string;
 } & VariantProps<typeof variants>;
 
-function GridItem({ size, icon, title }: GridItemProps) {
+function GridItem({ size, icon, title, width, height, color }: GridItemProps) {
   return (
     <TooltipProvider>
       <Tooltip>
@@ -40,17 +42,22 @@ function GridItem({ size, icon, title }: GridItemProps) {
           className={cn(
             variants({
               size,
-              className:
-                "content-center items-center  duration-300 ease-in-out",
+              className: `content-center items-center duration-300 ease-in-out `,
             }),
           )}
         >
-          <Image
-            src={profilePic}
-            width={48}
-            height={48}
-            alt="Picture of the author"
-          />
+          <div className="relative w-full h-full flex flex-col content-center items-center justify-center">
+            {icon ? (
+              <Image
+                src={icon}
+                width={width}
+                height={height}
+                alt={`${title} Logo`}
+              />
+            ) : (
+              ""
+            )}
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{title}</p>
