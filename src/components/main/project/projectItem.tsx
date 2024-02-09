@@ -3,7 +3,7 @@ import { ProjectItemInterface } from "@/config/site-config";
 function ProjectItem({ title, link, desc }: ProjectItemInterface) {
   return (
     <div
-      className="flex relative flex-col bg-[rgba(114,114,114,.2)] backdrop-blur-lg rounded-md p-4 gap-4 h-fit md:h-[20vh]
+      className="flex relative flex-col bg-[rgba(114,114,114,.2)] rounded-md p-4 gap-4 h-fit md:h-[20vh]
     transition duration-150 hover:scale-[1.01] "
     >
       <div className="flex flex-row justify-between content-center items-center">

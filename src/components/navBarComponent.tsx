@@ -28,9 +28,9 @@ function NavBarComponent() {
   }, []);
 
   return (
-    <div className="fixed w-full flex justify-center py-4  ">
+    <div className="fixed w-full flex justify-center py-4 z-50  ">
       <NavigationMenu
-        className={`mih-w-screen transition duration-300 px-2 py-4 md:py-4 md:px-6 rounded-2xl backdrop-blur-[10px] ${!scrolled ? "" : "bg-[rgba(114,114,114,.2)]"}`}
+        className={` mih-w-screen transition duration-300 px-2 py-4 md:py-4 md:px-6 rounded-2xl backdrop-blur-[10px] ${!scrolled ? "" : "bg-[rgba(114,114,114,.2)]"}`}
       >
         <NavigationMenuList>
           <NavigationMenuItem>
