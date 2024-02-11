@@ -144,7 +144,7 @@ export const GridItems: GridItemInterface[] = [
     type: "Icon",
     title: "Git",
     icon: "/tecIcon/git.png",
-    color: "rgb(235,79,49, .1)",
+    color: "rgb(63,45,0, .1)",
   },
   {
     layout: "1x1",
@@ -158,7 +158,7 @@ export const GridItems: GridItemInterface[] = [
     type: "Icon",
     title: "Ollama",
     icon: "/tecIcon/ollama.svg",
-    color: "rgb(252,252,252 , .2)",
+    color: "rgb(252,252,252 , .3)",
   },
   {
     layout: "1x1",
@@ -172,7 +172,7 @@ export const GridItems: GridItemInterface[] = [
     type: "Icon",
     title: "MinIO",
     icon: "/tecIcon/minio.png",
-    color: "rgba(213,198,201,0.7)",
+    color: "rgb(195,43,70,.2)",
   },
   {
     layout: "1x1",
