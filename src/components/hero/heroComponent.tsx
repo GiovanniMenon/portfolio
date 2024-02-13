@@ -2,14 +2,13 @@ import HeroHeader from "@/components/hero/heroHeaderComponent";
 
 function HeroComponent() {
   return (
-    <div className="flex flex-col justify-around items-center content-center w-full h-[60vh] ">
-      <div className={"absolute"}>
+    <div className="flex flex-col justify-around items-center content-center w-full h-[60vh]  ">
+      <div className={"absolute w-full"}>
         <svg
           className="hero-stars"
           xmlns="http://www.w3.org/2000/svg"
           width="1680"
           height="730"
-          viewBox="0 0 1680 730"
           fill="none"
         >
           <circle
