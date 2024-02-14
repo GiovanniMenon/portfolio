@@ -12,10 +12,10 @@ function ExperienceItem({
 }: ExperienceItemInterface) {
   return (
     <div className="flex flex-col md:flex-row gap-2.5">
-      <div className="flex flex-row w-full md:w-3/12 text-[--textColor] ">
+      <div className="flex flex-row w-3/12 text-[--textColor] ">
         {start} - {end}
       </div>
-      <div className="flex flex-col gap-2.5">
+      <div className="flex flex-col w-full gap-2.5">
         <h1 className="font-medium text-lg text-[--titleColor]">
           {title}
           {!isStudy ? (

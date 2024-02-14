@@ -238,7 +238,8 @@ export const Experiences: ExperienceItemInterface[] = [
     role: "Intern as Software Developer",
     start: "Aug 2023",
     end: "Oct 2023",
-    description: "Descrizione Experiences",
+    description:
+      "Working as Software Developer on a Web Interface for bring inside the company the OpenAI API. My role in the project was to design and create the logic, interface and the backend. The aim of the project was bring the AI inside the activity of the company",
   },
 ];
 
