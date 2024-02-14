@@ -7,14 +7,8 @@ import ExperienceGrid from "@/components/main/experience/experienceGrid";
 
 function MainComponent() {
   const text = `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Donec pulvinar massa in odio iaculis lacinia.
-        Etiam rutrum ligula non elit faucibus imperdiet non eu tortor.
-        Nam vel mi eleifend urna vestibulum tristique vitae id arcu.
-        In non turpis facilisis, semper urna et, facilisis nibh.
-        Mauris ornare ex at purus laoreet, et varius nisl rhoncus. 
-        Nullam scelerisque purus ac porta maximus. Duis ultrices velit sit amet tincidunt eleifend.
-        Suspendisse ultricies dolor sit amet elit varius porttitor. `;
+        I am a 21-year-old Italian student deeply passionate about technology and innovation. 
+        Currently, I am in my third year pursuing a Bachelor's degree in Computer Science (Department of Mathematics) at the University of Padua.`;
 
   return (
     <div className="max-w-[1300px] mx-auto p-[25px] flex flex-col md:gap-20">
