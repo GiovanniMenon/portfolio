@@ -36,8 +36,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#home" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
-                hover:text-[--titleColor] focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50  hover:text-opacity-90
+                hover:text-blue-500 focus:text-opacity-100 focus:outline-none focus:text-blue-500"
                 autoFocus={true}
               >
                 Home
@@ -47,8 +47,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#aboutMe" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
-              hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
               >
                 About
               </NavigationMenuLink>
@@ -57,8 +57,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#experience" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
-              hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
               >
                 Experience
               </NavigationMenuLink>
@@ -67,8 +67,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#project" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-white text-opacity-50 font-medium hover:text-opacity-90
-              hover:text-[--titleColor]  focus:text-opacity-100 focus:outline-none focus:text-[--titleColor]"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
               >
                 Project
               </NavigationMenuLink>

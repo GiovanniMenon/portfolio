@@ -7,7 +7,7 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
     transition duration-150 hover:scale-[1.01] "
     >
       <div className="flex flex-row justify-between content-center items-center">
-        <h1 className="font-medium text-xl text-[--titleColor]">{title}</h1>
+        <h1 className="font-medium text-xl text-blue-500">{title}</h1>
         <a href={link}>
           <svg
             className="with-icon_icon__MHUeb "
@@ -36,7 +36,7 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
           </svg>
         </a>
       </div>
-      <div className="flex flex-col text-base text-[--textColor] h-full justify-center items-center ">
+      <div className="flex flex-col text-base text-zinc-400 h-full justify-center items-center ">
         {desc}
       </div>
     </div>

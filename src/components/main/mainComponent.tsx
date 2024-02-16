@@ -13,7 +13,7 @@ function MainComponent() {
   return (
     <div className="max-w-[1300px] mx-auto p-[25px] flex flex-col md:gap-20">
       <MainItemComponent id="aboutMe" header="About Me">
-        <p className="text-[--textColor]">{text}</p>
+        <p className="text-zinc-400">{text}</p>
         <GridSkill></GridSkill>
       </MainItemComponent>
       <MainItemComponent id="experience" header="Experience">
