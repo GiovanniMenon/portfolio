@@ -239,7 +239,7 @@ export const Experiences: ExperienceItemInterface[] = [
     start: "Aug 2023",
     end: "Oct 2023",
     description:
-      "Working as Software Developer on a Web Interface for bring inside the company the OpenAI API. My role in the project was to design and create the logic, interface and the backend. The aim of the project was bring the AI inside the activity of the company",
+      "I worked as a Software Developer on a web interface to integrate the OpenAI API into the company's operations. My role in the project involved designing and developing the logic, interface, and backend. The primary goal of the project was to incorporate artificial intelligence into the company's activities.",
   },
 ];
 
