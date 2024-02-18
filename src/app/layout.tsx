@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from 'next/font/google'
+import localFont from "next/font/local";
 import "./globals.css";
 import React from "react";
+import type { Viewport } from "next";
 
-const jetBrains = JetBrains_Mono({
-  weight: '300',
-  subsets: ['latin'],
-})
+const calSans = localFont({ src: "./font/CalSans-SemiBold.woff2" });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Giovanni Menon Portfolio Websiste",
@@ -18,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${jetBrains.className}`}>{children}</body>
+    <html className="scroll-smooth" lang="en">
+      <body className={` ${calSans.className}`}>{children}</body>
     </html>
   );
 }

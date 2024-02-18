@@ -1,22 +1,38 @@
-
+import { TypeAnimation } from "react-type-animation";
 
 function HeroHeader() {
-    return (
-        <div className="flex flex-col justify-center items-center content-center w-full my-auto text-base md:text-lg text-left ">
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <div className="max-w-[1300px] flex flex-col h-full text-center md:text-left p-2 leading-relaxed">
-                <span>Hello there &#128075;,</span>
-                <span className="text-4xl md:text-7xl font-bold">I am <span className="text-blue-600">Giovanni.</span></span>
-                <span className="font-medium">I&apos;m working to create my personal website,</span>
-                <span>but it&apos;s currently under development.</span>
-                <span> In the meantime, feel free to connect with me on <a className="underline text-blue-600" href="https://www.linkedin.com/in/giovanni-menon/">LinkedIn</a> and explore my projects on <a className="underline text-blue-600" href="https://github.com/GiovanniMenon">GitHub</a>.</span>
-            </div>
 
-
-            {/* Possibile uso di una animazione*/}
-        </div>
-    )
-
+  return (
+    <div className="z-20 flex flex-col justify-center items-center content-center w-full h-[10vh] md:h-[60vh] text-4xl lg:text-6xl font-extrabold">
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
+      <div className="max-w-[1300px] flex flex-col text-center md:text-left gap-5 ">
+        <span className={"text-zinc-200"}>
+          Hello there,{" "}
+          <span className="bg-gradient-to-b from-cyan-500 to-blue-500  text-transparent bg-clip-text ">
+            I am Giovanni.
+          </span>
+        </span>
+        <span className="text-base md:text-lg text-zinc-400">
+          {" "}
+          An Italian student passionate about
+          <TypeAnimation
+            sequence={[
+              " Cybersecurity.",
+              2000,
+              " Programming.",
+              2000,
+              " Virtual Reality.",
+              2000,
+            ]}
+            wrapper="span"
+            className="font-bold text-zinc-200"
+            speed={25}
+            repeat={Infinity}
+          />
+        </span>
+      </div>
+  </div>
+  );
 }
 
 export default HeroHeader;
