@@ -42,17 +42,17 @@ export const TracingBeam = ({
   }, []);
 
   const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 0.8], [50, svgHeight - velo * 500]),
+    useTransform(scrollYProgress, [0, 0.8], [0, svgHeight]),
     {
-      stiffness: 500,
-      damping: 90,
+      stiffness: 100,
+      damping: 10,
     },
   );
   const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], [50, svgHeight - velo * 2000]),
+    useTransform(scrollYProgress, [0, 1], [0, svgHeight + 1900]),
     {
-      stiffness: 500,
-      damping: 90,
+      stiffness: 100,
+      damping: 10,
     },
   );
 
@@ -61,7 +61,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative mx-auto max-w-[1600px] h-full", className)}
     >
-      <div className="absolute -left-20 lg:left-0">
+      <div className="absolute -left-20 lg:-left-5">
         <motion.div
           transition={{
             duration: 0.2,
@@ -92,7 +92,7 @@ export const TracingBeam = ({
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
-          height={svgHeight} // Set the SVG height
+          height="1900" // Set the SVG height
           className=" ml-4 hidden lg:block"
           aria-hidden="true"
         >

@@ -12,7 +12,7 @@ function MainComponent() {
 
   return (
     <TracingBeam className="">
-      <div className=" max-w-[1300px] mx-auto  p-[25px] flex flex-col md:gap-20 antialiasedrelative">
+      <div className=" max-w-[1300px] mx-auto  p-[25px] flex flex-col md:gap-20 antialiased relative">
         <MainItemComponent id="aboutMe" header="About Me">
           <p className="text-zinc-400">{text}</p>
           <GridSkill></GridSkill>
