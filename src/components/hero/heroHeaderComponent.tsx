@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 
 function HeroHeader() {
+
   return (
     <div className="z-20 flex flex-col justify-center items-center content-center w-full h-[10vh] md:h-[60vh] text-4xl lg:text-6xl font-extrabold">
       {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -30,9 +31,7 @@ function HeroHeader() {
           />
         </span>
       </div>
-
-      {/* Possibile uso di una animazione*/}
-    </div>
+  </div>
   );
 }
 
