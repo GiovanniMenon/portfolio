@@ -7,8 +7,7 @@ import ExperienceGrid from "@/components/main/experience/experienceGrid";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 function MainComponent() {
   const text = `
-        I am a 21-year-old Italian student deeply passionate about technology and innovation. 
-        Currently, I am in my third year pursuing a Bachelor's degree in Computer Science (Department of Mathematics) at the University of Padua.`;
+        I am a 21-year-old Italian student deeply passionate about technology and innovation. Currently, I am in my third year pursuing a Bachelor's degree in Computer Science (Department of Mathematics) at the University of Padua. After graduation, I plan to continue my studies in the field of cyber security, which has always been the branch of computer science I am most passionate about.`;
 
   return (
     <TracingBeam className="">
