@@ -3,7 +3,7 @@ import { ProjectItemInterface } from "@/config/site-config";
 function ProjectItem({ title, link, desc }: ProjectItemInterface) {
   return (
     <div
-      className="flex relative flex-col bg-[rgba(114,114,114,.2)] rounded-md p-4 gap-4 h-fit md:h-[20vh]
+      className="flex relative flex-col bg-[rgba(114,114,114,.2)] rounded-md p-4 gap-8 h-fit
     transition duration-150 hover:scale-[1.01] "
     >
       <div className="flex flex-row justify-between content-center items-center">
@@ -36,7 +36,7 @@ function ProjectItem({ title, link, desc }: ProjectItemInterface) {
           </svg>
         </a>
       </div>
-      <div className="flex flex-col text-base text-zinc-400 h-full justify-center items-center ">
+      <div className="flex flex-col text-base text-zinc-400 lg:h-[10vh] justify-center items-center  ">
         {desc}
       </div>
     </div>

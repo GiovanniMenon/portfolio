@@ -14,8 +14,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Giovanni Menon Portfolio Websiste",
+  title: "Giovanni Menon",
+  description: "Giovanni Menon Portfolio website ",
 };
 
 export default function RootLayout({
