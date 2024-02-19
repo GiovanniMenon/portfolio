@@ -3,7 +3,7 @@ import FooterIcon from "@/components/footer/footerIcon";
 
 function Footer() {
   const githubLink = "https://github.com/GiovanniMenon";
-  const instagramLink = "";
+  const instagramLink = "https://www.instagram.com/menon.giovanni/";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
 
   return (
