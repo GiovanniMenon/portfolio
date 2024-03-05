@@ -202,6 +202,7 @@ export interface ProjectItemInterface {
   title: string;
   link: string;
   desc: string;
+  technologies: string[];
   demo?: string;
 }
 export const Projects: ProjectItemInterface[] = [
@@ -209,11 +210,13 @@ export const Projects: ProjectItemInterface[] = [
     title: "Arcane Oracle",
     link: "https://github.com/GiovanniMenon/Arcane-Oracle",
     desc: "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
+    technologies: ["C++", "Cmake", "Qmake", "Qt"],
   },
   {
     title: "Open Blue",
     link: "https://github.com/GiovanniMenon/OpenBlue",
     desc: "A Flask-based web interface facilitating user interaction with the OpenAI API, enabling requests and responses powered by GPT-3.5 and GPT-4 models.",
+    technologies: ["Python", "OpenAi", "Flask", "Js", "Html", "Css"],
   },
 ];
 
