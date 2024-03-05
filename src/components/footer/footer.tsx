@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function Footer() {
   const githubLink = "https://github.com/GiovanniMenon";
@@ -12,10 +13,23 @@ function Footer() {
     <div className="w-full flex flex-col gap-5 text-sm pt-10 md:pt-0">
       <Separator />
       <div className="w-full flex flex-row justify-between items-center px-1">
-        <p className={"text-secondary-foreground font-bold"}>Giovanni Menon</p>
+        <div
+          className={
+            "flex flex-row items-center content-center w-full space-x-5 "
+          }
+        >
+          <Avatar>
+            <AvatarImage src="/avatar.png" />
+            <AvatarFallback>GM</AvatarFallback>
+          </Avatar>
+          <p className={"text-secondary-foreground font-bold"}>
+            Giovanni Menon
+          </p>
+        </div>
+
         <div className="flex flex-row gap-3.5">
           <Button variant={"link"} size={"icon"}>
-            <Link href={githubLink}>
+            <Link href={githubLink} rel="noopener noreferrer" target="_blank">
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"
@@ -44,7 +58,7 @@ function Footer() {
             </Link>
           </Button>
           <Button variant={"link"} size={"icon"}>
-            <Link href={linkedinLink}>
+            <Link href={linkedinLink} rel="noopener noreferrer" target="_blank">
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"
@@ -84,7 +98,11 @@ function Footer() {
             </Link>
           </Button>
           <Button variant={"link"} size={"icon"}>
-            <Link href={instagramLink}>
+            <Link
+              href={instagramLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"

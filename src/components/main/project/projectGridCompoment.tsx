@@ -29,7 +29,7 @@ function ProjectGrid() {
             <CardFooter>
               <div className="flex flex-row w-full justify-end">
                 <Button variant={"link"} size={"icon"}>
-                  <Link href={link}>
+                  <Link href={link} rel="noopener noreferrer" target="_blank">
                     <svg
                       className="with-icon_icon__MHUeb "
                       data-testid="geist-icon"
