@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 function NavBarComponent() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,8 +37,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#home" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50  hover:text-opacity-90
-                hover:text-blue-500 focus:text-opacity-100 focus:outline-none focus:text-blue-500"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-secondary-foreground opacity-50  hover:opacity-90
+                hover:text-blue-500 focus:text-opacity-100 focus:outline-none focus:text-blue-500 focus:opacity-100"
                 autoFocus={true}
               >
                 Home
@@ -47,8 +48,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#aboutMe" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
-              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-secondary-foreground opacity-50  hover:opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500 focus:opacity-100"
               >
                 About
               </NavigationMenuLink>
@@ -57,8 +58,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#experience" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
-              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-secondary-foreground opacity-50  hover:opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500 focus:opacity-100"
               >
                 Experience
               </NavigationMenuLink>
@@ -67,8 +68,8 @@ function NavBarComponent() {
           <NavigationMenuItem>
             <Link href="#project" legacyBehavior passHref>
               <NavigationMenuLink
-                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-zinc-200 text-opacity-50 hover:text-opacity-90
-              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500"
+                className="text-sm px-2 md:px-4 md:py-2 md:text-lg text-secondary-foreground opacity-50  hover:opacity-90
+              hover:text-blue-500  focus:text-opacity-100 focus:outline-none focus:text-blue-500 focus:opacity-100"
               >
                 Project
               </NavigationMenuLink>
@@ -76,6 +77,7 @@ function NavBarComponent() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <ThemeToggle />
     </div>
   );
 }

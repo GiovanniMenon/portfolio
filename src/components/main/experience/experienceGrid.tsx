@@ -9,7 +9,9 @@ function ExperienceGrid() {
     <div className="flex flex-col w-full gap-16">
       <Separator />
       <div className="flex flex-col gap-10">
-        <h1 className="w-full font-extrabold text-xl text-zinc-300 ">Works</h1>
+        <h1 className="w-full font-extrabold text-xl text-secondary-foreground opacity-85 ">
+          Works
+        </h1>
         {Experiences.map((item, index) => {
           return (
             <ExperienceItem
@@ -26,7 +28,9 @@ function ExperienceGrid() {
       </div>
       <Separator />
       <div className="flex flex-col gap-10">
-        <h1 className="w-full font-bold text-xl text-zinc-300 ">Studies</h1>
+        <h1 className="w-full font-bold text-xl text-secondary-foreground opacity-85 ">
+          Studies
+        </h1>
         {Studies.map((item, index) => {
           return (
             <ExperienceItem
