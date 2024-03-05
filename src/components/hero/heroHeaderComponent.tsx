@@ -5,13 +5,13 @@ function HeroHeader() {
     <div className="z-20 flex flex-col justify-center items-center content-center w-full h-[10vh] md:h-[60vh] text-4xl lg:text-6xl font-extrabold">
       {/* eslint-disable-next-line react/no-unescaped-entities */}
       <div className="max-w-[1300px] flex flex-col text-center pt-0 md:pt-10 lg:pt-0 md:text-left gap-5 ">
-        <span className={"text-zinc-200"}>
+        <span className={"text-secondary-foreground"}>
           Hello there,{" "}
           <span className="bg-gradient-to-b from-cyan-500 to-blue-500  text-transparent bg-clip-text ">
             I am Giovanni.
           </span>
         </span>
-        <span className="text-base md:text-lg text-zinc-400">
+        <span className="text-base md:text-lg text-zinc-500 dark:text-zinc-400">
           {" "}
           An Italian student passionate about
           <TypeAnimation
@@ -24,7 +24,7 @@ function HeroHeader() {
               2000,
             ]}
             wrapper="span"
-            className="font-bold text-zinc-200"
+            className="font-bold text-secondary-foreground"
             speed={25}
             repeat={Infinity}
           />
