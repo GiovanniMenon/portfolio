@@ -29,7 +29,7 @@ function Footer() {
 
         <div className="flex flex-row gap-3.5">
           <Button variant={"link"} size={"icon"}>
-            <Link href={githubLink}>
+            <Link href={githubLink} rel="noopener noreferrer" target="_blank">
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"
@@ -58,7 +58,7 @@ function Footer() {
             </Link>
           </Button>
           <Button variant={"link"} size={"icon"}>
-            <Link href={linkedinLink}>
+            <Link href={linkedinLink} rel="noopener noreferrer" target="_blank">
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"
@@ -98,7 +98,11 @@ function Footer() {
             </Link>
           </Button>
           <Button variant={"link"} size={"icon"}>
-            <Link href={instagramLink}>
+            <Link
+              href={instagramLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <svg
                 className="with-icon_icon__MHUeb"
                 data-testid="geist-icon"
