@@ -11,8 +11,12 @@ This repository contains the code for my personal website. To build it, I use:
 ### UI Framework
 - [Shadcn/ui](https://ui.shadcn.com/)
   - Used for :
-    - NavBar Menu.
-    - Separator.
+      - Card (_Project_). 
+      - NavBar Menu.
+      - Separator.
+      - Button. 
+      - Theme Toggle.
+      - Themes and Colors [(here's)](https://ui.shadcn.com/themes).
 - [Aceternity UI](https://ui.aceternity.com/)
   - Used for :
     - Grid Background.
