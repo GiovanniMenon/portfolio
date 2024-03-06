@@ -1,15 +1,19 @@
 "use client";
 
-import NavBarComponent from "@/components/navBarComponent";
-import HeroComponent from "@/components/hero/heroComponent";
-import MainComponent from "@/components/main/mainComponent";
+import NavBar from "@/components/navBar";
+import Hero from "@/components/hero/hero";
+import Main from "@/components/main/main";
+import Chat from "@/components/chat/chat";
+import { useState } from "react";
 
 export default function Home() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
     <main className="overflow-x-hidden ">
-      <NavBarComponent></NavBarComponent>
-      <HeroComponent></HeroComponent>
-      <MainComponent></MainComponent>
+      <NavBar></NavBar>
+      <Hero isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed}></Hero>
+      <Main></Main>
+      <Chat isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed}></Chat>
     </main>
   );
 }

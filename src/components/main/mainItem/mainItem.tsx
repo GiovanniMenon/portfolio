@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-function MainItemComponent({
+function MainItem({
   id,
   header,
   children,
@@ -19,4 +19,4 @@ function MainItemComponent({
   );
 }
 
-export default MainItemComponent;
+export default MainItem;
