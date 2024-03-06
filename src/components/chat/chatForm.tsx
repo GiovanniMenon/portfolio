@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -34,7 +35,6 @@ export function ChatForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -47,7 +47,8 @@ export function ChatForm() {
           email: values.email,
         }),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (res.ok) toast.success("Email send with success");
+      if (!res.ok) toast.error("Internal Error with the Email Service");
     } catch (e) {
       console.error(e);
     }

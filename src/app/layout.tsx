@@ -5,6 +5,7 @@ import React from "react";
 import type { Viewport } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 const calSans = localFont({ src: "./font/CalSans-SemiBold.woff2" });
+import { Toaster } from "@/components/ui/sonner";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,6 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster position={"top-left"} richColors />
         </ThemeProvider>
       </body>
     </html>
