@@ -9,11 +9,10 @@ export async function POST(req: NextRequest) {
   console.log(email);
   try {
     const data = await resend.emails.send({
-      from: email,
-      to: ["giovanni.menon15@gmail.com"],
+      from: "",
+      to: process.env.EMAIL_TO_SEND!,
       subject: subject,
-      react: EmailTemplate({ body: body }),
-      text: "",
+      react: <div>body</div>,
     });
 
     console.log(data);
