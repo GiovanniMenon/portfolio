@@ -32,7 +32,7 @@ type GridItemProps = {
   color?: string;
 } & VariantProps<typeof variants>;
 
-function GridItem({ size, icon, title, color }: GridItemProps) {
+function TechnologiesItem({ size, icon, title, color }: GridItemProps) {
   return (
     <TooltipProvider>
       <Tooltip>
@@ -69,4 +69,4 @@ function GridItem({ size, icon, title, color }: GridItemProps) {
   );
 }
 
-export default GridItem;
+export default TechnologiesItem;

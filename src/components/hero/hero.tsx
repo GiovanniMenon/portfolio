@@ -1,8 +1,8 @@
-import HeroHeader from "@/components/hero/heroHeaderComponent";
+import HeroHeader from "@/components/hero/heroHeader";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-function HeroComponent() {
+function Hero() {
   return (
     <div className="flex flex-col justify-around items-center content-center w-full h-[60vh] bg-background  relative  ">
       <div
@@ -16,7 +16,10 @@ function HeroComponent() {
           "max-w-[1200px] mx-auto w-full absolute top-full md:top-[85%] lg:top-[80%] flex flex-row justify-center lg:justify-end z-20"
         }
       >
-        <Button variant={"default"} className={" font-bold pt-3 text-lg   "}>
+        <Button
+          variant={"default"}
+          className={" font-medium tracking-wide pt-3 text-base   "}
+        >
           <Link href={"resumee.pdf"} rel="noopener noreferrer" target="_blank">
             Download My Resumee
           </Link>
@@ -26,4 +29,4 @@ function HeroComponent() {
   );
 }
 
-export default HeroComponent;
+export default Hero;

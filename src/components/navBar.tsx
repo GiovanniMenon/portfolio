@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
-function NavBarComponent() {
+function NavBar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -82,4 +82,4 @@ function NavBarComponent() {
   );
 }
 
-export default NavBarComponent;
+export default NavBar;
