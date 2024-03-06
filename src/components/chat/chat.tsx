@@ -31,9 +31,22 @@ function Chat({
             Fullfill the form and send me an email
           </CardDescription>
         </CardHeader>
-        <CardContent></CardContent>
-        <CardFooter className={"text-xs"}>
+        <CardContent>
           <ChatForm />
+        </CardContent>
+        <CardFooter
+          className={"w-full justify-end items-start text-xs flex flex-col"}
+        >
+          <span>
+            {" "}
+            No data is <span className={"font-bold text-xs"}>Stored.</span>
+          </span>
+
+          <span>
+            {" "}
+            The Email service is provide by{" "}
+            <span className={"font-bold text-xs"}>Resend &#169;</span>
+          </span>
         </CardFooter>
       </Card>
 
