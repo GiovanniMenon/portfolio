@@ -18,12 +18,10 @@ function Chat({
 }) {
   return (
     <div
-      className={
-        "flex flex-col items-end space-y-2 fixed z-40 right-0 bottom-0 m-5"
-      }
+      className={`flex flex-col items-end space-y-2 fixed right-0 bottom-0 m-5 z-50 ${!isCollapsed ? "pointer-events-none" : "pointer-events-auto"}`}
     >
       <Card
-        className={`transition-all z-50 ease-linear duration-200 px-3 ${isCollapsed ? "invisible translate-y-5 opacity-0" : "visible translate-y-0"}`}
+        className={`transition-all ease-linear duration-200 px-3  ${!isCollapsed ? "invisible translate-y-5 opacity-0" : "visible translate-y-0"}`}
       >
         <CardHeader>
           <CardTitle className={"text-2xl"}>Contact Me</CardTitle>
@@ -51,6 +49,7 @@ function Chat({
       </Card>
 
       <Button
+        style={{ pointerEvents: "auto" }}
         variant={"outline"}
         size={"iconLg"}
         onClick={() => setIsCollapsed(!isCollapsed)}

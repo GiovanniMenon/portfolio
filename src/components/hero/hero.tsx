@@ -19,7 +19,7 @@ function Hero({
       <HeroHeader />
       <div
         className={
-          "z-40 max-w-[1300px] pl-[25px]  w-full absolute top-[85%] lg:top-[80%] flex flex-col md:flex-row justify-center items-center lg:justify-center gap-2.5"
+          "z-40 max-w-[1300px] w-full absolute top-[85%] lg:top-[80%] flex flex-col md:flex-row justify-center items-center lg:justify-center gap-2.5"
         }
       >
         <Button

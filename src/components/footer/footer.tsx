@@ -10,15 +10,15 @@ function Footer() {
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
 
   return (
-    <div className="w-full flex flex-col gap-5 text-sm pt-10 md:pt-0">
+    <div className="w-full flex flex-col gap-5 text-xs lg:text-sm pt-10 md:pt-0">
       <Separator />
-      <div className="w-full flex flex-row justify-between items-center px-1">
+      <div className="w-full flex flex-row justify-between items-center pr-14 px-1 lg:pr-1">
         <div
           className={
-            "flex flex-row items-center content-center w-full space-x-5 "
+            "flex flex-row justify-center items-center content-center w-fit space-x-5 "
           }
         >
-          <Avatar>
+          <Avatar className={"hidden lg:block"}>
             <AvatarImage src="/avatar.png" />
             <AvatarFallback>GM</AvatarFallback>
           </Avatar>
@@ -27,7 +27,7 @@ function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-row gap-3.5">
+        <div className="flex flex-row ">
           <Button variant={"link"} size={"icon"}>
             <Link href={githubLink} rel="noopener noreferrer" target="_blank">
               <svg

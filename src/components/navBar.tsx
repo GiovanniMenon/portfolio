@@ -29,7 +29,7 @@ function NavBar() {
   }, []);
 
   return (
-    <div className="fixed w-full flex justify-center py-4 z-50  ">
+    <div className="fixed w-full flex justify-center py-4 z-[60]  ">
       <NavigationMenu
         className={` mih-w-screen transition duration-300 px-2 py-4 md:py-4 md:px-6 rounded-2xl ${!scrolled ? "backdrop-blur-[8px] bg-[rgba(114,114,114,.1)]" : " backdrop-blur-[10px] bg-[rgba(114,114,114,.2)]"}`}
       >
