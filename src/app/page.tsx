@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden ">
       <NavBar></NavBar>
-      <Hero></Hero>
+      <Hero isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed}></Hero>
       <Main></Main>
       <Chat isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed}></Chat>
     </main>

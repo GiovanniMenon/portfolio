@@ -38,7 +38,7 @@ function Chat({
       </Card>
 
       <Button
-        variant={"default"}
+        variant={"outline"}
         size={"iconLg"}
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
