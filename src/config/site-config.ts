@@ -207,17 +207,24 @@ export interface ProjectItemInterface {
 }
 export const Projects: ProjectItemInterface[] = [
   {
+    title: "Research Project",
+    link: "",
+    desc: "Internship as researcher at the University of Padua.",
+    technologies: ["Network Security" , "Bash"],
+  },
+  {
+    title: "Knowledge Managment AI",
+    link: "https://github.com/CodingCowboys10/kmai",
+    desc: "Built a Web Application with Next.js that enables users to chat and have conversations with a local LLM (Language Model) about pre-loaded documents.",
+    technologies: ["Next.js", "OpenAi", "TypeScript", "Js", "Shacdn/ui", "Tailwind"],
+  },
+  {
     title: "Arcane Oracle",
     link: "https://github.com/GiovanniMenon/Arcane-Oracle",
     desc: "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
     technologies: ["C++", "Cmake", "Qmake", "Qt"],
   },
-  {
-    title: "Open Blue",
-    link: "https://github.com/GiovanniMenon/OpenBlue",
-    desc: "A Flask-based web interface facilitating user interaction with the OpenAI API, enabling requests and responses powered by GPT-3.5 and GPT-4 models.",
-    technologies: ["Python", "OpenAi", "Flask", "Js", "Html", "Css"],
-  },
+  
 ];
 
 // Experience List and interface
@@ -237,7 +244,7 @@ export interface ExperienceItemInterface {
 export const Experiences: ExperienceItemInterface[] = [
   {
     isStudy: false,
-    title: "GDS SPA",
+    title: "Global Display Solution",
     role: "Intern as Software Developer",
     start: "Aug 2023",
     end: "Oct 2023",
