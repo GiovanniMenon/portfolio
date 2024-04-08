@@ -17,7 +17,7 @@ function Main() {
           <p className="text-secondary-foreground opacity-70 flex flex-col">
           <span>{text}</span>
           <span>Simultaneously, I am actively engaged in preparing a Research Project in the field of Cyber Security, which will serve as
-          centerpiece of my Bachelor's thesis. My primary interests lie in the realm of Information Security, with a particular focus on
+          centerpiece of my Bachelor&apos;s thesis. My primary interests lie in the realm of Information Security, with a particular focus on
           Network Security. After graduation, I plan to continue my studies in this field.</span>
           </p>
           <TechnologiesSkill></TechnologiesSkill>
