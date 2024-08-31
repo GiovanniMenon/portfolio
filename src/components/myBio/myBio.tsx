@@ -3,6 +3,18 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Code,
+  Gamepad,
+  MailIcon,
+  MapPinIcon,
+  Music,
+  Music2,
+  Music3Icon,
+  Music4,
+  University,
+} from "lucide-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 function MyBio() {
   const githubLink = "https://github.com/GiovanniMenon";
@@ -11,18 +23,102 @@ function MyBio() {
   return (
     <Card
       className={
-        "hidden lg:block h-fit sticky w-full lg:w-[350px] px-4 py-0 bg-transparent border-white border-opacity-5"
+        "hidden lg:block h-fit sticky w-full lg:w-[350px] px-4 py-0 bg-transparent border-[white] border-2 " +
+        "border-opacity-5"
       }
     >
-      <CardTitle></CardTitle>
-      <CardContent>
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        BIo
+      <CardContent
+        className={"flex flex-col items-start justify-center p-0 py-3 gap-4"}
+      >
+        <div
+          className={"flex flex-row items-center justify-between w-full pt-2 "}
+        >
+          <Avatar className={"size-28"}>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <h1 className={"text-xl font-bold text-neutral-300"}>
+            Giovanni Menon
+          </h1>
+        </div>
+        <div
+          className={"flex flex-col gap-y-1.5 pt-3 tracking-tight opacity-70"}
+        >
+          <Link
+            className={
+              "flex items-center justify-start gap-2 text-xs font-medium "
+            }
+            href={"mailto:giovanni.menon.dev@gmail.com"}
+          >
+            <MailIcon className={"size-5 scale-90 text-primary"} />
+            <span className={"text-white hover:underline"}>
+              giovanni.menon.dev@gmail.com
+            </span>
+          </Link>
+          <Link
+            className={
+              "flex items-center justify-start gap-2 text-xs font-medium "
+            }
+            href={"https://github.com/GiovanniMenon"}
+          >
+            <GitHubLogoIcon className={"size-5 scale-90  text-primary"} />
+            <span className={"text-white hover:underline"}>
+              github.com/GiovanniMenon
+            </span>
+          </Link>
+          <Link
+            className={
+              "flex items-center justify-start gap-2 text-xs font-medium "
+            }
+            href={"https://www.unipd.it/en/"}
+          >
+            <University className={"size-5 scale-90 text-primary"} />
+            <span className={"text-white hover:underline"}>
+              University of Padua
+            </span>
+          </Link>
+          <div
+            className={
+              "flex items-center justify-start gap-2 text-xs font-medium "
+            }
+          >
+            <MapPinIcon className={"size-5 scale-90 text-primary"} />
+            <span className={"text-white"}>Italy</span>
+          </div>
+        </div>
+        <div className={"flex flex-col justify-start pt-3.5"}>
+          <h1 className={"justify-start text-xl font-bold text-neutral-300"}>
+            Me
+          </h1>
+          <p className={"text-sm text-white text-opacity-80"}>
+            lorem ipsum etc etc etc lorem ipsum etc etc etc lorem ipsum etc etc
+            etc
+          </p>
+          <div
+            className={
+              "flex flex-row items-center justify-between text-xs tracking-tight pt-3.5 pb-2 opacity-70"
+            }
+          >
+            <div className={"flex items-start justify-center gap-2"}>
+              <Music4 className={"size-4 "} />
+              <p>230 Hours on Spotify</p>
+            </div>
+            <div className={"flex items-end justify-center gap-2"}>
+              <Gamepad className={"size-4 "} />
+              <p>53 Hours Playing</p>
+            </div>
+          </div>
+          <Button
+            className={
+              "flex p-0 text-sm justify-center items-center gap-2 rounded"
+            }
+          >
+            <Code className={"size-5 "} />
+            <p>See all projects</p>
+          </Button>
+        </div>
       </CardContent>
-      <Separator className={"h-[2px] rounded"} />
+      <Separator className={"h-[2px] rounded opacity-75"} />
       <CardFooter className={"flex justify-center items-center h-full py-4"}>
         <div className={"flex gap-x-3"}>
           <Button
