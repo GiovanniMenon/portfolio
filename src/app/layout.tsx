@@ -34,7 +34,7 @@ export default function RootLayout({
             </div>
             <main className={"w-full flex flex-col items-center justify-start"}>
               <NavBar />
-              <div className={"p-5"}>{children}</div>
+              <div className={"w-full mt-3.5"}>{children}</div>
               <Analytics />
             </main>
 

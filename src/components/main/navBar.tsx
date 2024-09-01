@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { HomeIcon } from "@radix-ui/react-icons";
+import { Home } from "lucide-react";
+
 export default function NavBar() {
   return (
     <header
@@ -6,7 +10,17 @@ export default function NavBar() {
         "backdrop-filter backdrop-blur-xl border-white border-opacity-5 "
       }
     >
-      <div className="flex items-center gap-2 ">ciao</div>
+      <div className="flex items-center justify-center gap-2 ">
+        <Link
+          href={"/"}
+          className={
+            "flex flex-row justify-center items-center text-xs gap-x-2"
+          }
+        >
+          <Home className={"size-5"} />
+          <p className={""}>Home</p>
+        </Link>
+      </div>
     </header>
   );
 }

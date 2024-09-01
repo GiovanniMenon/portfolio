@@ -6,7 +6,7 @@ export default async function NotFound() {
   return (
     <Card
       className={
-        "mt-5 p-8 h-fit w-full bg-card rounded border-white border-opacity-5 backdrop-blur-xl"
+        "p-8 h-fit w-full bg-white/0 rounded border-white border-opacity-5 backdrop-blur-xl"
       }
     >
       <CardTitle
