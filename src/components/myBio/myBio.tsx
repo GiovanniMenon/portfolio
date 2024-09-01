@@ -24,7 +24,7 @@ function MyBio() {
     <Card
       className={
         "hidden lg:block h-fit sticky w-full lg:w-[350px] px-4 py-0 bg-transparent border-[white] border-2 " +
-        "border-opacity-5"
+        "border-opacity-5 rounded-[0.375rem]"
       }
     >
       <CardContent
@@ -42,7 +42,7 @@ function MyBio() {
           </h1>
         </div>
         <div
-          className={"flex flex-col gap-y-1.5 pt-3 tracking-tight opacity-70"}
+          className={"flex flex-col gap-y-1.5 pt-2 tracking-tight opacity-70"}
         >
           <Link
             className={
@@ -96,7 +96,7 @@ function MyBio() {
           </p>
           <div
             className={
-              "flex flex-row items-center justify-between text-xs tracking-tight pt-3.5 pb-2 opacity-70"
+              "flex flex-row items-center justify-between text-xs tracking-tight pt-3.5 pb-3 opacity-70"
             }
           >
             <div className={"flex items-start justify-center gap-2"}>
@@ -109,6 +109,7 @@ function MyBio() {
             </div>
           </div>
           <Button
+            variant={"default"}
             className={
               "flex p-0 text-sm justify-center items-center gap-2 rounded"
             }
@@ -119,7 +120,7 @@ function MyBio() {
         </div>
       </CardContent>
       <Separator className={"h-[2px] rounded opacity-75"} />
-      <CardFooter className={"flex justify-center items-center h-full py-4"}>
+      <CardFooter className={"flex justify-center items-center h-full py-3.5"}>
         <div className={"flex gap-x-3"}>
           <Button
             variant={"secondary"}

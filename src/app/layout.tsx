@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import MyBio from "@/components/myBio/myBio";
+import NavBar from "@/components/main/navBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`relative ${inter.className}`}>{children}</body>
+      <body
+        className={`bg-card bg-gradient-to-br from-background via-card/60 to-background relative ${inter.className}`}
+      >
+        <div
+          className={
+            "max-w-[1500px] flex item-start justify-center mx-auto min-h-screen"
+          }
+        >
+          <div className={"gap-4 flex flex-col md:flex-row md:mt-5 w-full"}>
+            <div>
+              <MyBio />
+            </div>
+            <main className={"w-full flex flex-col items-center justify-start"}>
+              <NavBar />
+              {children}
+              <Analytics />
+            </main>
+
+            <div className={"hidden lg:block w-full lg:w-fit bg-card"}>
+              Menu 3
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
