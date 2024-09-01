@@ -1,3 +1,3 @@
 export function Main() {
-  return <div>content</div>;
+  return <div className={"min-h-[2000px]"}>content</div>;
 }

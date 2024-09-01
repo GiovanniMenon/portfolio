@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="First update">
-      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/main/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/main/navBar.tsx" afterDir="false" />
+    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Add Nav Bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/navBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/navBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +91,8 @@
       <workItem from="1725129448986" duration="2628000" />
       <workItem from="1725136084447" duration="5624000" />
       <workItem from="1725174980314" duration="4844000" />
+      <workItem from="1725179831568" duration="76000" />
+      <workItem from="1725199381492" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="Init New Portfolio">
       <option name="closed" value="true" />
@@ -135,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725141675764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Nav Bar">
+      <option name="closed" value="true" />
+      <created>1725179897600</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725179897600</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +152,7 @@
     <MESSAGE value="Init New Portfolio" />
     <MESSAGE value="First look" />
     <MESSAGE value="First update" />
-    <option name="LAST_COMMIT_MESSAGE" value="First update" />
+    <MESSAGE value="Add Nav Bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Nav Bar" />
   </component>
 </project>

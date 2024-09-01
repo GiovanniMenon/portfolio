@@ -23,8 +23,8 @@ function MyBio() {
   return (
     <Card
       className={
-        "hidden lg:block h-fit sticky w-full lg:w-[350px] px-4 py-0 bg-transparent border-[white] border-2 " +
-        "border-opacity-5 rounded-[0.375rem]"
+        "hidden lg:block h-fit sticky top-5 w-full lg:w-[350px] px-4 py-0 bg-transparent " +
+        " rounded border-white border-opacity-5"
       }
     >
       <CardContent
