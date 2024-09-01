@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Fixing blur">
-      <change afterPath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" afterDir="false" />
+    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Add Exper">
+      <change afterPath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/navBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/navBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +170,7 @@
     <MESSAGE value="First update" />
     <MESSAGE value="Add Nav Bar" />
     <MESSAGE value="Fixing blur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing blur" />
+    <MESSAGE value="Add Exper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Exper" />
   </component>
 </project>
