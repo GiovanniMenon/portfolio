@@ -6,12 +6,12 @@ export default async function NotFound() {
   return (
     <Card
       className={
-        "p-8 h-fit w-full bg-white/0 rounded border-white border-opacity-5 backdrop-blur-xl"
+        "p-8 py-12 h-fit w-full bg-card/20 rounded border-white border-opacity-5 mt-4"
       }
     >
       <CardTitle
         className={
-          "text-9xl text-neutral-300 font-bold flex justify-center items-center"
+          "text-9xl text-accent-foreground font-bold flex justify-center items-center"
         }
       >
         404

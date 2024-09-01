@@ -1,3 +1,13 @@
+import Hero from "@/components/main/elements/hero";
+import { Separator } from "@/components/ui/separator";
+
 export function Main() {
-  return <div className={"min-h-[2000px]"}>content</div>;
+  return (
+    <main
+      className={"w-full flex-col flex justify-center items-center p-4 gap-14"}
+    >
+      <Hero></Hero>
+      <Separator className={"h-[2px] rounded opacity-75"} />
+    </main>
+  );
 }

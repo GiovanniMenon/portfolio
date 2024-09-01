@@ -9,6 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        shine: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "-200% 0" },
+        },
+      },
+      animation: {
+        shine: "shine 2.1s linear infinite",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

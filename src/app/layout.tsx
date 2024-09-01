@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import React from "react";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import MyBio from "@/components/myBio/myBio";
 import NavBar from "@/components/main/navBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Giovanni Menon",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={"dark"}>
       <body
-        className={`bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${inter.className}`}
+        className={`bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${roboto.className}`}
       >
         <div
           className={
@@ -34,7 +34,7 @@ export default function RootLayout({
             </div>
             <main className={"w-full flex flex-col items-center justify-start"}>
               <NavBar />
-              <div className={"w-full mt-3.5"}>{children}</div>
+              {children}
               <Analytics />
             </main>
 
