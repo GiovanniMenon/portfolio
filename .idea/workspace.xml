@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Adjust hero,experiences">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/main/elements/marquee-stacks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +92,7 @@
       <workItem from="1725271535328" duration="1314000" />
       <workItem from="1725277442052" duration="2357000" />
       <workItem from="1725292548229" duration="4809000" />
+      <workItem from="1725302299323" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="Init New Portfolio">
       <option name="closed" value="true" />

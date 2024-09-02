@@ -1,30 +1,7 @@
 "use client";
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
-
-import Marquee from "react-fast-marquee";
-
-import {
-  SiCloudflare,
-  SiCss3,
-  SiFigma,
-  SiFirebase,
-  SiGit,
-  SiHtml5,
-  SiJavascript,
-  SiJest,
-  SiMarkdown,
-  SiMysql,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPrisma,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
-} from "@icons-pack/react-simple-icons";
+import MarqueeStacks from "@/components/main/elements/marquee-stacks";
 
 export default function Experiences() {
   return (
@@ -49,21 +26,7 @@ export default function Experiences() {
           </p>
         </div>
         <div>
-          <div className={"w-[600px]"}>
-            <Marquee
-              pauseOnHover={true}
-              direction={"left"}
-              style={{ width: "100%", maxWidth: "100%", overflow: "" }}
-              autoFill
-            >
-              <div className={"flex gap-4 ml-4"}>
-                <SiHtml5 className="size-10" />
-                <SiCss3 className="size-10" />
-                <SiJavascript className="size-10" />
-                <SiTypescript className="size-10" />
-              </div>
-            </Marquee>
-          </div>
+          <MarqueeStacks />
         </div>
       </div>
     </div>
