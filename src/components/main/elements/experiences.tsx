@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
 import MarqueeStacks from "@/components/main/elements/marquee-stacks";
+import TimeExperience from "@/components/main/elements/timeExperience";
 
 export default function Experiences() {
   return (
@@ -26,6 +27,7 @@ export default function Experiences() {
           </p>
         </div>
         <div>
+          <TimeExperience />
           <MarqueeStacks />
         </div>
       </div>
