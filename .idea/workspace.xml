@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Add Exper">
+    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Add tooltip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" afterDir="false" />
     </list>
@@ -92,7 +93,8 @@
       <workItem from="1725179831568" duration="76000" />
       <workItem from="1725199381492" duration="4788000" />
       <workItem from="1725206709976" duration="4478000" />
-      <workItem from="1725271535328" duration="1238000" />
+      <workItem from="1725271535328" duration="1314000" />
+      <workItem from="1725277442052" duration="2261000" />
     </task>
     <task id="LOCAL-00001" summary="Init New Portfolio">
       <option name="closed" value="true" />
@@ -166,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725224482436</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add tooltip">
+      <option name="closed" value="true" />
+      <created>1725272834260</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725272834260</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +189,7 @@
     <MESSAGE value="Add Nav Bar" />
     <MESSAGE value="Fixing blur" />
     <MESSAGE value="Add Exper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Exper" />
+    <MESSAGE value="Add tooltip" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tooltip" />
   </component>
 </project>

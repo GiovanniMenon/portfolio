@@ -8,13 +8,13 @@ export default function Hero() {
     <div className={"flex flex-col justify-start w-full h-fit"}>
       <Link
         className="animate-shine bg-[length:200%_100%] font-medium bg-[linear-gradient(110deg,#09090B,45%,#27272A,55%,#09090B)]
-        w-fit p-1.5 border rounded "
+        w-fit p-1.5 border rounded  "
         href="#"
       >
         <span className="text-xs">About Me</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10"}>
-        <h1 className={"text-5xl font-black"}>
+        <h1 className={"text-5xl font-black tracking-tighter"}>
           Hello there, I am a student interested in Programming, Virtual Reality
           and CyberSecurity
         </h1>
@@ -35,7 +35,6 @@ export default function Hero() {
           <Button>Download my CV</Button>
           <Button variant={"secondary"}>Contact Me</Button>
         </div>
-        <div>Qui carosello di technolgie</div>
       </div>
     </div>
   );

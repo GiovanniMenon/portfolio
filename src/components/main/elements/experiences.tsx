@@ -13,7 +13,17 @@ export default function Experiences() {
         <BookOpenCheck className={"size-5"} />
         <span className="text-xs">Experiences</span>
       </Link>
-      <div className={"mt-10 flex flex-col gap-10"}></div>
+      <div className={"mt-10 flex flex-col gap-10"}>
+        <div className={"space-y-4"}>
+          <h1 className={"text-4xl font-bold tracking-tight text-primary"}>
+            Experiences
+          </h1>
+          <p className={"text-white text-opacity-80 font-[200] text-xs"}>
+            Explore my educational background and work experiences that have
+            shaped my skills.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

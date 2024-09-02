@@ -1,4 +1,5 @@
-import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
+"use client";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -6,16 +7,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Code,
   Gamepad,
-  Instagram,
-  InstagramIcon,
-  Linkedin,
-  LinkedinIcon,
-  LucideLinkedin,
   MailIcon,
   MapPinIcon,
-  Music,
-  Music2,
-  Music3Icon,
   Music4,
   University,
 } from "lucide-react";
@@ -31,11 +24,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useState } from "react";
 
 function MyBio() {
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
+  const [text, setText] = useState();
   return (
     <Card
       className={
@@ -140,7 +135,7 @@ function MyBio() {
         <div className={"flex gap-x-3"}>
           <TooltipProvider delayDuration={100} skipDelayDuration={1000}>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Link
                   href={githubLink}
                   rel="noopener noreferrer"
@@ -160,7 +155,7 @@ function MyBio() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Link
                   href={linkedinLink}
                   rel="noopener noreferrer"
@@ -180,7 +175,7 @@ function MyBio() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Link
                   href={instagramLink}
                   rel="noopener noreferrer"
@@ -200,23 +195,17 @@ function MyBio() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger>
-                <Link
-                  href={instagramLink}
-                  rel="noopener noreferrer"
-                  target="_blank"
+              <TooltipTrigger asChild>
+                <Button
+                  variant={"secondary"}
+                  className={"rounded-full"}
+                  size={"icon"}
                 >
-                  <Button
-                    variant={"secondary"}
-                    className={"rounded-full"}
-                    size={"icon"}
-                  >
-                    <DiscordLogoIcon className={"size-5"} />
-                  </Button>
-                </Link>
+                  <DiscordLogoIcon className={"size-5"} />
+                </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Discord</p>
+                <p>Discord ID</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
