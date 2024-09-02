@@ -26,10 +26,9 @@ export default function Experiences() {
             shaped my skills.
           </p>
         </div>
-        <div>
-          <TimeExperience />
-          <MarqueeStacks />
-        </div>
+
+        <TimeExperience />
+        <MarqueeStacks />
       </div>
     </div>
   );
