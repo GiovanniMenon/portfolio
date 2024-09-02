@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Add tooltip">
+    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Adjust hero,experiences">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myBio/myBio.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,8 @@
       <workItem from="1725199381492" duration="4788000" />
       <workItem from="1725206709976" duration="4478000" />
       <workItem from="1725271535328" duration="1314000" />
-      <workItem from="1725277442052" duration="2261000" />
+      <workItem from="1725277442052" duration="2357000" />
+      <workItem from="1725292548229" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="Init New Portfolio">
       <option name="closed" value="true" />
@@ -176,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725272834260</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adjust hero,experiences">
+      <option name="closed" value="true" />
+      <created>1725279791332</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725279791332</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +198,7 @@
     <MESSAGE value="Fixing blur" />
     <MESSAGE value="Add Exper" />
     <MESSAGE value="Add tooltip" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tooltip" />
+    <MESSAGE value="Adjust hero,experiences" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust hero,experiences" />
   </component>
 </project>
