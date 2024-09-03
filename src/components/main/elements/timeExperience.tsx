@@ -138,8 +138,8 @@ export default function TimeExperience() {
                 of Padua.
               </p>
               <p className={"opacity-70 mt-1"}>
-                For my bachelor’s thesis, I did research on the security of the
-                QUIC protocol against selective traffic manipulation.
+                For my bachelor&apos;s thesis, I did research on the security of
+                the QUIC protocol against selective traffic manipulation.
               </p>
               <div className={"flex gap-2 "}>
                 <Badge variant={"secondary"} className={"font-bold text-sm"}>
@@ -170,7 +170,7 @@ export default function TimeExperience() {
           >
             <div className="flex flex-col gap-2.5">
               <p className={"opacity-70"}>
-                Enrolled in the Master’s Programme in International
+                Enrolled in the Master&apos;s Programme in International
                 Cybersecurity and Cyberintelligence
               </p>
             </div>
