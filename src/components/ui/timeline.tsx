@@ -110,20 +110,17 @@ const TimelineDot = React.forwardRef<HTMLDivElement, TimelineDotProps>(
 );
 TimelineDot.displayName = "TimelineDot";
 
-const timelineContentVariants = cva(
-  "row-start-2 row-end-2 pb-8 text-foreground",
-  {
-    variants: {
-      side: {
-        right: "col-start-3 col-end-4 mr-auto text-left",
-        left: "col-start-1 col-end-2 ml-auto text-right",
-      },
-    },
-    defaultVariants: {
-      side: "right",
+const timelineContentVariants = cva("row-start-2 row-end-2 pb-8 text-sm", {
+  variants: {
+    side: {
+      right: "col-start-3 col-end-4 mr-auto text-left",
+      left: "col-start-1 col-end-2 ml-auto text-right",
     },
   },
-);
+  defaultVariants: {
+    side: "right",
+  },
+});
 
 interface TimelineContentProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -171,7 +168,12 @@ const TimelineHeading = React.forwardRef<
   <p
     role="heading"
     aria-level={variant === "primary" ? 2 : 3}
-    className={cn(timelineHeadingVariants({ side, variant }), className)}
+    style={{ fontSize: "0.875rem", opacity: "0.7", fontWeight: "300" }}
+    className={cn(
+      "tracking-thicker text-sm",
+      timelineHeadingVariants({ side, variant }),
+      className,
+    )}
     ref={ref}
     {...props}
   />

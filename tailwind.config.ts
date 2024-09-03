@@ -43,6 +43,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        tiolet: {
+          DEFAULT: "hsl(var(--tiolet))",
+          foreground: "hsl(var(--tiolet-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

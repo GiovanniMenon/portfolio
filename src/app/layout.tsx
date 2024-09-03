@@ -38,9 +38,7 @@ export default function RootLayout({
               <Analytics />
             </main>
 
-            <div className={"hidden lg:block w-full lg:w-fit"}>
-              <MyBio />
-            </div>
+            <div className={"hidden lg:block w-full lg:w-fit"}></div>
           </div>
         </div>
       </body>

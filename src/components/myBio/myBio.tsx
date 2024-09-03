@@ -24,13 +24,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useState } from "react";
 
 function MyBio() {
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
-  const [text, setText] = useState();
   return (
     <Card
       className={
