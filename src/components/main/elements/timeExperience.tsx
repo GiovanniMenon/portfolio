@@ -25,12 +25,12 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"font-bold text-base tracking-tight"}>
+              <p className={"font-bold text-base tracking-tight "}>
                 High School Diploma in Administration, Finance, and Marketing{" "}
                 <span className={"font-normal opacity-70"}>at </span>
                 ITET Einaudi.
               </p>
-              <p className={"opacity-70 mt-1 mt-1"}>
+              <p className={"opacity-70 mt-1"}>
                 Final Evaluation: <span className={"font-bold"}>100/100</span> .
               </p>
               <div className={"flex gap-2 "}>
@@ -172,6 +172,12 @@ export default function TimeExperience() {
               <p className={"opacity-70"}>
                 Enrolled in the Master&apos;s Programme in International
                 Cybersecurity and Cyberintelligence
+              </p>
+              <p className={"opacity-70 text-xs"}>
+                University of <span className={"font-bold"}>Granada</span>,
+                University of <span className={"font-bold"}>Minho</span>,
+                University of <span className={"font-bold"}>Padua</span> and
+                <span className={"font-bold"}> Vilnius</span> University
               </p>
             </div>
           </motion.div>

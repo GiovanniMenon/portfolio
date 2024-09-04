@@ -16,11 +16,11 @@ export default function Hero() {
         <span className="text-xs">Presentation</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10"}>
-        <h1 className={"text-5xl font-black tracking-tighter"}>
+        <h1 className={"text-5xl font-black tracking-tighter text-primary"}>
           Hello there, I am a student interested in Programming, Virtual Reality
           and CyberSecurity
         </h1>
-        <p className={"text-white text-opacity-80 font-[200] "}>
+        <p className={"text-white text-opacity-80 font-light "}>
           I am a 21-year-old Italian student deeply passionate about technology
           and innovation. Currently, I am in my third year pursuing a
           Bachelor&apos;s degree in Computer Science (Department of Mathematics)

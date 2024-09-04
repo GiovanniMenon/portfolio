@@ -31,7 +31,12 @@ import {
 import { motion } from "framer-motion";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { BlocksIcon } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 export default function MarqueeStacks() {
@@ -48,7 +53,7 @@ export default function MarqueeStacks() {
         >
           <Card
             className={
-              "p-3 bg-card/20 border-white border-opacity-5 rounded w-[700px]"
+              "p-3 bg-card/30 border-white border-opacity-5 rounded w-[300px] md:w-[700px]"
             }
           >
             <CardTitle className={"flex flex-row justify-between"}>
@@ -64,7 +69,24 @@ export default function MarqueeStacks() {
                     View All
                   </Button>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent
+                  className={
+                    "w-[90vw] md:max-w-screen-sm max-h-[60vh] md:max-h-screen overflow-auto"
+                  }
+                  aria-describedby={"Experiences Stack"}
+                >
+                  <DialogTitle className={""}>
+                    <div className={"flex justify-start items-center gap-2"}>
+                      <BlocksIcon size={"16"} />
+                      <h1
+                        className={
+                          "text-md font-bold tracking-tight text-primary"
+                        }
+                      >
+                        Stack
+                      </h1>
+                    </div>
+                  </DialogTitle>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
                       <SiHtml5 className="text-4xl text-orange-600" />

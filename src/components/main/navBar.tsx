@@ -24,7 +24,7 @@ export default function NavBar() {
             <p className={""}>Home</p>
           </Button>
         </Link>
-        <Link href={"/"}>
+        <Link href={"#experiences"}>
           <Button
             className={
               "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
@@ -36,7 +36,7 @@ export default function NavBar() {
             <p className={""}>Experiences</p>
           </Button>
         </Link>
-        <Link href={"/"}>
+        <Link href={"#projects"}>
           <Button
             className={
               "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
