@@ -48,7 +48,7 @@ export default function MarqueeStacks() {
         >
           <Card
             className={
-              "p-3 bg-card/20 border-white border-opacity-5 rounded w-[600px]"
+              "p-3 bg-card/20 border-white border-opacity-5 rounded w-[700px]"
             }
           >
             <CardTitle className={"flex flex-row justify-between"}>
@@ -64,54 +64,169 @@ export default function MarqueeStacks() {
                     View All
                   </Button>
                 </DialogTrigger>
-                <DialogContent></DialogContent>
+                <DialogContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiHtml5 className="text-4xl text-orange-600" />
+                      <span className={"opacity-80"}>HTML5</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiCss3 className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>CSS3</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiJavascript className="text-4xl text-yellow-500" />
+                      <span className={"opacity-80"}>JavaScript</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiTypescript className="text-4xl text-blue-500" />
+                      <span className={"opacity-80"}>TypeScript</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiGithub className="text-4xl text-gray-300" />
+                      <span className={"opacity-80"}>GitHub</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiOpenai className="text-4xl text-white" />
+                      <span className={"opacity-80"}>OpenAI</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiGo className="text-4xl text-blue-400" />
+                      <span className={"opacity-80"}>Go</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiPython className="text-4xl text-yellow-400" />
+                      <span className={"opacity-80"}>Python</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiC className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>C</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiCplusplus className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>C++</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiJira className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>Jira</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiMinio className="text-4xl text-red-500" />
+                      <span className={"opacity-80"}>MinIO</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiAmazons3 className="text-4xl text-orange-600" />
+                      <span className={"opacity-80"}>Amazon S3</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiOllama className="text-4xl text-white" />
+                      <span className={"opacity-80"}>Ollama</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiFlask className="text-4xl text-white" />
+                      <span className={"opacity-80"}>Flask</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiLangchain className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>LangChain</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiRedis className="text-4xl text-red-500" />
+                      <span className={"opacity-80"}>Redis</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiMysql className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>MySQL</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiGit className="text-4xl text-orange-600" />
+                      <span className={"opacity-80"}>Git</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiTailwindcss className="text-4xl text-blue-400" />
+                      <span className={"opacity-80"}>Tailwind CSS</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiReact className="text-4xl text-blue-500" />
+                      <span className={"opacity-80"}>React</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiNextdotjs className="text-4xl text-white" />
+                      <span className={"opacity-80"}>Next.js</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiFlutter className="text-4xl text-blue-400" />
+                      <span className={"opacity-80"}>Flutter</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiDart className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>Dart</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiPostgresql className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>PostgreSQL</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiWireshark className="text-4xl text-blue-600" />
+                      <span className={"opacity-80"}>Wireshark</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiVirtualbox className="text-4xl text-gray-300" />
+                      <span className={"opacity-80"}>VirtualBox</span>
+                    </div>
+                  </div>
+                </DialogContent>
               </Dialog>
             </CardTitle>
-            <CardContent className={"p-0 mt-8 flex flex-col gap-5"}>
+            <CardContent className={"px-0 py-3 mt-8 flex flex-col gap-5"}>
               <Marquee
                 pauseOnHover={true}
                 direction={"left"}
-                style={{ width: "100%", maxWidth: "100%", overflow: "" }}
-                speed={40}
+                style={{
+                  width: "100%",
+                  maxWidth: "100%",
+                  overflow: "",
+                }}
+                speed={35}
                 autoFill
               >
-                <div className={"flex gap-4 ml-4"}>
-                  <SiHtml5 className="size-10" />
-                  <SiCss3 className="size-10" />
-                  <SiJavascript className="size-10" />
-                  <SiTypescript className="size-10" />
-                  <SiGo className="size-10" />
-                  <SiC className="size-10" />
-                  <SiCplusplus className="size-10" />
-                  <SiDart className="size-10" />
-                  <SiPython className="size-10" />
+                <div className={"flex space-x-5 ml-4.5 px-2 py-1"}>
+                  <SiHtml5 className="size-9" />
+                  <SiCss3 className="size-9" />
+                  <SiJavascript className="size-9" />
+                  <SiTypescript className="size-9" />
+                  <SiGo className=" size-9 " />
+                  <SiC className="size-9" />
+                  <SiCplusplus className="size-9" />
+                  <SiDart className="size-9" />
+                  <SiPython className="size-9" />
                 </div>
               </Marquee>
               <Marquee
                 pauseOnHover={true}
                 direction={"right"}
                 style={{ width: "100%", maxWidth: "100%", overflow: "" }}
-                speed={40}
+                speed={35}
               >
-                <div className={"flex gap-4 ml-4"}>
-                  <SiFlask className="size-10" />
-                  <SiMysql className="size-10" />
-                  <SiPostgresql className="size-10" />
-                  <SiRedis className="size-10" />
-                  <SiGithub className="size-10" />
-                  <SiGit className="size-10" />
-                  <SiJira className="size-10" />
-                  <SiAmazons3 className="size-10" />
-                  <SiMinio className="size-10" />
-                  <SiOpenai className="size-10" />
-                  <SiOllama className="size-10" />
-                  <SiLangchain className="size-10" />
-                  <SiWireshark className="size-10" />
-                  <SiVirtualbox className="size-10" />
-                  <SiTailwindcss className="size-10" />
-                  <SiReact className="size-10" />
-                  <SiNextdotjs className="size-10" />
-                  <SiFlutter className="size-10" />
+                <div className={"flex space-x-5 ml-4.5 px-2 py-1"}>
+                  <SiFlask className="size-9" />
+                  <SiMysql className="size-9" />
+                  <SiPostgresql className="size-9" />
+                  <SiRedis className="size-9" />
+                  <SiGithub className="size-9" />
+                  <SiGit className="size-9" />
+                  <SiJira className="size-9" />
+                  <SiAmazons3 className="size-9" />
+                  <SiMinio className="size-9" />
+                  <SiOpenai className="size-9" />
+                  <SiOllama className="size-9" />
+                  <SiLangchain className="size-9" />
+                  <SiWireshark className="size-9" />
+                  <SiVirtualbox className="size-9" />
+                  <SiTailwindcss className="size-9" />
+                  <SiReact className="size-9" />
+                  <SiNextdotjs className="size-9" />
+                  <SiFlutter className="size-9" />
                 </div>
               </Marquee>
             </CardContent>
