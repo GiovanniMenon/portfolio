@@ -7,7 +7,7 @@ export default function NavBar() {
   return (
     <header
       className={
-        "sticky top-5 px-3 md:border w-full z-50 md:rounded flex items-center rounded-none justify-between p-2 overflow-hidden bg-card/30" +
+        "sticky top-5 px-3 md:border w-fit z-50 md:rounded flex items-center rounded-none justify-center p-2 overflow-hidden bg-card/30" +
         "backdrop-filter backdrop-blur-xl border-white border-opacity-5 "
       }
     >
