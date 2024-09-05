@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import MyBio from "@/components/myBio/myBio";
 import NavBar from "@/components/main/navBar";
 import Footer from "@/components/main/footer";
-import { Separator } from "@/components/ui/separator";
 
+import Shapes from "@/components/shapes";
 const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -38,14 +38,15 @@ export default function RootLayout({
             <div>
               <MyBio />
             </div>
-            <main
-              className={"w-full  flex flex-col items-center justify-start"}
-            >
+            <main className={"w-full flex flex-col items-center justify-start"}>
               <NavBar />
               {children}
               <Analytics />
               <Footer />
             </main>
+            <div className={"hidden lg:block w-fit "}>
+              <Shapes />
+            </div>
           </div>
         </div>
       </body>

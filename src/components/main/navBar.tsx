@@ -7,15 +7,15 @@ export default function NavBar() {
   return (
     <header
       className={
-        "sticky top-5 px-3 md:border w-full z-50 md:rounded flex items-center rounded-none justify-center p-2 overflow-hidden " +
-        "backdrop-filter backdrop-blur-2xl border-white border-opacity-5 "
+        "sticky top-5 px-3 md:border w-full z-50 md:rounded flex items-center rounded justify-start p-2 overflow-hidden " +
+        "backdrop-filter backdrop-blur-xl border-white border-opacity-5 "
       }
     >
       <div className="flex items-center justify-center gap-2">
         <Link href={"/"}>
           <Button
             className={
-              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet text-tiolet-foreground font-bold tracking-wide "
+              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-bold tracking-wide "
             }
             size={"sm"}
             variant={"outlineBorderNo"}

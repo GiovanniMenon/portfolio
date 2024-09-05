@@ -4,6 +4,7 @@ import { ChartBarIcon } from "lucide-react";
 import MarqueeStacks from "@/components/main/elements/marquee-stacks";
 import TimeExperience from "@/components/main/elements/timeExperience";
 import { motion } from "framer-motion";
+import React from "react";
 export default function Experiences() {
   return (
     <div className={"flex flex-col justify-start w-full h-fit"}>
@@ -25,7 +26,6 @@ export default function Experiences() {
             shaped my skills.
           </p>
         </div>
-
         <TimeExperience />
         <MarqueeStacks />
       </div>
