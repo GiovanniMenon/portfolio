@@ -44,10 +44,10 @@ export default function MarqueeStacks() {
     <div className={"flex justify-center items-center w-full overflow-hidden"}>
       <div className={""}>
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
           }}
           className={"flex flex-col gap-5"}
         >

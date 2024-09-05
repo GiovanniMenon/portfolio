@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-  Code,
+  BracesIcon,
   Gamepad,
   MailIcon,
   MapPinIcon,
@@ -123,7 +123,7 @@ function MyBio() {
               "flex p-0 text-sm justify-center items-center gap-2 rounded"
             }
           >
-            <Code className={"size-5 "} />
+            <BracesIcon className={"size-5 "} />
             <p>See all projects</p>
           </Button>
         </div>

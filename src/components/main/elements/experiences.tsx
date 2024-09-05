@@ -16,14 +16,7 @@ export default function Experiences() {
         <span className="text-xs">Experiences</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10 relative"}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.5,
-          }}
-          className={"space-y-2"}
-        >
+        <div className={"space-y-2"}>
           <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
             Experiences
           </h1>
@@ -31,7 +24,7 @@ export default function Experiences() {
             Explore my educational background and work experiences that have
             shaped my skills.
           </p>
-        </motion.div>
+        </div>
 
         <TimeExperience />
         <MarqueeStacks />

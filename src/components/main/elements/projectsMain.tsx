@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Code } from "lucide-react";
+import { BracesIcon } from "lucide-react";
 
 import { motion } from "framer-motion";
 import ProjectsList from "@/config/project";
@@ -16,18 +16,11 @@ export default function ProjectsMain() {
         w-fit p-1.5 border rounded flex space-x-2.5 items-center justify-center"
         href="#projects"
       >
-        <Code className={"size-5"} />
+        <BracesIcon className={"size-5"} />
         <span className="text-xs">Projects</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10 relative"}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.5,
-          }}
-          className={"space-y-2"}
-        >
+        <div className={"space-y-2"}>
           <div className={"flex justify-between"}>
             <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
               Projects
@@ -37,7 +30,7 @@ export default function ProjectsMain() {
               variant={"secondary"}
               size={"sm"}
             >
-              <Code className={"size-5"} />
+              <BracesIcon className={"size-4"} />
               Explore all
             </Button>
           </div>
@@ -45,8 +38,7 @@ export default function ProjectsMain() {
           <p className={"text-white text-opacity-80 font-[200] text-xs"}>
             Here is a selection of my best projects.
           </p>
-        </motion.div>
-
+        </div>
         <div className={"flex flex-col justify-start w-full h-fit gap-y-1.5"}>
           {ProjectsList.slice(0, 3).map((project, index) => (
             <Project key={index} {...project} />

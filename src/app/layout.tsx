@@ -5,6 +5,8 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import MyBio from "@/components/myBio/myBio";
 import NavBar from "@/components/main/navBar";
+import Footer from "@/components/main/footer";
+import { Separator } from "@/components/ui/separator";
 
 const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
@@ -36,6 +38,7 @@ export default function RootLayout({
               <NavBar />
               {children}
               <Analytics />
+              <Footer />
             </main>
 
             <div className={"hidden lg:block w-full lg:w-fit"}>
