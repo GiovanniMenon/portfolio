@@ -16,7 +16,7 @@ export default function ProjectsMain() {
         w-fit p-1.5 border rounded flex space-x-2.5 items-center justify-center"
         href="#projects"
       >
-        <BracesIcon className={"size-5"} />
+        <BracesIcon className={"size-4 text-tiolet"} />
         <span className="text-xs">Projects</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10 relative"}>
@@ -26,11 +26,11 @@ export default function ProjectsMain() {
               Projects
             </h1>
             <Button
-              className={"flex justify-center items-center gap-1.5"}
+              className={"flex justify-center items-center gap-1.5 "}
               variant={"secondary"}
               size={"sm"}
             >
-              <BracesIcon className={"size-4"} />
+              <BracesIcon className={"size-4 "} />
               Explore all
             </Button>
           </div>

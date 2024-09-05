@@ -196,7 +196,7 @@ function MyBio() {
               <TooltipTrigger asChild>
                 <Button
                   variant={"secondary"}
-                  className={"rounded-full"}
+                  className={"rounded-full "}
                   size={"icon"}
                 >
                   <DiscordLogoIcon className={"size-5"} />

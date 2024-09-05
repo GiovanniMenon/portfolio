@@ -70,8 +70,8 @@ const timelineDotVariants = cva(
       status: {
         default: "[&>*]:hidden",
         current:
-          "[&>*:not(.lucide-circle)]:hidden [&>.lucide-circle]:fill-current [&>.lucide-circle]:text-current",
-        done: "bg-primary [&>*:not(.lucide-check)]:hidden [&>.lucide-check]:text-background",
+          "[&>*:not(.lucide-circle)]:hidden [&>.lucide-circle]:fill-tiolet [&>.lucide-circle]:text-tiolet",
+        done: "bg-tiolet [&>*:not(.lucide-check)]:hidden [&>.lucide-check]:text-tiolet",
         error:
           "border-destructive bg-destructive [&>*:not(.lucide-x)]:hidden [&>.lucide-x]:text-background",
         custom: "[&>*:not(:nth-child(4))]:hidden [&>*:nth-child(4)]:block",
@@ -94,14 +94,14 @@ const TimelineDot = React.forwardRef<HTMLDivElement, TimelineDotProps>(
     <div
       role="status"
       className={cn(
-        "timeline-dot ",
+        "timeline-dot text-tiolet",
         timelineDotVariants({ status }),
         className,
       )}
       ref={ref}
       {...props}
     >
-      <Circle className="size-2.5" />
+      <Circle className="size-2.5 " />
       <Check className="size-3 " />
       <X className="size-3" />
       {customIcon}
@@ -192,7 +192,7 @@ const TimelineLine = React.forwardRef<HTMLHRElement, TimelineLineProps>(
         aria-orientation="vertical"
         className={cn(
           "col-start-2 col-end-3 row-start-2 row-end-2 mx-auto flex h-full min-h-16 w-0.5 justify-center rounded-full opacity-75",
-          done ? "bg-primary" : "bg-border",
+          done ? "bg-tiolet" : "bg-border",
           className,
         )}
         ref={ref}

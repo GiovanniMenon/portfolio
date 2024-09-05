@@ -56,9 +56,13 @@ export default function MarqueeStacks() {
               "p-3 bg-card/30 border-white border-opacity-5 rounded w-[300px] md:w-[700px]"
             }
           >
-            <CardTitle className={"flex flex-row justify-between"}>
-              <div className={"flex justify-between items-center gap-2"}>
-                <BlocksIcon size={"16"} />
+            <CardTitle className={"flex flex-row justify-between "}>
+              <div
+                className={
+                  "flex justify-between items-center gap-2 text-tiolet"
+                }
+              >
+                <BlocksIcon size={"16 "} />
                 <h1 className={"text-md font-bold tracking-tight text-primary"}>
                   Stack
                 </h1>

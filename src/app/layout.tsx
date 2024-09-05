@@ -30,20 +30,22 @@ export default function RootLayout({
             "max-w-[1500px] flex item-start justify-center mx-auto min-h-screen"
           }
         >
-          <div className={"gap-4 flex flex-col md:flex-row md:mt-5 w-full"}>
+          <div
+            className={
+              "gap-4 flex flex-col md:flex-row md:mt-5 w-full relative"
+            }
+          >
             <div>
               <MyBio />
             </div>
-            <main className={"w-full flex flex-col items-center justify-start"}>
+            <main
+              className={"w-full  flex flex-col items-center justify-start"}
+            >
               <NavBar />
               {children}
               <Analytics />
               <Footer />
             </main>
-
-            <div className={"hidden lg:block w-full lg:w-fit"}>
-              <MyBio />
-            </div>
           </div>
         </div>
       </body>

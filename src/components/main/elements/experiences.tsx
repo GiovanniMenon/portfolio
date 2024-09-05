@@ -12,7 +12,7 @@ export default function Experiences() {
         w-fit p-1.5 border rounded flex space-x-2.5 items-center justify-center"
         href="#experiences"
       >
-        <ChartBarIcon className={"size-5"} />
+        <ChartBarIcon className={"size-5 text-tiolet"} />
         <span className="text-xs">Experiences</span>
       </Link>
       <div className={"mt-10 flex flex-col gap-10 relative"}>
