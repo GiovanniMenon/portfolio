@@ -17,9 +17,7 @@ export default function Project(Project: ProjectInterface) {
         }
       >
         <CardContent className={"p-0 w-full flex relative"}>
-          <div
-            className={"min-w-[40%] h-[150px] bg-secondary min-h-full rounded"}
-          >
+          <div className={"w-3/5 h-[150px] bg-secondary min-h-full rounded"}>
             {Project.imgPath}
           </div>
           <div
