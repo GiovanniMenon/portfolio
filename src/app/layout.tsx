@@ -21,9 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={"dark"}>
+    <html className="scroll-smooth dark" lang="en">
       <body
         className={`bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${roboto.className}`}
+        id={"home"}
       >
         <div
           className={

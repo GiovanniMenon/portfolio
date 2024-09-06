@@ -9,9 +9,8 @@ export function Main() {
   return (
     <main
       className={
-        "w-full flex-col flex justify-center items-center p-4 gap-14 mb-8"
+        "w-full flex-col flex justify-center items-center p-4 gap-20 mb-8"
       }
-      id={"home"}
     >
       <Hero />
       <Separator className={"h-[2px] rounded opacity-75"} id={"experiences"} />

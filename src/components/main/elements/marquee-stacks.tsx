@@ -27,6 +27,7 @@ import {
   SiPostgresql,
   SiWireshark,
   SiVirtualbox,
+  SiSupabase,
 } from "@icons-pack/react-simple-icons";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
@@ -178,6 +179,10 @@ export default function MarqueeStacks() {
                       <span className={"opacity-80"}>Redis</span>
                     </div>
                     <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
+                      <SiSupabase className="text-4xl text-green-600" />
+                      <span className={"opacity-80"}>Supabase</span>
+                    </div>
+                    <div className="flex items-center space-x-2 py-0.5 text-xs tracking-tight">
                       <SiMysql className="text-4xl text-blue-600" />
                       <span className={"opacity-80"}>MySQL</span>
                     </div>
@@ -256,6 +261,7 @@ export default function MarqueeStacks() {
                   <SiMysql className="size-9" />
                   <SiPostgresql className="size-9" />
                   <SiRedis className="size-9" />
+                  <SiSupabase className="size-9" />
                   <SiGithub className="size-9" />
                   <SiGit className="size-9" />
                   <SiJira className="size-9" />

@@ -1,9 +1,49 @@
+"use client";
 import Link from "next/link";
-import { MailsIcon } from "lucide-react";
+import { ArrowRightIcon, MailsIcon } from "lucide-react";
 
 import React from "react";
-
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+const FormSchema = z.object({
+  email: z
+    .string()
+    .min(10, {
+      message: "Bio must be at least 10 characters.",
+    })
+    .max(160, {
+      message: "Bio must not be longer than 30 characters.",
+    }),
+  message: z
+    .string()
+    .min(10, {
+      message: "Bio must be at least 10 characters.",
+    })
+    .max(160, {
+      message: "Bio must not be longer than 30 characters.",
+    }),
+});
 export default function ContactMe() {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+  });
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    alert("");
+  }
+
   return (
     <div className={"flex flex-col justify-start w-full h-fit"}>
       <Link
@@ -20,10 +60,59 @@ export default function ContactMe() {
             Contact Me
           </h1>
           <p className={"text-white text-opacity-80 font-[200] text-xs"}>
-            Explore my educational background and work experiences that have
-            shaped my skills.
+            Please contact me directly at{" "}
+            <span className={"font-bold"}>giovanni.menon.dev@gmail.com</span> or
+            through this form.
           </p>
         </div>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className={"w-full flex flex-col gap-2"}
+          >
+            <FormField
+              render={() => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder={"Your Email"}
+                      type={"email"}
+                      className={"bg-card/30 m-0"}
+                    ></Input>
+                  </FormControl>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+              )}
+              name={"email"}
+              control={form.control}
+            />
+            <FormField
+              render={() => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      className={"resize-none bg-card/30 m-0 min-h-[150px]"}
+                      placeholder={"Your Message"}
+                    />
+                  </FormControl>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+              )}
+              name={"message"}
+              control={form.control}
+            />
+
+            <Button
+              type="submit"
+              className={"flex justify-center items-center gap-2"}
+            >
+              Submit
+              <ArrowRightIcon className={"size-4"} />
+            </Button>
+          </form>
+        </Form>
       </div>
     </div>
   );

@@ -74,12 +74,17 @@ export default function Hero() {
               </Button>
             </Link>
 
-            <Link className="" href="#contact">
+            <Link
+              className=""
+              href="/cv.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <Button
                 className={"flex flex-row gap-2 items-center justify-center"}
                 variant={"secondary"}
               >
-                Contact Me
+                Download my Cv
                 <DownloadIcon className={"size-4 "} />
               </Button>
             </Link>
