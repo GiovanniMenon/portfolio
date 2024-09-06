@@ -1,14 +1,32 @@
+"use client";
 import ProjectInterface from "@/interfaces/project";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 export default function Project(Project: ProjectInterface) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1", "1.33 0"],
+  });
+
+  // Scala da 0.8 a 1 mentre entra, rimane 1, e poi torna a 0 quando esce
+  const scaleProgress = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.85, 1],
+    [0.8, 1, 1, 0.8],
+  );
+
+  // L'opacità passa da 0 a 1 mentre entra, rimane 1, e poi torna a 0 mentre esce
+  const opacityProgress = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.85, 1],
+    [0, 1, 1, 0],
+  );
   return (
     <motion.div
-      initial={{ scale: 0.85, opacity: 0.9 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{
-        duration: 0.3,
-      }}
+      ref={ref}
+      style={{ scale: scaleProgress, opacity: opacityProgress }}
     >
       <Card
         className={

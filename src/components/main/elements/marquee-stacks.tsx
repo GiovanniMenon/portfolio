@@ -28,7 +28,7 @@ import {
   SiWireshark,
   SiVirtualbox,
 } from "@icons-pack/react-simple-icons";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { BlocksIcon } from "lucide-react";
 import {
@@ -38,18 +38,35 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useRef } from "react";
 
 export default function MarqueeStacks() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1", "1.33 0"],
+  });
+
+  // Scala da 0.8 a 1 mentre entra, rimane 1, e poi torna a 0 quando esce
+  const scaleProgress = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.8, 1],
+    [0.8, 1, 1, 0.8],
+  );
+
+  // L'opacità passa da 0 a 1 mentre entra, rimane 1, e poi torna a 0 mentre esce
+  const opacityProgress = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.9, 1],
+    [0, 1, 1, 0],
+  );
+
   return (
     <div className={"flex justify-center items-center w-full overflow-hidden"}>
       <div className={""}>
         <motion.div
-          initial={{ scale: 0.8 }}
-          whileInView={{ scale: 1 }}
-          transition={{
-            duration: 0.3,
-          }}
-          className={"flex flex-col gap-5"}
+          ref={ref}
+          style={{ scale: scaleProgress, opacity: opacityProgress }}
         >
           <Card
             className={

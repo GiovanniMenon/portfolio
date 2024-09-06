@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   BracesIcon,
+  CopyIcon,
   Gamepad,
   MailIcon,
   MapPinIcon,
@@ -24,8 +25,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useState } from "react";
 
 function MyBio() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 4000);
+  };
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
@@ -117,15 +125,17 @@ function MyBio() {
               <p>53 Hours Playing</p>
             </div>
           </div>
-          <Button
-            variant={"default"}
-            className={
-              "flex p-0 text-sm justify-center items-center gap-2 rounded"
-            }
-          >
-            <BracesIcon className={"size-5 "} />
-            <p>See all projects</p>
-          </Button>
+          <Link href={"#projects"} className={""}>
+            <Button
+              variant={"default"}
+              className={
+                "flex p-0 text-sm justify-center items-center gap-2 rounded w-full"
+              }
+            >
+              <BracesIcon className={"size-5 "} />
+              <p>See all projects</p>
+            </Button>
+          </Link>
         </div>
       </CardContent>
       <Separator className={"h-[2px] rounded opacity-75"} />
@@ -193,17 +203,39 @@ function MyBio() {
               </TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger asChild>
+              <TooltipTrigger
+                onClick={(event) => {
+                  event.preventDefault();
+                }}
+                asChild
+              >
                 <Button
                   variant={"secondary"}
                   className={"rounded-full "}
                   size={"icon"}
+                  onClick={handleCopy}
                 >
                   <DiscordLogoIcon className={"size-5"} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Discord ID</p>
+              <TooltipContent
+                onPointerDownOutside={(event) => {
+                  event.preventDefault();
+                }}
+              >
+                <span className={"transition-all"}>
+                  {!copied ? (
+                    <div
+                      className={
+                        "flex flex-row items-center justify-center gap-2"
+                      }
+                    >
+                      menny9762 <CopyIcon className={"size-3"} />
+                    </div>
+                  ) : (
+                    "Copied !!"
+                  )}
+                </span>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

@@ -1,8 +1,15 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { DoorClosedIcon } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowRightIcon,
+  DoorClosedIcon,
+  PenIcon,
+  DownloadIcon,
+} from "lucide-react";
 import { motion } from "framer-motion";
+
 export default function Hero() {
   // @ts-ignore
   return (
@@ -58,8 +65,24 @@ export default function Hero() {
           }}
         >
           <div className={"flex flex-row space-x-2"}>
-            <Button>Download my CV</Button>
-            <Button variant={"secondary"}>Contact Me</Button>
+            <Link className="" href="#contact">
+              <Button
+                className={"flex flex-row gap-2 items-center justify-center"}
+              >
+                Contact Me
+                <ArrowRight className={"size-4 "} />
+              </Button>
+            </Link>
+
+            <Link className="" href="#contact">
+              <Button
+                className={"flex flex-row gap-2 items-center justify-center"}
+                variant={"secondary"}
+              >
+                Contact Me
+                <DownloadIcon className={"size-4 "} />
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

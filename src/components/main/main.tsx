@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Experiences from "@/components/main/elements/experiences";
 import ProjectsMain from "@/components/main/elements/projectsMain";
 import React from "react";
+import ContactMe from "@/components/main/elements/contactMe";
 
 export function Main() {
   return (
@@ -17,6 +18,8 @@ export function Main() {
       <Experiences />
       <Separator className={"h-[2px] rounded opacity-75"} id={"projects"} />
       <ProjectsMain />
+      <Separator className={"h-[2px] rounded opacity-75 "} id={"contact"} />
+      <ContactMe />
       <Separator className={"h-[2px] rounded opacity-75 "} />
     </main>
   );
