@@ -1,8 +1,10 @@
 "use client";
 import ProjectInterface from "@/interfaces/project";
-import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
+
 export default function Project(Project: ProjectInterface) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -10,14 +12,12 @@ export default function Project(Project: ProjectInterface) {
     offset: ["0 1", "1 1", "1.33 0"],
   });
 
-  // Scala da 0.8 a 1 mentre entra, rimane 1, e poi torna a 0 quando esce
   const scaleProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 0.85, 1],
     [0.8, 1, 1, 0.8],
   );
 
-  // L'opacità passa da 0 a 1 mentre entra, rimane 1, e poi torna a 0 mentre esce
   const opacityProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 0.85, 1],
@@ -31,18 +31,28 @@ export default function Project(Project: ProjectInterface) {
       <Card
         className={
           "bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/80 hover:cursor-pointer " +
-          "transition-all ease-linear"
+          "transition-all ease-linear md:h-[250px] "
         }
       >
-        <CardContent className={"p-0 w-full flex relative"}>
-          <div className={"w-3/5 h-[150px] bg-secondary min-h-full rounded"}>
-            {Project.imgPath}
-          </div>
-          <div
+        <CardContent className={"p-0 w-full h-full flex flex-row"}>
+          <Image
+            src={"/arcaneOracle.jpg"}
+            alt={"logo ARCANE oraclae"}
+            width={1200}
+            height={800}
             className={
-              "flex flex-col items-start justify-start pl-2 pr-1 w-full"
+              "w-full md:h-full rounded object-cover md:w-[380px] h-[330px]"
             }
-          >
+            style={{
+              color: "transparent",
+              objectFit: "cover",
+              width: "380px",
+            }}
+            loading={"lazy"}
+            decoding={"async"}
+          />
+
+          <div className={"flex flex-col items-start justify-start pl-2 pr-1"}>
             <div className={"flex justify-between w-full items-center"}>
               <h1
                 className={
