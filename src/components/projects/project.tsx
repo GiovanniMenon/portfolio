@@ -5,7 +5,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-export default function Project(Project: ProjectInterface) {
+export default function Project({
+  isGridView,
+  project,
+}: {
+  isGridView: boolean;
+  project: ProjectInterface;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -15,13 +21,13 @@ export default function Project(Project: ProjectInterface) {
   const scaleProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 0.85, 1],
-    [0.8, 1, 1, 0.8],
+    isGridView ? [1, 1, 1, 1] : [0.8, 1, 1, 0.8],
   );
 
   const opacityProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 0.85, 1],
-    [0, 1, 1, 0],
+    isGridView ? [1, 1, 1, 1] : [0, 1, 1, 0],
   );
   return (
     <motion.div
@@ -30,44 +36,45 @@ export default function Project(Project: ProjectInterface) {
     >
       <Card
         className={
-          "bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/80 hover:cursor-pointer " +
-          "transition-all ease-linear md:h-[250px] "
+          `bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/90 hover:cursor-pointer ` +
+          `transition-all ease-linear  ${isGridView ? "md:h-full" : "md:h-full"} `
         }
       >
-        <CardContent className={"p-0 w-full h-full flex flex-row"}>
+        <CardContent
+          className={`p-0 w-full h-full flex ${isGridView ? "flex-col gap-y-3.5" : "flex-row"}`}
+        >
           <Image
             src={"/arcaneOracle.jpg"}
             alt={"logo ARCANE oraclae"}
             width={1200}
             height={800}
-            className={
-              "w-full md:h-full rounded object-cover md:w-[380px] h-[330px]"
-            }
+            className={`w-full h-[330px] rounded object-cover ${isGridView ? "" : "md:[380px] md:h-full"} `}
             style={{
               color: "transparent",
               objectFit: "cover",
-              width: "380px",
             }}
             loading={"lazy"}
             decoding={"async"}
           />
 
-          <div className={"flex flex-col items-start justify-start pl-2 pr-1"}>
-            <div className={"flex justify-between w-full items-center"}>
+          <div
+            className={`flex flex-col items-start justify-start  ${isGridView ? "p-2.5" : "pl-2 pr-1"} w-full gap-1.5`}
+          >
+            <div className={"flex justify-between items-center w-full"}>
               <h1
                 className={
-                  "text-2xl tracking-tight font-black group-hover:text-tiolet transition-all ease-linear "
+                  "text-3xl tracking-tight font-black group-hover:text-tiolet/90 transition-all ease-linear "
                 }
               >
-                {Project.title}
+                {project.title}
               </h1>
               <p className={"text-white text-opacity-80 font-bold text-xs"}>
-                {Project.year}
+                {project.year}
               </p>
             </div>
 
             <p className={"text-white text-opacity-80 font-light text-sm"}>
-              {Project.description}
+              {project.description}
             </p>
           </div>
         </CardContent>

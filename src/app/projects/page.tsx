@@ -32,7 +32,7 @@ export default function Home() {
             <span className={"font-bold tracking-wide"}>Filter </span>
           </Button>
 
-          <div className={"flex justify-between items-center "}>
+          <div className={"md:flex justify-between items-center hidden  "}>
             <Button
               variant={!isGridView ? "secondary" : "ghostNoHover"}
               size={"sm"}
@@ -57,7 +57,7 @@ export default function Home() {
         className={`gap-2 ${isGridView ? "grid grid-cols-1 md:grid-cols-2" : "flex flex-col"}`}
       >
         {ProjectsList.slice(0, 3).map((project, index) => (
-          <Project key={index} {...project} />
+          <Project key={index} project={project} isGridView={isGridView} />
         ))}
       </div>
     </main>

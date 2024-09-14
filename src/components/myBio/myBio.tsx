@@ -125,7 +125,7 @@ function MyBio() {
               <p>53 Hours Playing</p>
             </div>
           </div>
-          <Link href={"#projects"} className={""}>
+          <Link href={"/projects#home"}>
             <Button
               variant={"default"}
               className={

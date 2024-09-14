@@ -25,14 +25,16 @@ export default function ProjectsMain() {
             <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
               Projects
             </h1>
-            <Button
-              className={"flex justify-center items-center gap-1.5 "}
-              variant={"secondary"}
-              size={"sm"}
-            >
-              <BracesIcon className={"size-4 "} />
-              Explore all
-            </Button>
+            <Link href={"/projects#home"}>
+              <Button
+                className={"flex justify-center items-center gap-1.5 "}
+                variant={"secondary"}
+                size={"sm"}
+              >
+                <BracesIcon className={"size-4 "} />
+                Explore all
+              </Button>
+            </Link>
           </div>
 
           <p className={"text-white text-opacity-80 font-[200] text-xs"}>
@@ -41,7 +43,7 @@ export default function ProjectsMain() {
         </div>
         <div className={"flex flex-col justify-start w-full h-fit gap-y-1.5"}>
           {ProjectsList.slice(0, 3).map((project, index) => (
-            <Project key={index} {...project} />
+            <Project key={index} project={project} isGridView={false} />
           ))}
         </div>
       </div>
