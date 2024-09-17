@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
-import { HomeIcon } from "@radix-ui/react-icons";
 import { BookOpenCheck, BracesIcon, Code, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { usePathname } from "next/navigation";
 export default function NavBar() {
+  const pathname = usePathname();
   return (
     <header
       className={
@@ -24,30 +25,34 @@ export default function NavBar() {
             <p className={""}>Home</p>
           </Button>
         </Link>
-        <Link href={"/#experiences"}>
-          <Button
-            className={
-              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
-            }
-            size={"sm"}
-            variant={"outlineBorderNo"}
-          >
-            <BookOpenCheck className={"size-5"} />
-            <p className={""}>Experiences</p>
-          </Button>
-        </Link>
-        <Link href={"/#projects"}>
-          <Button
-            className={
-              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
-            }
-            size={"sm"}
-            variant={"outlineBorderNo"}
-          >
-            <BracesIcon className={"size-[14px]"} />
-            <p className={""}>Projects</p>
-          </Button>
-        </Link>
+        {pathname !== "/projects" && (
+          <Link href={"/#experiences"}>
+            <Button
+              className={
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
+              }
+              size={"sm"}
+              variant={"outlineBorderNo"}
+            >
+              <BookOpenCheck className={"size-5"} />
+              <p className={""}>Experiences</p>
+            </Button>
+          </Link>
+        )}
+        {pathname !== "/projects" && (
+          <Link href={"/#projects"}>
+            <Button
+              className={
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
+              }
+              size={"sm"}
+              variant={"outlineBorderNo"}
+            >
+              <BracesIcon className={"size-[14px]"} />
+              <p className={""}>Projects</p>
+            </Button>
+          </Link>
+        )}
       </div>
     </header>
   );

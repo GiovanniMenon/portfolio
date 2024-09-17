@@ -8,6 +8,7 @@ const ProjectsList: ProjectInterface[] = [
     description: "Internship as researcher at the University of Padua.",
     year: "2021",
     imgPath: "",
+    tag: ["Go"],
   },
   {
     title: "Knowledge Managment AI",
@@ -16,6 +17,7 @@ const ProjectsList: ProjectInterface[] = [
       "Built a Web Application with Next.js that enables users to chat and have conversations with a local LLM (Language Model) about pre-loaded documents.",
     year: "",
     imgPath: "",
+    tag: ["Typescript", "React"],
   },
   {
     title: "Arcane Oracle",
@@ -24,6 +26,7 @@ const ProjectsList: ProjectInterface[] = [
       "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
     year: "",
     imgPath: "",
+    tag: ["C++"],
   },
 ];
 

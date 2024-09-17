@@ -92,7 +92,7 @@ export default function ContactMe() {
                 <FormItem>
                   <FormControl>
                     <Textarea
-                      className={"resize-none bg-card/30 m-0 min-h-[150px]"}
+                      className={"resize-none bg-card/30 m-0 min-h-[200px]"}
                       placeholder={"Your Message"}
                     />
                   </FormControl>
@@ -106,7 +106,7 @@ export default function ContactMe() {
 
             <Button
               type="submit"
-              className={"flex justify-center items-center gap-2"}
+              className={"flex justify-center items-center gap-2 w-fit mx-auto"}
             >
               Submit
               <ArrowRightIcon className={"size-4"} />
