@@ -20,7 +20,7 @@ export default async function NotFound() {
         className={"flex-col gap-y-8 flex justify-center items-center mt-9"}
       >
         <p className={"text-muted-foreground font-medium"}>
-          Oops! The page you&apos;re looking for doesn&apos;t exist.
+          Oops! The project you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link href={"/"}>
           <Button variant={"default"} className={"rounded"}>

@@ -146,7 +146,7 @@ const timelineHeadingVariants = cva(
         left: "col-start-1 col-end-2 ml-auto text-right",
       },
       variant: {
-        primary: "text-base font-medium text-primary",
+        primary: "text-base font-medium text-muted-foreground",
         secondary: "text-sm font-light text-muted-foreground",
       },
     },
@@ -168,7 +168,7 @@ const TimelineHeading = React.forwardRef<
   <p
     role="heading"
     aria-level={variant === "primary" ? 2 : 3}
-    style={{ fontSize: "0.875rem", opacity: "0.7", fontWeight: "300" }}
+    style={{ fontSize: "0.875rem", fontWeight: "300" }}
     className={cn(
       "tracking-thicker text-sm",
       timelineHeadingVariants({ side, variant }),

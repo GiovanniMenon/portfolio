@@ -59,10 +59,16 @@ export default function ContactMe() {
           <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
             Contact Me
           </h1>
-          <p className={"text-white text-opacity-80 font-[200] text-xs"}>
-            Please contact me directly at{" "}
-            <span className={"font-bold"}>giovanni.menon.dev@gmail.com</span> or
-            through this form.
+          <p className={"font-[200] text-xs"}>
+            <span className={"text-muted-foreground"}>
+              {" "}
+              Please contact me directly at{" "}
+            </span>
+            <span className={"font-bold"}>giovanni.menon.dev@gmail.com</span>
+            <span className={"text-muted-foreground"}>
+              {" "}
+              or through this form.
+            </span>
           </p>
         </div>
         <Form {...form}>

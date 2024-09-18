@@ -40,7 +40,7 @@ export default function Hero() {
             Reality and CyberSecurity
           </h1>
         </motion.div>
-        <p className={"text-white text-opacity-80 font-light "}>
+        <p className={"text-muted-foreground font-light "}>
           I am a 21-year-old Italian student deeply passionate about technology
           and innovation. Currently, I am in my third year pursuing a
           Bachelor&apos;s degree in Computer Science (Department of Mathematics)

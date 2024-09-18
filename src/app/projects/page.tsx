@@ -10,13 +10,14 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 import { Tag } from "@/interfaces/project";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   const [isGridView, setIsGridView] = useState(false);
   const [selectedTag, setSelectedTag] = useState<Tag | "All">("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const allTags = useMemo(() => {
     const tags = new Set<Tag>();
     ProjectsList.forEach((project) => {
@@ -25,32 +26,51 @@ export default function Home() {
     return ["All", ...Array.from(tags)] as const;
   }, []);
   const filteredProjects = useMemo(() => {
-    if (selectedTag === "All") {
-      return ProjectsList;
-    }
-    return ProjectsList.filter((project) =>
-      project.tag?.includes(selectedTag as Tag),
-    );
-  }, [selectedTag]);
+    return ProjectsList.filter((project) => {
+      const matchesTag =
+        selectedTag === "All" || project.tag?.includes(selectedTag as Tag);
+      const matchesSearch =
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesTag && matchesSearch;
+    });
+  }, [selectedTag, searchQuery]);
   return (
     <main
       className={
         "w-full flex-col flex justify-center items-center p-4 gap-5 mb-8"
       }
     >
-      <div className={"flex flex-row justify-between items-center w-full"}>
-        <h1 className={"text-lg tracking-tight font-bold"}>
-          <span className={"text-tiolet"}>{selectedTag}</span> Projects:{" "}
-          {filteredProjects.length}
+      <div className={"flex flex-row justify-between items-center w-full "}>
+        <h1 className={"hidden md:block text-xl tracking-tight w-full"}>
+          <span className={"text-tiolet font-bold"}>{selectedTag} </span>
+          <span className={"font-light"}>
+            {" "}
+            projects: {filteredProjects.length}
+          </span>
         </h1>
-        <div className={"flex justify-between items-center gap-5 "}>
+
+        <div
+          className={
+            "flex flex-col md:flex-row justify-between items-center gap-2.5 w-full "
+          }
+        >
+          <Input
+            type={"text"}
+            name={"searchInput"}
+            className={"w-full md:w-[300px] border rounded"}
+            placeholder={"Search"}
+            onChange={(event) => {
+              setSearchQuery(event.target.value);
+            }}
+          />
           <Select
             onValueChange={(value) => setSelectedTag(value as Tag | "All")}
           >
             <SelectTrigger>
               <div
                 className={
-                  "flex flex-row justify-between items-center gap-2 pr-2"
+                  "flex flex-row justify-between items-center gap-2 pr-2 "
                 }
               >
                 <FilterIcon className={"size-4"} />
@@ -68,22 +88,26 @@ export default function Home() {
             </SelectContent>
           </Select>
 
-          <div className={"md:flex justify-between items-center hidden  "}>
+          <div
+            className={
+              "md:flex justify-between items-center hidden rounded border p-1 h-9"
+            }
+          >
             <Button
               variant={!isGridView ? "secondary" : "ghostNoHover"}
               size={"sm"}
-              className={"h-fit w-fit p-2"}
+              className={"h-fit w-fit p-1 rounded"}
               onClick={() => setIsGridView(false)}
             >
-              <ListIcon className={"size-4"} />
+              <ListIcon className={"size-5"} />
             </Button>
             <Button
               variant={isGridView ? "secondary" : "ghostNoHover"}
               size={"sm"}
-              className={"h-fit w-fit p-2"}
+              className={"h-fit w-fit p-1 rounded"}
               onClick={() => setIsGridView(true)}
             >
-              <Grid2X2Icon className={"size-4"} />
+              <Grid2X2Icon className={"size-5"} />
             </Button>
           </div>
         </div>
@@ -95,6 +119,9 @@ export default function Home() {
         {filteredProjects.slice(0, 3).map((project, index) => (
           <Project key={index} project={project} isGridView={isGridView} />
         ))}
+        {filteredProjects.length === 0 && (
+          <p className={""}>No Projects found matching your criteria. </p>
+        )}
       </div>
     </main>
   );

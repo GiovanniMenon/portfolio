@@ -58,17 +58,15 @@ function MyBio() {
             Giovanni Menon
           </h1>
         </div>
-        <div
-          className={"flex flex-col gap-y-1.5 pt-2 tracking-tight opacity-70"}
-        >
+        <div className={"flex flex-col gap-y-1.5 pt-2 tracking-tight "}>
           <Link
             className={
               "flex items-center justify-start gap-2 text-xs font-medium "
             }
             href={"mailto:giovanni.menon.dev@gmail.com"}
           >
-            <MailIcon className={"size-5 scale-90 text-primary"} />
-            <span className={"text-white hover:underline"}>
+            <MailIcon className={"size-5 scale-90 text-tiolet"} />
+            <span className={"text-muted-foreground hover:underline"}>
               giovanni.menon.dev@gmail.com
             </span>
           </Link>
@@ -78,8 +76,8 @@ function MyBio() {
             }
             href={"https://github.com/GiovanniMenon"}
           >
-            <GitHubLogoIcon className={"size-5 scale-90  text-primary"} />
-            <span className={"text-white hover:underline"}>
+            <GitHubLogoIcon className={"size-5 scale-90  text-tiolet"} />
+            <span className={"text-muted-foreground hover:underline"}>
               github.com/GiovanniMenon
             </span>
           </Link>
@@ -89,8 +87,8 @@ function MyBio() {
             }
             href={"https://www.unipd.it/en/"}
           >
-            <University className={"size-5 scale-90 text-primary"} />
-            <span className={"text-white hover:underline"}>
+            <University className={"size-5 scale-90 text-tiolet"} />
+            <span className={"text-muted-foreground hover:underline"}>
               University of Padua
             </span>
           </Link>
@@ -99,21 +97,19 @@ function MyBio() {
               "flex items-center justify-start gap-2 text-xs font-medium "
             }
           >
-            <MapPinIcon className={"size-5 scale-90 text-primary"} />
-            <span className={"text-white"}>Italy</span>
+            <MapPinIcon className={"size-5 scale-90 text-tiolet"} />
+            <span className={"text-muted-foreground"}>Italy</span>
           </div>
         </div>
         <div className={"flex flex-col justify-start pt-3.5"}>
-          <h1 className={"justify-start text-xl font-bold text-neutral-300"}>
-            Me
-          </h1>
-          <p className={"text-sm text-white text-opacity-80"}>
+          <h1 className={"justify-start text-xl font-bold"}>Me</h1>
+          <p className={"text-sm text-muted-foreground"}>
             lorem ipsum etc etc etc lorem ipsum etc etc etc lorem ipsum etc etc
             etc
           </p>
           <div
             className={
-              "flex flex-row items-center justify-between text-xs tracking-tight pt-3.5 pb-3 opacity-70"
+              "flex flex-row items-center justify-between text-xs tracking-tight pt-3.5 pb-3 text-muted-foreground"
             }
           >
             <div className={"flex items-start justify-center gap-2"}>

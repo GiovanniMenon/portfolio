@@ -27,11 +27,12 @@ export default function TimeExperience() {
             <div className="flex flex-col gap-2.5">
               <p className={"font-bold text-base tracking-tight "}>
                 High School Diploma in Administration, Finance, and Marketing{" "}
-                <span className={"font-normal opacity-70"}>at </span>
+                <span className={"font-normal text-muted-foreground"}>at </span>
                 ITET Einaudi.
               </p>
-              <p className={"opacity-70 mt-1"}>
-                Final Evaluation: <span className={"font-bold"}>100/100</span> .
+              <p className={"text-muted-foreground mt-1"}>
+                Final Evaluation: <span className={"text-white"}>100/100</span>{" "}
+                .
               </p>
               <div className={"flex gap-2 "}>
                 <Badge variant={"secondary"} className={"text-sm"}>
@@ -57,7 +58,7 @@ export default function TimeExperience() {
             <div className="flex flex-col gap-2.5">
               <p className={"font-bold text-base tracking-tight"}>
                 Started Computer Science degree{" "}
-                <span className={"font-normal opacity-70"}>at </span>
+                <span className={"font-normal text-muted-foreground"}>at </span>
                 University of Padua.
               </p>
               <div className={"flex gap-2 "}>
@@ -92,12 +93,16 @@ export default function TimeExperience() {
           >
             <div className="flex flex-col gap-2.5">
               <p className={"font-bold text-base tracking-tight"}>
-                Intern <span className={"font-normal opacity-70"}> as </span>{" "}
+                Intern{" "}
+                <span className={"font-normal text-muted-foreground"}>
+                  {" "}
+                  as{" "}
+                </span>{" "}
                 Software Developer{" "}
-                <span className={"font-normal opacity-70"}>at </span>
+                <span className={"font-normal text-muted-foreground"}>at </span>
                 Global Display Solution.
               </p>
-              <p className={"opacity-70 mt-1"}>
+              <p className={"text-muted-foreground mt-1"}>
                 Worked on a web interface to integrate the OpenAI API into the
                 company&apos;s operations .
               </p>
@@ -134,10 +139,10 @@ export default function TimeExperience() {
             <div className="flex flex-col gap-2.5">
               <p className={"font-bold text-base tracking-tight"}>
                 Undergraduate Student Researcher{" "}
-                <span className={"font-normal opacity-70"}>at </span> University
-                of Padua.
+                <span className={"font-normal text-muted-foreground"}>at </span>{" "}
+                University of Padua.
               </p>
-              <p className={"opacity-70 mt-1"}>
+              <p className={"text-muted-foreground mt-1"}>
                 For my bachelor&apos;s thesis, I did research on the security of
                 the QUIC protocol against selective traffic manipulation.
               </p>
@@ -169,15 +174,19 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"opacity-70"}>
+              <p className={" font-bold text-base"}>
                 Enrolled in the Master&apos;s Programme in International
                 Cybersecurity and Cyberintelligence
               </p>
-              <p className={"opacity-70 text-xs"}>
-                University of <span className={"font-bold"}>Granada</span>,
-                University of <span className={"font-bold"}>Minho</span>,
-                University of <span className={"font-bold"}>Padua</span> and
-                <span className={"font-bold"}> Vilnius</span> University
+              <p className={"text-muted-foreground text-xs"}>
+                University of{" "}
+                <span className={"text-white font-bold"}>Granada</span>,
+                University of{" "}
+                <span className={"text-white  font-bold"}>Minho</span>,
+                University of{" "}
+                <span className={"text-white font-bold"}>Padua</span> and
+                <span className={"text-white font-bold"}> Vilnius</span>{" "}
+                University
               </p>
             </div>
           </motion.div>

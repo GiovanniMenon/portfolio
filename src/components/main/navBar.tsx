@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
-import { BookOpenCheck, BracesIcon, Code, Home } from "lucide-react";
+import {
+  ArrowLeftIcon,
+  BookOpenCheck,
+  BracesIcon,
+  Home,
+  MoveLeft,
+  MoveLeftIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 export default function NavBar() {
   const pathname = usePathname();
+  const router = useRouter();
   return (
     <header
       className={
@@ -13,19 +21,33 @@ export default function NavBar() {
       }
     >
       <div className="flex items-center justify-center gap-2">
-        <Link href={"/#home"}>
+        {pathname.search("/projects") !== 0 ? (
+          <Link href={"/#home"}>
+            <Button
+              className={
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-bold tracking-wide "
+              }
+              size={"sm"}
+              variant={"outlineBorderNo"}
+            >
+              <Home className={"size-4"} />
+              <p className={""}>Home</p>
+            </Button>
+          </Link>
+        ) : (
           <Button
             className={
               "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-bold tracking-wide "
             }
             size={"sm"}
             variant={"outlineBorderNo"}
+            onClick={router.back}
           >
-            <Home className={"size-4"} />
-            <p className={""}>Home</p>
+            <ArrowLeftIcon className={"size-4"} />
           </Button>
-        </Link>
-        {pathname !== "/projects" && (
+        )}
+
+        {pathname.search("/projects") !== 0 && (
           <Link href={"/#experiences"}>
             <Button
               className={
@@ -39,7 +61,7 @@ export default function NavBar() {
             </Button>
           </Link>
         )}
-        {pathname !== "/projects" && (
+        {pathname.search("/projects") !== 0 && (
           <Link href={"/#projects"}>
             <Button
               className={
