@@ -120,7 +120,9 @@ export default function Home() {
           <Project key={index} project={project} isGridView={isGridView} />
         ))}
         {filteredProjects.length === 0 && (
-          <p className={""}>No Projects found matching your criteria. </p>
+          <p className={"col-span-2"}>
+            No Projects found matching your criteria.{" "}
+          </p>
         )}
       </div>
     </main>

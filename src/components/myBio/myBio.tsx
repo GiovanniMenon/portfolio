@@ -1,4 +1,3 @@
-"use client";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -6,15 +5,13 @@ import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   BracesIcon,
-  CopyIcon,
-  Gamepad,
+  KeyboardIcon,
   MailIcon,
   MapPinIcon,
   Music4,
   University,
 } from "lucide-react";
 import {
-  DiscordLogoIcon,
   GitHubLogoIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
@@ -25,18 +22,23 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useState } from "react";
+import { DiscordLink } from "@/components/myBio/discordLink";
 
-function MyBio() {
-  const [copied, setCopied] = useState(false);
+async function MyBio() {
+  const data = await fetch(
+    "https://wakatime.com/api/v1/users/current/all_time_since_today",
+    {
+      headers: {
+        Authorization: `Basic ${Buffer.from(process.env.WAKATIME_API!).toString("base64")}`,
+      },
+    },
+  );
+  const hours = (await data.json()).data.text;
 
-  const handleCopy = () => {
-    setCopied(true);
-    setTimeout(() => setCopied(false), 4000);
-  };
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
+
   return (
     <Card
       className={
@@ -117,8 +119,8 @@ function MyBio() {
               <p>230 Hours on Spotify</p>
             </div>
             <div className={"flex items-end justify-center gap-2"}>
-              <Gamepad className={"size-4 "} />
-              <p>53 Hours Playing</p>
+              <KeyboardIcon className={"size-4 "} />
+              <p>{hours} Coding</p>
             </div>
           </div>
           <Link href={"/projects#home"}>
@@ -198,42 +200,7 @@ function MyBio() {
                 <p>Instagram</p>
               </TooltipContent>
             </Tooltip>
-            <Tooltip>
-              <TooltipTrigger
-                onClick={(event) => {
-                  event.preventDefault();
-                }}
-                asChild
-              >
-                <Button
-                  variant={"secondary"}
-                  className={"rounded-full "}
-                  size={"icon"}
-                  onClick={handleCopy}
-                >
-                  <DiscordLogoIcon className={"size-5"} />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent
-                onPointerDownOutside={(event) => {
-                  event.preventDefault();
-                }}
-              >
-                <span className={"transition-all"}>
-                  {!copied ? (
-                    <div
-                      className={
-                        "flex flex-row items-center justify-center gap-2"
-                      }
-                    >
-                      menny9762 <CopyIcon className={"size-3"} />
-                    </div>
-                  ) : (
-                    "Copied !!"
-                  )}
-                </span>
-              </TooltipContent>
-            </Tooltip>
+            <DiscordLink />
           </TooltipProvider>
         </div>
       </CardFooter>
