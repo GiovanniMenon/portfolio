@@ -28,6 +28,24 @@ const ProjectsList: ProjectInterface[] = [
     imgPath: "",
     tag: ["C++"],
   },
+  {
+    title: "Arcane Oracle2",
+    url: "https://github.com/GiovanniMenon/Arcane-Oracle",
+    description:
+      "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
+    year: "",
+    imgPath: "",
+    tag: ["C++"],
+  },
+  {
+    title: "Arcane Oracle3",
+    url: "https://github.com/GiovanniMenon/Arcane-Oracle",
+    description:
+      "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
+    year: "",
+    imgPath: "",
+    tag: ["C++"],
+  },
 ];
 
 export default ProjectsList;

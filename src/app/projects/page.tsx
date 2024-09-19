@@ -116,7 +116,7 @@ export default function Home() {
       <div
         className={`gap-2 ${isGridView ? "grid grid-cols-1 md:grid-cols-2" : "flex flex-col"}`}
       >
-        {filteredProjects.slice(0, 3).map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <Project key={index} project={project} isGridView={isGridView} />
         ))}
         {filteredProjects.length === 0 && (
