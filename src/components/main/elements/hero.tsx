@@ -36,22 +36,23 @@ export default function Hero() {
           }} // Aggiunto effetto "spring"
         >
           <h1 className={"text-5xl font-black tracking-tighter text-primary"}>
-            Hello there, I am a student interested in Programming, Virtual
-            Reality and CyberSecurity
+            <span className={"text-tiolet"}>Cybersecurity</span> Enthusiast and
+            Tech Explorer
           </h1>
         </motion.div>
         <p className={"text-muted-foreground font-light "}>
-          I am a 21-year-old Italian student deeply passionate about technology
-          and innovation. Currently, I am in my third year pursuing a
-          Bachelor&apos;s degree in Computer Science (Department of Mathematics)
-          at the University of Padua.
+          Hello there, I&apos;m a 22-year-old Italian student passionate about
+          Programming, Virtual Reality, and Cybersecurity. I recently graduated
+          with a degree in Computer Science from the University of Padua and am
+          now pursuing a Joint Master&apos;s Degree in International
+          Cybersecurity and Cyberintelligence across four European universities.
           <br />
           <br />
-          Simultaneously, I am actively engaged in preparing a Research Project
-          in the field of Cyber Security, which will serve as centerpiece of my
-          Bachelor&apos;s thesis. My primary interests lie in the realm of
-          Information Security, with a particular focus on Network Security.
-          After graduation, I plan to continue my studies in this field.
+          My primary focus is on Information and Network Security. I&apos;m open
+          to <span className={"text-tiolet"}>research</span> projects and{" "}
+          <span className={"text-tiolet"}>collaborations</span> where I can
+          contribute, learn, and grow. If you have an opportunity that matches
+          my skills and interests, feel free to reach out!
         </p>
         <motion.div
           initial={{ opacity: 0, y: 100 }}

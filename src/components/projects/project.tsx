@@ -89,11 +89,11 @@ export default function Project({
       <Card
         className={
           `bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/90 hover:cursor-pointer ` +
-          `transition-all ease-linear  ${isGridView ? "md:h-full" : "md:h-full"} block lg:hidden`
+          `transition-all ease-linear  md:h-full  block lg:hidden`
         }
       >
         <CardContent
-          className={`p-0 w-full h-full flex ${isGridView ? "flex-col gap-y-3.5" : "flex-col md:flex-row"}`}
+          className={`p-0 w-full h-full flex flex-col${isGridView ? " gap-y-3.5" : " md:flex-row"} relative`}
         >
           <Image
             src={"/arcaneOracle.jpg"}
@@ -110,7 +110,7 @@ export default function Project({
           />
 
           <div
-            className={`flex flex-col items-start justify-start p-2.5 w-full gap-1.5`}
+            className={`flex flex-col items-start justify-between p-2.5 w-full gap-2 `}
           >
             <div className={"flex justify-between items-center w-full"}>
               <h1
@@ -129,13 +129,21 @@ export default function Project({
               {project.description}
             </p>
             <Link
-              className={`mx-auto ${isGridView ? "mt-2" : "mt-10"}`}
+              className={`mx-auto mt-auto ${isGridView ? "hidden" : "block"} `}
               href={`/projects/${project.title.replaceAll(" ", "_")}`}
             >
               <Button>Explore Project</Button>
             </Link>
           </div>
         </CardContent>
+        <CardFooter className={` ${isGridView ? "block" : "hidden"}`}>
+          <Link
+            className={`mx-auto mt-auto ${isGridView ? "" : ""} `}
+            href={`/projects/${project.title.replaceAll(" ", "_")}`}
+          >
+            <Button>Explore Project</Button>
+          </Link>
+        </CardFooter>
       </Card>
     </>
   );

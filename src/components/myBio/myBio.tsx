@@ -33,8 +33,10 @@ async function MyBio() {
       },
     },
   );
-  const hours = (await data.json()).data.text;
-
+  let hours = null;
+  if (data.ok) {
+    hours = (await data.json()).data.text;
+  }
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";
@@ -91,7 +93,7 @@ async function MyBio() {
           >
             <University className={"size-5 scale-90 text-tiolet"} />
             <span className={"text-muted-foreground hover:underline"}>
-              University of Padua
+              University of Granada
             </span>
           </Link>
           <div
@@ -105,9 +107,14 @@ async function MyBio() {
         </div>
         <div className={"flex flex-col justify-start pt-3.5"}>
           <h1 className={"justify-start text-xl font-bold"}>Me</h1>
-          <p className={"text-sm text-muted-foreground"}>
-            lorem ipsum etc etc etc lorem ipsum etc etc etc lorem ipsum etc etc
-            etc
+          <p className={"text-sm text-muted-foreground font-bold"}>
+            I graduated in Computer Science from the University of Padua, and
+            I&apos;m now pursuing a{" "}
+            <span className={"text-white"}>
+              Joint Master&apos;s Degree in International Cybersecurity and
+              Cyberintelligence{" "}
+            </span>
+            across four European universities.{" "}
           </p>
           <div
             className={
@@ -120,7 +127,7 @@ async function MyBio() {
             </div>
             <div className={"flex items-end justify-center gap-2"}>
               <KeyboardIcon className={"size-4 "} />
-              <p>{hours} Coding</p>
+              <p>{hours || ""} Coding</p>
             </div>
           </div>
           <Link href={"/projects#home"}>
