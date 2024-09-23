@@ -68,6 +68,12 @@ export default function Page({ params }: { params: { projectName: string } }) {
       <div className={"flex flex-col w-full gap-5"}>
         <h1 className={"leading-none text-2xl font-bold"}>Description</h1>
         <p className={"text-muted-foreground text-sm"}>{project.description}</p>
+        <h1 className={"leading-none text-xl font-bold"}>Contributor</h1>
+        {project.contributorName && (
+          <div className={"flex w-full justify-start"}>
+            {project.contributorName}
+          </div>
+        )}
       </div>
       <Separator className={"h-[2px] rounded opacity-75"} />
       <div className={"flex flex-col w-full gap-5"}>

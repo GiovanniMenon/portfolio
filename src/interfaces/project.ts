@@ -1,4 +1,12 @@
-type Tag = "Python" | "Typescript" | "Go" | "C" | "C++" | "React" | "Sql";
+type Tag =
+  | "Python"
+  | "Typescript"
+  | "Go"
+  | "C"
+  | "C++"
+  | "React"
+  | "Sql"
+  | string;
 
 interface ProjectInterface {
   title: string;
@@ -8,6 +16,9 @@ interface ProjectInterface {
   imgPath: string;
   linkPreview?: string;
   tag?: Tag[];
+  download?: string;
+  contributorGithub?: string;
+  contributorName?: string;
 }
 
 export type { Tag };
