@@ -79,7 +79,7 @@ export default function Project({
                 </div>
 
                 <p className={"text-muted-foreground font-light text-sm"}>
-                  {project.description.slice(0, 500)}
+                  {project.description.slice(0, 300) + "..."}
                 </p>
               </div>
             </CardContent>
