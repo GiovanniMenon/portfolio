@@ -1,13 +1,14 @@
-type Tag =
-  | "Python"
-  | "Typescript"
-  | "Go"
-  | "C"
-  | "C++"
-  | "React"
-  | "Sql"
-  | string;
+type Tag = "Python" | "Typescript" | "Go" | "C" | "C++" | "React" | "Sql";
 
+export const definedTags: Tag[] = [
+  "Python",
+  "Typescript",
+  "Go",
+  "C",
+  "C++",
+  "React",
+  "Sql",
+];
 interface ProjectInterface {
   title: string;
   url: string;
@@ -15,7 +16,7 @@ interface ProjectInterface {
   year: string;
   imgPath: string;
   linkPreview?: string;
-  tag?: Tag[];
+  tag?: string[];
   download?: string;
   contributorGithub?: string;
   contributorName?: string;

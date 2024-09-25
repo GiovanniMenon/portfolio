@@ -23,17 +23,29 @@ const ProjectsList: ProjectInterface[] = [
     year: "May 2024",
     imgPath: "/Evaluating_QUIC.png",
     tag: ["Go", "VirtualBox", "Wireshark"],
-    linkPreview: "https://giovanni-menon.vercel.app/",
+    linkPreview: "https://hdl.handle.net/20.500.12608/70974",
     download: "/Menon_Giovanni.pdf",
   },
   {
     title: "Knowledge Managment AI",
     url: "https://github.com/CodingCowboys10/kmai",
     description:
-      "Built a Web Application with Next.js that enables users to chat and have conversations with a local LLM (Language Model) about pre-loaded documents.",
+      "Knowledge Management AI is a web application developed using Next.js, React, and TypeScript. This innovative project allows users to interact with a local Language Model (LLM) through chats and conversations based on pre-loaded documents. The application supports a variety of file formats, including PDF, DOCX, and MP3, offering flexible document management.\n" +
+      "Utilizing ChromaDB for efficient vector database management and Ollama for local AI model execution, the application provides advanced natural language processing capabilities. Users can upload and organize documents with a tagging system, with the option for data obscuration in the vector database to ensure privacy.\n" +
+      "A key feature is the ability to initiate multiple chat sessions on uploaded documents, with the flexibility to change AI models for different conversations. The user interface is customizable with various themes, and users have full control over session management, including the option to delete them.\n" +
+      "This tool combines cutting-edge AI technologies with intuitive document management, offering a powerful solution for interactive knowledge exploration and information retrieval.",
     year: "Oct 2023",
     imgPath: "",
-    tag: ["NextJs", "React", "Typescript"],
+    tag: [
+      "NextJs",
+      "React",
+      "Typescript",
+      "ChromaDB",
+      "MinHo",
+      "Amazon S3",
+      "Ollama",
+      "OpenAI API",
+    ],
   },
   {
     title: "OpenBlue",
@@ -43,7 +55,6 @@ const ProjectsList: ProjectInterface[] = [
     year: "Aug 2023",
     imgPath: "",
     tag: ["Python", "Flask", "Javascript"],
-    contributorName: "Endy Hysa",
   },
   {
     title: "Arcane Oracle",
@@ -51,9 +62,10 @@ const ProjectsList: ProjectInterface[] = [
     description:
       "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
     year: "Mar 2023",
-    imgPath: "",
+    imgPath: "/arcaneOracle.jpg",
     tag: ["C++", "Qt"],
     contributorName: "Endy Hysa",
+    contributorGithub: "https://github.com/EndyXVIII",
   },
 ];
 

@@ -12,6 +12,7 @@ import {
   BookOpenIcon,
   DownloadIcon,
   GithubIcon,
+  UsersIcon,
 } from "lucide-react";
 import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 
@@ -59,7 +60,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
       <div className={"overflow-hidden rounded"}>
         <Image
           src={project.imgPath}
-          alt={"logo ARCANE oraclae"}
+          alt={`Screen of ${project.title}`}
           width={1500}
           height={1500}
           className={`w-full h-[400px] rounded object-contain `}
@@ -100,7 +101,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             </Button>
           </Link>
         )}
-        {project.contributorGithub && (
+        {project.contributorGithub && project.contributorName && (
           <Link
             className=""
             href={project.contributorGithub}
@@ -109,11 +110,11 @@ export default function Page({ params }: { params: { projectName: string } }) {
           >
             <Button
               className={
-                "flex flex-row gap-2 items-center justify-center h-14 rounded border"
+                "flex flex-row gap-2 items-center justify-center h-12 rounded border"
               }
-              variant={"outline"}
+              variant={"outlineBorderNo"}
             >
-              <Book className={"size-5 "} />
+              <UsersIcon className={"size-5"} />
               <Separator
                 orientation={"vertical"}
                 className={"w-[2px] rounded"}
@@ -145,16 +146,16 @@ export default function Page({ params }: { params: { projectName: string } }) {
         <h1 className={"leading-none text-2xl font-bold rounded"}>Links</h1>
         <div className={"flex w-full gap-4"}>
           <Link href={project.url} className={""}>
-            <Button className={"bg-tiolet "}>
+            <Badge className={"p-2"} variant={"default"}>
               <GitHubLogoIcon className={"size-5"} />
-            </Button>
+            </Badge>
           </Link>
 
           {project.linkPreview && (
             <Link href={project.linkPreview} className={""}>
-              <Button className={"bg-tiolet flex gap-4"}>
+              <Badge className={"p-2"} variant={"default"}>
                 <GlobeIcon className={"size-5"} />
-              </Button>
+              </Badge>
             </Link>
           )}
         </div>

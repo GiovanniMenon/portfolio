@@ -11,7 +11,7 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { Tag } from "@/interfaces/project";
+import { definedTags, Tag } from "@/interfaces/project";
 import { Input } from "@/components/ui/input";
 
 export default function Home() {
@@ -21,7 +21,11 @@ export default function Home() {
   const allTags = useMemo(() => {
     const tags = new Set<Tag>();
     ProjectsList.forEach((project) => {
-      project.tag?.forEach((tag) => tags.add(tag));
+      project.tag?.forEach((tag) => {
+        if (definedTags.includes(tag as Tag)) {
+          tags.add(tag as Tag);
+        }
+      });
     });
     return ["All", ...Array.from(tags)] as const;
   }, []);

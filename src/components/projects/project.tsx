@@ -6,6 +6,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Project({
   isGridView,
@@ -63,7 +64,7 @@ export default function Project({
               />
 
               <div
-                className={`flex flex-col items-start justify-start p-2.5 w-full gap-1.5`}
+                className={`flex flex-col items-start justify-start p-2.5 pb-1 w-full gap-1.5`}
               >
                 <div className={"flex justify-between items-center w-full"}>
                   <h1
@@ -81,6 +82,19 @@ export default function Project({
                 <p className={"text-muted-foreground font-light text-sm"}>
                   {project.description.slice(0, 300) + "..."}
                 </p>
+                <div
+                  className={`flex flex-row gap-2  ${isGridView ? "mt-3" : "mt-auto"}`}
+                >
+                  {project.tag?.slice(0, 5).map((tag, index) => (
+                    <Badge
+                      key={index}
+                      className={"w-fit p-1.5 font-bold"}
+                      variant={"secondary"}
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -126,7 +140,7 @@ export default function Project({
             </div>
 
             <p className={"text-muted-foreground font-light text-sm"}>
-              {project.description}
+              {project.description.slice(0, 300) + "..."}
             </p>
             <Link
               className={`mx-auto mt-auto ${isGridView ? "hidden" : "block"} `}
