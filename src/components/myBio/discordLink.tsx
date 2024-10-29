@@ -13,7 +13,10 @@ export function DiscordLink() {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     setCopied(true);
-    setTimeout(() => setCopied(false), 4000);
+    navigator.clipboard.writeText("menny9762").then(() => {
+      setCopied(true); // Mostra il feedback di copia riuscita
+      setTimeout(() => setCopied(false), 4000); // Rimuove il feedback dopo 4 secondi
+    });
   };
   return (
     <Tooltip>
