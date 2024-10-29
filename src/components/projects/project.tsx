@@ -50,7 +50,7 @@ export default function Project({
               className={`p-0 w-full h-full flex ${isGridView ? "flex-col gap-y-3.5" : "flex-col md:flex-row"}`}
             >
               <Image
-                src={"/arcaneOracle.jpg"}
+                src={project.imgPath}
                 alt={"logo ARCANE oraclae"}
                 width={1200}
                 height={800}
@@ -58,6 +58,7 @@ export default function Project({
                 style={{
                   color: "transparent",
                   objectFit: "cover",
+                  height: "280px",
                 }}
                 loading={"lazy"}
                 decoding={"async"}
@@ -80,7 +81,7 @@ export default function Project({
                 </div>
 
                 <p className={"text-muted-foreground font-light text-sm"}>
-                  {project.description.slice(0, 300) + "..."}
+                  {project.shortDescription}
                 </p>
                 <div
                   className={`flex flex-row gap-2  ${isGridView ? "mt-3" : "mt-auto"}`}
@@ -107,7 +108,7 @@ export default function Project({
         }
       >
         <CardContent
-          className={`p-0 w-full h-full flex flex-col${isGridView ? " gap-y-3.5" : " md:flex-row"} relative`}
+          className={`p-0 w-full h-full flex flex-col ${isGridView ? " gap-y-3.5" : " md:flex-row"} relative`}
         >
           <Image
             src={"/arcaneOracle.jpg"}
@@ -122,7 +123,6 @@ export default function Project({
             loading={"lazy"}
             decoding={"async"}
           />
-
           <div
             className={`flex flex-col items-start justify-between p-2.5 w-full gap-2 `}
           >
@@ -140,24 +140,16 @@ export default function Project({
             </div>
 
             <p className={"text-muted-foreground font-light text-sm"}>
-              {project.description.slice(0, 300) + "..."}
+              {project.shortDescription}
             </p>
             <Link
-              className={`mx-auto mt-auto ${isGridView ? "hidden" : "block"} `}
+              className={`mx-auto block  ${isGridView ? "mt-3" : "mt-auto"} `}
               href={`/projects/${project.title.replaceAll(" ", "_")}`}
             >
               <Button>Explore Project</Button>
             </Link>
           </div>
         </CardContent>
-        <CardFooter className={` ${isGridView ? "block" : "hidden"}`}>
-          <Link
-            className={`mx-auto mt-auto ${isGridView ? "" : ""} `}
-            href={`/projects/${project.title.replaceAll(" ", "_")}`}
-          >
-            <Button>Explore Project</Button>
-          </Link>
-        </CardFooter>
       </Card>
     </>
   );

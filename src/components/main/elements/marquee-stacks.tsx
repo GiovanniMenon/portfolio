@@ -48,14 +48,12 @@ export default function MarqueeStacks() {
     offset: ["0 1", "1 1", "1.33 0"],
   });
 
-  // Scala da 0.8 a 1 mentre entra, rimane 1, e poi torna a 0 quando esce
   const scaleProgress = useTransform(
     scrollYProgress,
     [0, 0.4, 0.8, 1],
     [0.8, 1, 1, 0.8],
   );
 
-  // L'opacità passa da 0 a 1 mentre entra, rimane 1, e poi torna a 0 mentre esce
   const opacityProgress = useTransform(
     scrollYProgress,
     [0, 0.5, 0.9, 1],

@@ -23,12 +23,12 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth dark" lang="en">
       <body
-        className={`bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${roboto.className}`}
+        className={`overflow-x-hidden bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${roboto.className}`}
         id={"home"}
       >
         <div
           className={
-            "max-w-[1500px] flex item-start justify-center mx-auto min-h-screen"
+            "max-w-[1500px] flex item-start justify-center mx-auto min-h-screen "
           }
         >
           <div

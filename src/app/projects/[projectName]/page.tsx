@@ -77,7 +77,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
       <div className={"flex flex-col w-full gap-5"}>
         <h1 className={"leading-none text-2xl font-bold"}>Description</h1>
         <p className={"text-muted-foreground text-base"}>
-          {project.description}
+          {project.longDescription}
         </p>
         {project.download && (
           <Link

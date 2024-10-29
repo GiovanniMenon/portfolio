@@ -4,7 +4,7 @@ import Project from "@/components/projects/project";
 import { FilterIcon, Grid2X2Icon, ListIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -35,7 +35,12 @@ export default function Home() {
         selectedTag === "All" || project.tag?.includes(selectedTag as Tag);
       const matchesSearch =
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase());
+        project.shortDescription
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        project.tag?.some((tag) =>
+          tag.toLowerCase().includes(searchQuery.toLowerCase()),
+        );
       return matchesTag && matchesSearch;
     });
   }, [selectedTag, searchQuery]);
@@ -94,7 +99,7 @@ export default function Home() {
 
           <div
             className={
-              "md:flex justify-between items-center hidden rounded border p-1 h-9"
+              "lg:flex justify-between items-center hidden rounded border p-1 h-9"
             }
           >
             <Button

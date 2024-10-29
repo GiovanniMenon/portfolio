@@ -49,8 +49,8 @@ export default function Hero() {
           <br />
           <br />
           My primary focus is on Information and Network Security. I&apos;m open
-          to <span className={"text-tiolet"}>research</span> projects and{" "}
-          <span className={"text-tiolet"}>collaborations</span> where I can
+          to <span className={"text-white"}>research</span> projects and{" "}
+          <span className={"text-white"}>collaborations</span> where I can
           contribute, learn, and grow. If you have an opportunity that matches
           my skills and interests, feel free to reach out!
         </p>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 type Tag = "Python" | "Typescript" | "Go" | "C" | "C++" | "React" | "Sql";
 
 export const definedTags: Tag[] = [
@@ -12,7 +14,8 @@ export const definedTags: Tag[] = [
 interface ProjectInterface {
   title: string;
   url: string;
-  description: string;
+  longDescription: ReactNode;
+  shortDescription: string;
   year: string;
   imgPath: string;
   linkPreview?: string;
