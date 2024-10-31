@@ -8,15 +8,19 @@ export async function send({
   email: string;
   message: string;
 }) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  try{
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    throw new Error();
+    
+    const { data } = await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>",
+      to: [process.env.EMAIL!],
+      subject: "Hello World",
 
-  const { data } = await resend.emails.send({
-    from: "Acme <onboarding@resend.dev>",
-    to: [process.env.EMAIL!],
-    subject: "Hello World",
+      react: "<strong>It works! </strong>", //Aggiungegere email template
+    });
+  }catch{
+    return new Error();
+  }
 
-    react: "<strong>It works! </strong>", //Aggiungegere email template
-  });
-
-  console.log(data);
 }

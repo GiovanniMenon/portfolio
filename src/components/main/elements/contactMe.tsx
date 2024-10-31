@@ -19,6 +19,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { send } from "@/serverActions/send";
+import confetti from "canvas-confetti"
+import { toast } from "sonner"
+
 const FormSchema = z.object({
   email: z.string().email({
     message: "Email must be contain correct email format",
@@ -37,7 +40,43 @@ export default function ContactMe() {
     resolver: zodResolver(FormSchema),
   });
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    send({ email: data.email, message: data.body }); //da finire e da mettere il captcha/conferma di invio
+    send({ email: data.email, message: data.body })
+      .then(() => {
+      
+
+      const end = Date.now() + 1.5 * 1000 // 3 seconds
+      const colors = ["#c4b5fd", "#e9d5ff", "#a855f7", "#8b5cf6"]
+  
+      const frame = () => {
+        if (Date.now() > end) return;
+  
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 0, y: 0.5 },
+          colors: colors,
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 1, y: 0.5 },
+          colors: colors,
+        });
+  
+        requestAnimationFrame(frame);
+      }
+  
+      frame()
+      toast.success("Email sent correctly")
+      form.reset({email:"" , body:""})
+    })
+    .catch(() => { 
+      toast.error("Error occurred sending the email. Try later")}
+    ) 
   }
 
   return (
