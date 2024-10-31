@@ -107,10 +107,10 @@ async function MyBio() {
         </div>
         <div className={"flex flex-col justify-start pt-3.5"}>
           <h1 className={"justify-start text-xl font-bold"}>Me</h1>
-          <p className={"text-sm text-muted-foreground font-bold"}>
+          <p className={"text-muted-foreground font-light text-sm"}>
             I graduated in Computer Science from the University of Padua, and
             I&apos;m now pursuing a{" "}
-            <span className={"text-white"}>
+            <span className={"text-white "}>
               Joint Master&apos;s Degree in International Cybersecurity and
               Cyberintelligence{" "}
             </span>

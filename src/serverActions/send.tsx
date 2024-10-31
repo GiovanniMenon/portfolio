@@ -1,5 +1,7 @@
 "use server";
 import { Resend } from "resend";
+import { Html } from "@react-email/components";
+import GetInTouchEmail from "@/components/emails";
 
 export async function send({
   email,
@@ -8,19 +10,17 @@ export async function send({
   email: string;
   message: string;
 }) {
-  try{
+  try {
     const resend = new Resend(process.env.RESEND_API_KEY);
-    throw new Error();
-    
+
     const { data } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: [process.env.EMAIL!],
-      subject: "Hello World",
+      from: "Giovanni <onboarding@resend.dev>",
+      to: [process.env.EMAIL!, email],
+      subject: "Get in Contact",
 
-      react: "<strong>It works! </strong>", //Aggiungegere email template
+      react: <GetInTouchEmail userFirstname={email} />, //Aggiungegere email template
     });
-  }catch{
-    return new Error();
+  } catch {
+    throw new Error();
   }
-
 }

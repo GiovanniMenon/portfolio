@@ -31,9 +31,7 @@ export default function Hero() {
             type: "spring",
             duration: 0.5,
             bounce: 0.6,
-            // velocity: 8,
-            // mass: 0.9,
-          }} // Aggiunto effetto "spring"
+          }}
         >
           <h1 className={"text-5xl font-black tracking-tighter text-primary"}>
             <span className={"text-tiolet"}>Cybersecurity</span> Enthusiast and
