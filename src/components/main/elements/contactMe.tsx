@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { ArrowRightIcon, MailsIcon } from "lucide-react";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Form,
   FormControl,
@@ -19,8 +19,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { send } from "@/serverActions/send";
-import confetti from "canvas-confetti"
-import { toast } from "sonner"
+import confetti from "canvas-confetti";
+import { toast } from "sonner";
 
 const FormSchema = z.object({
   email: z.string().email({
@@ -31,52 +31,53 @@ const FormSchema = z.object({
     .min(5, {
       message: "Message can be empty.",
     })
-    .max(400, {
+    .max(700, {
       message: "Message is too long",
     }),
 });
 export default function ContactMe() {
+  const [disable, setDisable] = useState(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    setDisable(true);
     send({ email: data.email, message: data.body })
       .then(() => {
-      
+        const end = Date.now() + 1.5 * 1000; // 3 seconds
+        const colors = ["#c4b5fd", "#e9d5ff", "#a855f7", "#8b5cf6"];
 
-      const end = Date.now() + 1.5 * 1000 // 3 seconds
-      const colors = ["#c4b5fd", "#e9d5ff", "#a855f7", "#8b5cf6"]
-  
-      const frame = () => {
-        if (Date.now() > end) return;
-  
-        confetti({
-          particleCount: 3,
-          angle: 60,
-          spread: 55,
-          startVelocity: 60,
-          origin: { x: 0, y: 0.5 },
-          colors: colors,
-        });
-        confetti({
-          particleCount: 3,
-          angle: 120,
-          spread: 55,
-          startVelocity: 60,
-          origin: { x: 1, y: 0.5 },
-          colors: colors,
-        });
-  
-        requestAnimationFrame(frame);
-      }
-  
-      frame()
-      toast.success("Email sent correctly")
-      form.reset({email:"" , body:""})
-    })
-    .catch(() => { 
-      toast.error("Error occurred sending the email. Try later")}
-    ) 
+        const frame = () => {
+          if (Date.now() > end) return;
+
+          confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            startVelocity: 60,
+            origin: { x: 0, y: 0.5 },
+            colors: colors,
+          });
+          confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            startVelocity: 60,
+            origin: { x: 1, y: 0.5 },
+            colors: colors,
+          });
+
+          requestAnimationFrame(frame);
+        };
+
+        frame();
+        toast.success("Email sent correctly");
+        form.reset({ email: "", body: "" });
+        setDisable(false);
+      })
+      .catch(() => {
+        toast.error("Error occurred sending the email. Try later");
+      });
   }
 
   return (
@@ -151,6 +152,7 @@ export default function ContactMe() {
             <Button
               type="submit"
               className={"flex justify-center items-center gap-2 w-fit mx-auto"}
+              disabled={disable}
             >
               Submit
               <ArrowRightIcon className={"size-4"} />

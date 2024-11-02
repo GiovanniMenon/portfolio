@@ -15,11 +15,12 @@ export async function send({
 
     const { data } = await resend.emails.send({
       from: "Giovanni <onboarding@resend.dev>",
-      to: [process.env.EMAIL!, email],
+      to: [process.env.EMAIL_TO_SEND!],
       subject: "Get in Contact",
-
-      react: <GetInTouchEmail userFirstname={email} />, //Aggiungegere email template
+      react: <GetInTouchEmail userFirstname={email} message={message} />, //Aggiungegere email template
     });
+
+    // if (!data) throw new Error();
   } catch {
     throw new Error();
   }

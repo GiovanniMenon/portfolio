@@ -123,7 +123,7 @@ export default function Home() {
       </div>
       <Separator className={"h-[2px] rounded opacity-75"} />
       <div
-        className={`gap-2 ${isGridView ? "grid grid-cols-1 md:grid-cols-2" : "flex flex-col"}`}
+        className={`gap-2 ${isGridView ? "grid grid-cols-1 md:grid-cols-2" : "flex flex-col"} w-full`}
       >
         {filteredProjects.map((project, index) => (
           <Project key={index} project={project} isGridView={isGridView} />
