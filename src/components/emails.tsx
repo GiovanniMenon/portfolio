@@ -20,7 +20,7 @@ export const GetInTouchEmail = ({
           on your portfolio site.
         </Text>
         <Text style={paragraph}>Here’s the message:</Text>
-        <Text style={messageText}>{message}</Text>
+        <Text style={button}>{message}</Text>
         <Hr style={hr} />
         <Text style={footer}>
           Please note, this is an automated message; replies to this email will
@@ -38,40 +38,38 @@ GetInTouchEmail.PreviewProps = {
 export default GetInTouchEmail;
 
 const main = {
-  backgroundColor: "#1a1a1a", // Dark background to match your website's theme
-  color: "#ffffff", // White text for contrast
+  backgroundColor: "#ffffff",
   fontFamily:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
 const container = {
   margin: "0 auto",
   padding: "20px 0 48px",
-  maxWidth: "600px",
 };
 
 const paragraph = {
   fontSize: "16px",
   lineHeight: "26px",
-  color: "#EAEAEA", // Light gray for softer contrast
 };
 
-const messageText = {
+const button = {
+  backgroundColor: "#5F51E8",
+  borderRadius: "3px",
+  color: "#fff",
   fontSize: "16px",
-  lineHeight: "26px",
-  fontStyle: "italic",
-  color: "#FFFFFF",
-  backgroundColor: "#2D2D2D",
-  padding: "10px",
-  borderRadius: "5px",
+  textDecoration: "none",
+  textAlign: "center" as const,
+  display: "block",
+  padding: "12px",
 };
 
 const hr = {
-  borderColor: "#5F51E8",
+  borderColor: "#cccccc",
   margin: "20px 0",
 };
 
 const footer = {
-  color: "#8898AA",
+  color: "#8898aa",
   fontSize: "12px",
 };

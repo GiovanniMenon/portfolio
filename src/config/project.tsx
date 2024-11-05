@@ -66,23 +66,42 @@ const ProjectsList: ProjectInterface[] = [
       "Knowledge Management AI is a web application developed using Next.js, React, and TypeScript. This innovative project allows users to interact with a local Language Model (LLM) through chats and conversations based on pre-loaded documents.",
     longDescription: (
       <>
-        Knowledge Management AI is a web application developed using Next.js,
-        React, and TypeScript. This innovative project allows users to interact
-        with a local Language Model (LLM) through chats and conversations based
-        on pre-loaded documents. The application supports a variety of file
-        formats, including PDF, DOCX, and MP3, offering flexible document
-        management. Utilizing ChromaDB for efficient vector database management
-        and Ollama for local AI model execution, the application provides
-        advanced natural language processing capabilities. Users can upload and
-        organize documents with a tagging system, with the option for data
-        obscuration in the vector database to ensure privacy. A key feature is
-        the ability to initiate multiple chat sessions on uploaded documents,
-        with the flexibility to change AI models for different conversations.
-        The user interface is customizable with various themes, and users have
-        full control over session management, including the option to delete
-        them. This tool combines cutting-edge AI technologies with intuitive
-        document management, offering a powerful solution for interactive
-        knowledge exploration and information retrieval.
+        Knowledge Management AI is a web application developed using{" "}
+        <span className="text-white">Next.js</span>,{" "}
+        <span className="text-white">React</span>, and{" "}
+        <span className="text-white">TypeScript</span>. This project allows
+        users to interact with a local Language Model (LLM) through chats and
+        conversations based on pre-loaded documents. The application supports a
+        variety of file formats, including PDF, DOCX, and MP3, and at the same
+        time offers a flexible document management.
+        <br />
+        <br />
+        Use <span className="text-white">ChromaDB</span> for efficient vector
+        database management and <span className="text-white">Ollama</span> for
+        local AI model execution. Users can upload and organize documents with a
+        tagging system, with the option for data obscuration in the vector
+        database to ensure privacy. A key feature is the ability to initiate
+        multiple chat sessions on uploaded documents, with the flexibility to
+        change AI models for in the middle of a conversations. The user
+        interface is customizable with various themes, and users have full
+        control over session management, including the option to delete them.
+        <br />
+        <br />
+        Working on Knowledge Management AI taught me how to{" "}
+        <span className="text-white">integrate complex AI models </span> into a
+        web application and manage large amounts of data with{" "}
+        <span className="text-white">database solutions</span>. It improve my
+        understanding of{" "}
+        <span className="text-white">software architecture patterns </span>.
+        Additionally, I gained hands-on experience in implementing file
+        management systems and building customizable user interfaces with modern
+        web technologies.
+        <br />
+        <br />
+        <em>
+          Full details on system requirements and build instructions are
+          available on the project’s GitHub page.
+        </em>
       </>
     ),
     year: "Oct 2023",
@@ -112,20 +131,49 @@ const ProjectsList: ProjectInterface[] = [
     title: "Arcane Oracle",
     url: "https://github.com/GiovanniMenon/Arcane-Oracle",
     shortDescription:
-      "A desktop application designed for the Object-Oriented Programming course.",
+      "A desktop application for creating and managing AI-Generated playing cards and decks, developed for the Object-Oriented Programming course of the University of Padua.",
     longDescription: (
       <>
-        A desktop application designed for the{" "}
-        <span className={"text-white"}>Object-Oriented Programming</span>{" "}
-        course,
+        Arcane Oracle is a desktop application developed for the{" "}
+        <span className="text-white">Object-Oriented Programming</span> course
+        at the University of Padua in the 2022/2023 academic year, created in
+        collaboration with{" "}
+        <a
+          href="https://github.com/EndyXVIII"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+            textDecoration: "underline",
+            textUnderlineOffset: "2px",
+          }}
+        >
+          Endy Hysa
+        </a>
+        . This project allows users to create, delete, and edit playing cards
+        and manage their corresponding decks, using custom images generated by
+        the <span className="text-white">DALL·E 2 API</span>
+        , with a default image available if no API key is provided.
         <br />
-        allowing the management of a card deck generated via the{" "}
-        <strong>DALL·E 2 API</strong>.
+        <br />
+        Working on Arcane Oracle taught me essential skills in{" "}
+        <span className="text-white">problem-solving </span>
+        and <span className="text-white">adapting to new challenges</span>. It
+        helped me deepen my understanding of object-oriented programming
+        principles, particularly in managing complex data structures, and gave
+        me a valuable experience with AI-integrated applications and API use.
+        <br />
+        <br />
+        <em>
+          Full details on system requirements and build instructions are
+          available on the project’s GitHub page.
+        </em>
       </>
     ),
+
     year: "Mar 2023",
     imgPath: "/arcaneOracle.jpg",
-    tag: ["C++", "Qt"],
+    tag: ["C++", "Qt", "DALL·E 2"],
     contributorName: "Endy Hysa",
     contributorGithub: "https://github.com/EndyXVIII",
   },
