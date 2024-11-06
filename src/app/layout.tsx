@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
 import React from "react";
-import type { Viewport } from "next";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-const calSans = localFont({ src: "./font/CalSans-SemiBold.woff2" });
-import { Toaster } from "@/components/ui/sonner";
+import { Roboto } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import MyBio from "@/components/myBio/myBio";
+import NavBar from "@/components/main/navBar";
+import Footer from "@/components/main/footer";
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
+import Shapes from "@/components/shapes";
+const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Giovanni Menon",
-  description: "Giovanni Menon Portfolio website ",
+  description: "Giovanni Menon personal website",
 };
 
 export default function RootLayout({
@@ -25,17 +21,40 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <body className={` ${calSans.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <html className="scroll-smooth dark" lang="en">
+      <body
+        className={`overflow-x-hidden bg-card dark:bg-gradient-to-br from-primary-foreground via-card/55 to-primary-foreground relative ${roboto.className}`}
+        id={"home"}
+      >
+        <div
+          className={
+            "max-w-[1500px] flex item-start justify-center mx-auto min-h-screen "
+          }
         >
-          {children}
-          <Toaster position={"top-left"} richColors />
-        </ThemeProvider>
+          <div
+            className={
+              "gap-4 flex flex-col md:flex-row md:mt-5 w-full relative"
+            }
+          >
+            <div className={"hidden md:block "}>
+              <MyBio />
+            </div>
+            <main
+              className={
+                "w-full flex flex-col items-center justify-center md:justify-start px-3.5 lg:px-1"
+              }
+            >
+              <NavBar />
+              <div className={"mt-3.5"}>{children}</div>
+
+              <Analytics />
+              <Footer />
+            </main>
+            <div className={"hidden lg:block w-fit "}>
+              <Shapes />
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

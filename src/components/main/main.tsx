@@ -1,37 +1,28 @@
-import MainItem from "@/components/main/mainItem/mainItem";
+import Hero from "@/components/main/elements/hero";
+import { Separator } from "@/components/ui/separator";
+import Experiences from "@/components/main/elements/experiences";
+import ProjectsMain from "@/components/main/elements/projectsMain";
 import React from "react";
-import Footer from "@/components/footer/footer";
-import TechnologiesSkill from "@/components/main/technologies/technologiesSkill";
-import ProjectGrid from "@/components/main/project/projectGrid";
-import ExperienceGrid from "@/components/main/experience/experienceGrid";
-import { TracingBeam } from "@/components/ui/tracing-beam";
-function Main() {
-  const text = `
-        I am a 21-year-old Italian student deeply passionate about technology and innovation.
-        Currently, I am in my third year pursuing a Bachelor's degree in Computer Science (Department of Mathematics) at the University of Padua.`;
+import ContactMe from "@/components/main/elements/contactMe";
+import { Toaster } from "@/components/ui/sonner";
 
+export function Main() {
   return (
-    <TracingBeam className="">
-      <div className=" max-w-[1300px] mx-auto  p-[25px] flex flex-col md:gap-20 antialiased relative">
-        <MainItem id="aboutMe" header="About Me">
-          <p className="text-secondary-foreground opacity-70 flex flex-col">
-          <span>{text}</span>
-          <span>Simultaneously, I am actively engaged in preparing a Research Project in the field of Cyber Security, which will serve as
-          centerpiece of my Bachelor&apos;s thesis. My primary interests lie in the realm of Information Security, with a particular focus on
-          Network Security. After graduation, I plan to continue my studies in this field.</span>
-          </p>
-          <TechnologiesSkill></TechnologiesSkill>
-        </MainItem>
-        <MainItem id="experience" header="Experience">
-          <ExperienceGrid></ExperienceGrid>
-        </MainItem>
-        <MainItem id="project" header="Project">
-          <ProjectGrid />
-        </MainItem>
-        <Footer></Footer>
-      </div>
-    </TracingBeam>
+    <main
+      className={
+        "w-full flex-col flex justify-center items-center p-4 py-2 gap-20 mb-8"
+      }
+    >
+      <Toaster position="top-center" />
+
+      <Hero />
+      <Separator className={"h-[2px] rounded opacity-75"} id={"experiences"} />
+      <Experiences />
+      <Separator className={"h-[2px] rounded opacity-75"} id={"projects"} />
+      <ProjectsMain />
+      <Separator className={"h-[2px] rounded opacity-75 "} id={"contact"} />
+      <ContactMe />
+      <Separator className={"h-[2px] rounded opacity-75 "} />
+    </main>
   );
 }
-
-export default Main;

@@ -5,39 +5,13 @@
 
 
 This repository contains the code of my personal website.
+Here's the final result ->  [Website](https://giovanni-menon.vercel.app/).
 
+***Future Update*** : 
+- [x] Project Section
+- [x] Contact Section
+- [ ] Captcha Solver for Sending Email
+- [ ] Post Section
 
-## Tech stack
-
-
-- Next.js
-- [Shadcn/ui](https://ui.shadcn.com/)
-  - Used for :
-    - Card (_Project_ , _Contact_). 
-    - Form (_label_, _textArea_, _input_).
-    - NavBar Menu.
-    - Tooltip.
-    - Separator.
-    - Button. 
-    - Theme Toggle.
-    - Themes and Colors [(here's)](https://ui.shadcn.com/themes).
-- [Aceternity UI](https://ui.aceternity.com/)
-  - Used for :
-    - Grid Background.
-    - Laser Beam Tracer.
-- Tailwind.
-
-### Email
-
-The email services is provided by [Resend](https://resend.com/). 
-
-
-### Here's the final result ->  [Website](https://portfolio-giovannimenons-projects.vercel.app/).
-
-## Future Update
-- [x] Contact Form.
-- [x] Resumee Download.
-- [ ] Custom Domain.
-- [ ] Custom CSS Email.
-- [ ] Ai ChatBot related to my Resumee.
-- [ ] Index the site.
+> The code for these projects may not be the best or the cleanest, as it was written and developed mostly in my spare time, sometimes in an experimental way.
+> Some aspects could definitely be improved and optimized.
