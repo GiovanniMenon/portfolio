@@ -44,12 +44,14 @@ async function MyBio() {
   return (
     <Card
       className={
-        "hidden lg:block h-fit sticky top-5 w-full lg:w-[350px] px-4 py-0 bg-card/30 " +
-        " rounded border-white border-opacity-5"
+        " relative h-fit md:sticky top-5 w-full lg:w-[350px] px-4 py-0  bg-card/30 " +
+        " rounded border-white border-opacity-5 "
       }
     >
       <CardContent
-        className={"flex flex-col items-start justify-center p-0 py-3 gap-4"}
+        className={
+          "flex flex-col items-start justify-center p-0 py-3 gap-4 w-full"
+        }
       >
         <div
           className={"flex flex-row items-center justify-between w-full pt-2 "}
@@ -144,7 +146,7 @@ async function MyBio() {
         </div>
       </CardContent>
       <Separator className={"h-[2px] rounded opacity-75"} />
-      <CardFooter className={"flex justify-center items-center h-full py-3.5"}>
+      <CardFooter className={"flex justify-center items-center py-3.5 "}>
         <div className={"flex gap-x-3"}>
           <TooltipProvider delayDuration={100} skipDelayDuration={1000}>
             <Tooltip>

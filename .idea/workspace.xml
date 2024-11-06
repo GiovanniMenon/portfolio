@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Adjust hero,experiences">
-      <change afterPath="$PROJECT_DIR$/src/components/main/elements/marquee-stacks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/elements/experiences.tsx" afterDir="false" />
+    <list default="true" id="4c9b5485-b83c-401d-83bb-c8175d22fd3c" name="Changes" comment="Adjust emil format, 2 project and change link position">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/menny/Documents/GitHub/portfolio/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -60,6 +60,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/main" />
     </key>
@@ -67,7 +71,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.22855.79" />
       </set>
     </attachedChunks>
   </component>
@@ -93,6 +97,9 @@
       <workItem from="1725277442052" duration="2357000" />
       <workItem from="1725292548229" duration="4809000" />
       <workItem from="1725302299323" duration="344000" />
+      <workItem from="1730840571588" duration="4360000" />
+      <workItem from="1730846267349" duration="7044000" />
+      <workItem from="1730880359684" duration="921000" />
     </task>
     <task id="LOCAL-00001" summary="Init New Portfolio">
       <option name="closed" value="true" />
@@ -182,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725279791332</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adjust emil format, 2 project and change link position">
+      <option name="closed" value="true" />
+      <created>1730844917870</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730844917870</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +212,7 @@
     <MESSAGE value="Add Exper" />
     <MESSAGE value="Add tooltip" />
     <MESSAGE value="Adjust hero,experiences" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust hero,experiences" />
+    <MESSAGE value="Adjust emil format, 2 project and change link position" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust emil format, 2 project and change link position" />
   </component>
 </project>

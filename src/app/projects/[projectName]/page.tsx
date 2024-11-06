@@ -39,7 +39,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
   return (
     <main
       className={
-        "w-full flex-col flex justify-center items-center p-4 gap-7 mb-20"
+        "w-full flex-col flex justify-center items-center p-4  gap-7 mb-20"
       }
     >
       <div className={"flex w-full justify-between items-center mt-2"}>

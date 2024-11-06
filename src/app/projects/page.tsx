@@ -4,7 +4,7 @@ import Project from "@/components/projects/project";
 import { FilterIcon, Grid2X2Icon, ListIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Select,
   SelectContent,

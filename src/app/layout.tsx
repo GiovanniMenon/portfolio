@@ -36,12 +36,17 @@ export default function RootLayout({
               "gap-4 flex flex-col md:flex-row md:mt-5 w-full relative"
             }
           >
-            <div>
+            <div className={"hidden md:block "}>
               <MyBio />
             </div>
-            <main className={"w-full flex flex-col items-center justify-start"}>
+            <main
+              className={
+                "w-full flex flex-col items-center justify-center md:justify-start px-3.5 lg:px-1"
+              }
+            >
               <NavBar />
-              {children}
+              <div className={"mt-3.5"}>{children}</div>
+
               <Analytics />
               <Footer />
             </main>

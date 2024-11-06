@@ -1,13 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  ArrowRightIcon,
-  DoorClosedIcon,
-  PenIcon,
-  DownloadIcon,
-} from "lucide-react";
+import { ArrowRight, DoorClosedIcon, DownloadIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -15,8 +9,8 @@ export default function Hero() {
   return (
     <div className={"flex flex-col justify-start w-full h-fit"}>
       <Link
-        className="animate-shine bg-[length:200%_100%] font-medium bg-[linear-gradient(110deg,#09090B,45%,#27272A,55%,#09090B)]
-        w-fit p-1.5 border rounded flex space-x-2.5 items-center justify-center"
+        className="hidden animate-shine bg-[length:200%_100%] font-medium bg-[linear-gradient(110deg,#09090B,45%,#27272A,55%,#09090B)]
+        w-fit p-1.5 border rounded md:flex space-x-2.5 items-center justify-center"
         href="#"
       >
         <DoorClosedIcon className={"size-5 text-tiolet"} />
