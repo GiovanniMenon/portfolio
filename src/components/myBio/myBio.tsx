@@ -55,7 +55,7 @@ async function MyBio() {
           className={"flex flex-row items-center justify-between w-full pt-2 "}
         >
           <Avatar className={"size-28"}>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="/icon1.jpg" alt="@shadcn" className={""} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <h1 className={"text-xl font-bold text-neutral-300"}>
@@ -102,7 +102,7 @@ async function MyBio() {
             }
           >
             <MapPinIcon className={"size-5 scale-90 text-tiolet"} />
-            <span className={"text-muted-foreground"}>Italy</span>
+            <span className={"text-muted-foreground"}>Padua, Italy</span>
           </div>
         </div>
         <div className={"flex flex-col justify-start pt-3.5"}>
@@ -123,7 +123,7 @@ async function MyBio() {
           >
             <div className={"flex items-start justify-center gap-2"}>
               <Music4 className={"size-4 "} />
-              <p>230 Hours on Spotify</p>
+              <p>Using Spotify</p>
             </div>
             <div className={"flex items-end justify-center gap-2"}>
               <KeyboardIcon className={"size-4 "} />

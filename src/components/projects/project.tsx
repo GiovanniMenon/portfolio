@@ -40,34 +40,27 @@ export default function Project({
       >
         <Link
           href={`/projects/${project.title.replaceAll(" ", "_")}`}
-          className={"hidden lg:block"}
+          className={"hidden lg:block h-full"}
         >
           <Card
             className={
               `bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/90 hover:cursor-pointer ` +
-              `transition-all ease-linear  ${isGridView ? "md:h-full" : "md:h-full"} `
+              `transition-all ease-linear h-full ${isGridView ? "" : ""} `
             }
           >
             <CardContent
-              className={`p-0 w-full h-full flex ${isGridView ? "flex-col gap-y-3.5" : "flex-col md:flex-row"}`}
+              className={`p-0 w-full h-full flex items-stretch ${isGridView ? "flex-col gap-y-3.5" : "flex-col md:flex-row"}`}
             >
               <Image
                 src={project.imgPath}
                 alt={"logo ARCANE oraclae"}
-                width={1200}
-                height={800}
-                className={`w-full h-[330px] rounded object-cover ${isGridView ? "" : "md:[380px] md:h-full"} `}
-                style={{
-                  color: "transparent",
-                  objectFit: "cover",
-                  height: "280px",
-                }}
-                loading={"lazy"}
-                decoding={"async"}
+                width={1920}
+                height={1080}
+                className={`w-full rounded object-cover ${isGridView ? "h-[300px]" : " aspect-video md:w-[480px] h-[330px] md:h-full"} `}
               />
 
               <div
-                className={`flex flex-col items-start justify-start p-2.5 pb-1 w-full gap-1.5`}
+                className={`flex-1 flex flex-col items-stretch justify-start p-2.5 pb-1 w-full gap-1.5 `}
               >
                 <div className={"flex justify-between items-center w-full"}>
                   <h1
@@ -82,16 +75,16 @@ export default function Project({
                   </p>
                 </div>
 
-                <p className={"text-muted-foreground font-light text-sm"}>
+                <p
+                  className={`text-muted-foreground font-light text-sm  ${isGridView ? "mb-3" : " "}`}
+                >
                   {project.shortDescription}
                 </p>
-                <div
-                  className={`flex flex-row gap-2  ${isGridView ? "mt-3" : "mt-auto"}`}
-                >
+                <div className={`flex flex-wrap gap-1 mt-auto `}>
                   {project.tag?.slice(0, 5).map((tag, index) => (
                     <Badge
                       key={index}
-                      className={"w-fit p-1.5 font-bold"}
+                      className={"w-fit p-1.5 font-bold "}
                       variant={"secondary"}
                     >
                       {tag}
@@ -114,16 +107,9 @@ export default function Project({
             <Image
               src={project.imgPath}
               alt={"logo ARCANE oraclae"}
-              width={1200}
-              height={800}
-              className={`w-full h-[330px] rounded object-cover ${isGridView ? "" : "md:[380px] md:h-full"} `}
-              style={{
-                color: "transparent",
-                objectFit: "cover",
-                objectPosition: "50% 50%",
-              }}
-              loading={"lazy"}
-              decoding={"async"}
+              width={1920}
+              height={1080}
+              className={`w-full rounded object-cover ${isGridView ? "h-[300px]" : " aspect-video md:w-[480px] h-[330px] md:h-full"} `}
             />
             <div
               className={`flex flex-col items-start justify-between p-2.5 w-full gap-2 `}

@@ -6,21 +6,23 @@ const ProjectsList: ProjectInterface[] = [
     title: "Portfolio",
     url: "https://github.com/GiovanniMenon/portfolio",
     shortDescription:
-      "A personal portfolio website developed using Next.js, React, and TypeScript. This responsive site presents an overview of my journey in web development, featuring some of the projects I've worked on.",
+      "A personal portfolio website developed using Next.js, React, and TypeScript. This website presents an overview of my journey in web development, featuring some of the projects I've worked on.",
     longDescription: (
       <>
         A personal portfolio website developed using Next.js, React, and
         TypeScript. This responsive site presents an overview of my journey in
-        web development, featuring some of the projects I&apos;ve worked on. It
-        includes information about my educational background and the programming
-        languages and tools I&apos;ve been learning. The site also provides ways
-        to get in touch with me and links to my professional social media
-        profiles. Through this portfolio, I aim to share my progress as a
-        developer and connect with others in the field.
+        web development, featuring some of the projects I&apos;ve worked on.
+        <br />
+        <br />
+        It includes information about my educational background and the
+        programming languages and tools I&apos;ve been learning. The site also
+        provides ways to get in touch with me and links to my professional
+        social media profiles. Through this portfolio, I aim to share my
+        progress as a developer and connect with others.
       </>
     ),
     year: "Sept 2024",
-    imgPath: "",
+    imgPath: "/portfolio.png",
     tag: ["NextJs", "React", "Typescript"],
     linkPreview: "https://giovanni-menon.vercel.app/",
   },
@@ -33,34 +35,43 @@ const ProjectsList: ProjectInterface[] = [
       <>
         <p>
           A research internship project conducted at the University of Padua,
-          focusing on evaluating the resilience of the QUIC (Quick UDP Internet
-          Connections) protocol in modern networks. The study, supervised by
-          Prof. Alessandro Galeazzi and in collaboration with Dr. Enrico
-          Bassetti, investigated potential vulnerabilities in QUIC, particularly
-          in the context of mobile data traffic billing. The project involved an
-          in-depth analysis of the QUIC protocol, examining its current
-          state-of-the-art, associated technologies, and intrinsic logic. This
-          was followed by the design and implementation of experiments to test
-          identified strategies that could potentially be exploited to
-          artificially manipulate mobile traffic. The research findings suggest
-          that certain manipulation strategies could lead to increased data
-          traffic for targeted users, potentially resulting in higher data
-          consumption and associated costs. This work contributes to the ongoing
-          discussion on network protocol security and its implications for
-          end-users. Technologies used included Go for implementation,
-          VirtualBox for creating controlled testing environments, and Wireshark
-          for network traffic analysis.
+          focusing on evaluating the resilience of the{" "}
+          <span className="text-white">
+            QUIC (Quick UDP Internet Connections) protocol{" "}
+          </span>{" "}
+          in modern networks. The study, supervised by{" "}
+          <span className="text-white"> Prof. Alessandro Galeazzi </span>
+          and in collaboration with{" "}
+          <span className="text-white"> Dr. Enrico Bassetti </span>,
+          investigated potential vulnerabilities in QUIC, particularly in the
+          context of mobile data traffic billing.
+          <br />
+          <br />
+          The project involved an in-depth analysis of the QUIC protocol,
+          examining its current state-of-the-art, associated technologies, and
+          intrinsic logic. This was followed by the design and implementation of
+          experiments to test identified strategies that could potentially be
+          exploited to artificially manipulate mobile traffic.
+          <br />
+          <br />
+          The research findings suggest that certain manipulation strategies
+          could lead to increased data traffic for targeted users, potentially
+          resulting in higher data consumption and associated costs. This work
+          contributes to the ongoing discussion on network protocol security and
+          its implications for end-users. Technologies used included Go for
+          implementation, VirtualBox for creating controlled testing
+          environments, and Wireshark for network traffic analysis.
         </p>
       </>
     ),
     year: "May 2024",
     imgPath: "/Evaluating_QUIC.png",
-    tag: ["Go", "VirtualBox", "Wireshark"],
+    tag: ["Go", "VirtualBox", "Wireshark", "Caddy"],
     linkPreview: "https://hdl.handle.net/20.500.12608/70974",
     download: "/Menon_Giovanni.pdf",
   },
   {
-    title: "Knowledge Managment AI",
+    title: "Knowledge Management AI",
     url: "https://github.com/CodingCowboys10/kmai",
     shortDescription:
       "Knowledge Management AI is a web application developed using Next.js, React, and TypeScript. This innovative project allows users to interact with a local Language Model (LLM) through chats and conversations based on pre-loaded documents.",
@@ -105,7 +116,7 @@ const ProjectsList: ProjectInterface[] = [
       </>
     ),
     year: "Oct 2023",
-    imgPath: "/kmai.png",
+    imgPath: "/kmai1.png",
     tag: [
       "NextJs",
       "React",
@@ -116,16 +127,6 @@ const ProjectsList: ProjectInterface[] = [
       "Ollama",
       "OpenAI API",
     ],
-  },
-  {
-    title: "OpenBlue",
-    url: "https://github.com/GiovanniMenon/Arcane-Oracle",
-    shortDescription:
-      "A desktop application designed for the Object-Oriented Programming course, allowing the management of a card deck generated via the DALL·E 2 API",
-    longDescription: <></>,
-    year: "Aug 2023",
-    imgPath: "",
-    tag: ["Python", "Flask", "Javascript"],
   },
   {
     title: "Arcane Oracle",

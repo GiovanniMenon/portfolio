@@ -1,19 +1,11 @@
 import ProjectsList from "@/config/project";
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
-import Project from "@/components/projects/project";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import {
-  Book,
-  BookAIcon,
-  BookOpenIcon,
-  DownloadIcon,
-  GithubIcon,
-  UsersIcon,
-} from "lucide-react";
+import { Book, UsersIcon } from "lucide-react";
 import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 
 export async function generateMetadata({
@@ -90,11 +82,11 @@ export default function Page({ params }: { params: { projectName: string } }) {
               >
                 <Button
                   className={
-                    "flex flex-row gap-2 items-center justify-center h-12 rounded border w-[150px]"
+                    "flex flex-row gap-2 items-center justify-center h-12 rounded border w-[200px]"
                   }
                   variant={"outlineBorderNo"}
                 >
-                  <Book className={"size-5 "} />
+                  <Book className={"size-5 text-tiolet"} />
                   <Separator
                     orientation={"vertical"}
                     className={"w-[2px] rounded"}
@@ -112,7 +104,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
               >
                 <Button
                   className={
-                    "flex flex-row gap-2 items-center justify-center h-12 rounded border w-[150px]"
+                    "flex flex-row gap-2 items-center justify-center h-12 rounded border"
                   }
                   variant={"outlineBorderNo"}
                 >
@@ -135,7 +127,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             >
               <Button
                 className={
-                  "flex flex-row gap-2 items-center justify-center h-12 rounded border w-[150px]"
+                  "flex flex-row gap-2 items-center justify-center h-12 rounded border"
                 }
                 variant={"outlineBorderNo"}
               >
@@ -157,7 +149,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
               >
                 <Button
                   className={
-                    "flex flex-row gap-2 items-center justify-center h-12 rounded border w-[150px]"
+                    "flex flex-row gap-2 items-center justify-center h-12 rounded border"
                   }
                   variant={"outlineBorderNo"}
                 >
@@ -166,7 +158,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                     orientation={"vertical"}
                     className={"w-[2px] rounded"}
                   />
-                  <p className={"text-sm font-bold"}>Demo</p>
+                  <p className={"text-sm font-bold"}>Website</p>
                 </Button>
               </Link>
             )}
