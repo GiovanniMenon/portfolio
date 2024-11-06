@@ -5,9 +5,12 @@
 
 
 This repository contains the code of my personal website.
-Here's the final result ->  [Website](https://portfolio-giovannimenons-projects.vercel.app/).
+Here's the final result ->  [Website](https://giovanni-menon.vercel.app/).
 
-> ***Future Update*** : 
-> - [x] Project Section
-> - [ ] Captcha Solver for Sending Email
-> - [ ] Post Section
+***Future Update*** : 
+- [x] Project Section
+- [ ] Captcha Solver for Sending Email
+- [ ] Post Section
+
+> The code for these projects may not be the best or the cleanest, as it was written and developed mostly in my spare time, sometimes in an experimental way.
+> Some aspects could definitely be improved and optimized.
