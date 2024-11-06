@@ -9,6 +9,7 @@ Here's the final result ->  [Website](https://giovanni-menon.vercel.app/).
 
 ***Future Update*** : 
 - [x] Project Section
+- [x] Contact Section
 - [ ] Captcha Solver for Sending Email
 - [ ] Post Section
 
