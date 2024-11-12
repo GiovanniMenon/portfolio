@@ -42,7 +42,7 @@ export default function NavBar() {
         <SheetTrigger className={"block md:hidden"}>
           <Button
             className={
-              "rounded flex flex-row justify-center items-center text-xs font-bold tracking-wide "
+              "rounded flex flex-row justify-center items-center text-xs font-medium tracking-wide "
             }
             size={"sm"}
             variant={"link"}
@@ -59,7 +59,7 @@ export default function NavBar() {
             <Link href={"/"} className={"w-full"}>
               <Button
                 className={
-                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== `/` ? "text-muted-foreground" : "text-accent-foreground"}  font-bold tracking-wide w-full`
+                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== `/` ? "text-muted-foreground" : "text-accent-foreground"}  font-medium tracking-wide w-full`
                 }
                 size={"lg"}
                 variant={"outlineBorderNo"}
@@ -71,7 +71,7 @@ export default function NavBar() {
             <Link href={"/contact"} className={"w-full"}>
               <Button
                 className={
-                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/contact"  ? "text-muted-foreground" : "text-accent-foreground "} font-bold tracking-wide w-full`
+                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/contact"  ? "text-muted-foreground" : "text-accent-foreground "} font-medium tracking-wide w-full`
                 }
                 size={"lg"}
                 variant={"outlineBorderNo"}
@@ -83,7 +83,7 @@ export default function NavBar() {
             <Link href={"/about"} className={"w-full"}>
               <Button
                 className={
-                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/about"? "text-muted-foreground" : "text-accent-foreground"} font-bold tracking-wide w-full`
+                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/about"? "text-muted-foreground" : "text-accent-foreground"} font-medium tracking-wide w-full`
                 }
                 size={"lg"}
                 variant={"outlineBorderNo"}
@@ -95,7 +95,7 @@ export default function NavBar() {
             <Link href={"/projects"} className={"w-full"}>
               <Button
                 className={
-                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/projects" ? "text-muted-foreground" : "text-accent-foreground"} font-bold tracking-wide w-full`
+                  `rounded flex flex-row justify-start items-center text-base gap-x-12 ${pathname !== "/projects" ? "text-muted-foreground" : "text-accent-foreground"} font-medium tracking-wide w-full`
                 }
                 size={"lg"}
                 variant={"outlineBorderNo"}
@@ -178,7 +178,7 @@ export default function NavBar() {
           <Link href={"/#home"}>
             <Button
               className={
-                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-bold tracking-wide "
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-medium tracking-wide "
               }
               size={"sm"}
               variant={"outlineBorderNo"}
@@ -190,7 +190,7 @@ export default function NavBar() {
         ) : (
           <Button
             className={
-              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-bold tracking-wide "
+              "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-tiolet hover:bg-tiolet/90 text-tiolet-foreground font-medium tracking-wide "
             }
             size={"sm"}
             variant={"outlineBorderNo"}
@@ -204,7 +204,7 @@ export default function NavBar() {
           <Link href={"/#experiences"}>
             <Button
               className={
-                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-medium tracking-wide"
               }
               size={"sm"}
               variant={"outlineBorderNo"}
@@ -218,7 +218,7 @@ export default function NavBar() {
           <Link href={"/#projects"}>
             <Button
               className={
-                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-bold tracking-wide"
+                "rounded flex flex-row justify-center items-center text-xs gap-x-2 bg-accent text-accent-foreground font-medium tracking-wide"
               }
               size={"sm"}
               variant={"outlineBorderNo"}

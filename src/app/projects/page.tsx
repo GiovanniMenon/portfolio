@@ -52,7 +52,7 @@ export default function Home() {
     >
       <div className={"flex flex-row justify-between items-center w-full "}>
         <h1 className={"hidden md:block text-xl tracking-tight w-full"}>
-          <span className={"text-tiolet font-bold"}>{selectedTag} </span>
+          <span className={"text-tiolet font-medium"}>{selectedTag} </span>
           <span className={"font-light"}>
             {" "}
             projects: {filteredProjects.length}
@@ -83,7 +83,7 @@ export default function Home() {
                 }
               >
                 <FilterIcon className={"size-4"} />
-                <span className={"font-bold tracking-wide"}>
+                <span className={"font-medium tracking-wide"}>
                   {selectedTag == "All" ? "Filter" : selectedTag}
                 </span>
               </div>
