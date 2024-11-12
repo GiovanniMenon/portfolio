@@ -65,7 +65,7 @@ export default function Project({
                 <div className={"flex justify-between items-center w-full"}>
                   <h1
                     className={
-                      "text-3xl tracking-tight font-black group-hover:text-tiolet/90 transition-all ease-linear "
+                      "text-3xl tracking-tight font-bold group-hover:text-tiolet/90 transition-all ease-linear "
                     }
                   >
                     {project.title}
@@ -117,7 +117,7 @@ export default function Project({
               <div className={"flex justify-between items-center w-full"}>
                 <h1
                   className={
-                    "text-3xl tracking-tight font-black group-hover:text-tiolet/90 transition-all ease-linear "
+                    "text-3xl tracking-tight font-bold group-hover:text-tiolet/90 transition-all ease-linear "
                   }
                 >
                   {project.title}

@@ -18,7 +18,7 @@ export default function Experiences() {
       </Link>
       <div className={"mt-10 flex flex-col gap-10 relative"}>
         <div className={"space-y-2"}>
-          <h1 className={"text-3xl font-medium tracking-tight text-primary"}>
+          <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
             Experiences
           </h1>
           <p className={"text-muted-foreground font-[200] text-xs"}>

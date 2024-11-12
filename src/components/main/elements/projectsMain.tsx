@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BracesIcon } from "lucide-react";
-
-import { motion } from "framer-motion";
 import ProjectsList from "@/config/project";
 import Project from "@/components/projects/project";
 
@@ -22,7 +20,7 @@ export default function ProjectsMain() {
       <div className={"mt-10 flex flex-col gap-10 relative"}>
         <div className={"space-y-2"}>
           <div className={"flex justify-between"}>
-            <h1 className={"text-3xl font-medium tracking-tight text-primary"}>
+            <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
               Projects
             </h1>
             <Link href={"/projects#home"}>
