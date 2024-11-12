@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: { projectName: string };
 }) {
   const project = ProjectsList.find(
-    (item) => item.title === params.projectName.replaceAll("_", " "),
+    (item) => item.title.toLowerCase() === params.projectName.replaceAll("-", " "),
   );
 
   if (!project) {
@@ -30,7 +30,7 @@ export async function generateMetadata({
 
 export default function Page({ params }: { params: { projectName: string } }) {
   const project = ProjectsList.find(
-    (item) => item.title === params.projectName.replaceAll("_", " "),
+    (item) => item.title.toLowerCase() === params.projectName.replaceAll("-", " "),
   );
 
   if (!project) {

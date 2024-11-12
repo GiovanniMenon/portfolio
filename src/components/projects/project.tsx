@@ -39,7 +39,7 @@ export default function Project({
         style={{ scale: scaleProgress, opacity: opacityProgress }}
       >
         <Link
-          href={`/projects/${project.title.replaceAll(" ", "_")}`}
+          href={`/projects/${project.title.toLowerCase().replaceAll(" ", "-")}`}
           className={"hidden lg:block h-full"}
         >
           <Card
@@ -132,7 +132,7 @@ export default function Project({
               </p>
               <Link
                 className={`mx-auto block  ${isGridView ? "mt-3" : "mt-auto"} `}
-                href={`/projects/${project.title.replaceAll(" ", "_")}`}
+                href={`/projects/${project.title.toLowerCase().replaceAll(" ", "-")}`}
               >
                 <Button>Explore Project</Button>
               </Link>
