@@ -27,8 +27,8 @@ export default function Hero() {
             bounce: 0.6,
           }}
         >
-          <h1 className={"text-5xl font-black tracking-tighter text-primary"}>
-            <span className={"text-tiolet"}>Cybersecurity</span> Enthusiast and
+          <h1 className={"text-5xl font-bold tracking-tighter text-primary"}>
+            <span className={"text-tiolet font-bold"}>Cybersecurity</span> Enthusiast and
             Tech Explorer
           </h1>
         </motion.div>

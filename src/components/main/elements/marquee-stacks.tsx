@@ -79,7 +79,7 @@ export default function MarqueeStacks() {
                 }
               >
                 <BlocksIcon size={"16 "} />
-                <h1 className={"text-md font-bold tracking-tight text-primary"}>
+                <h1 className={"text-md font-medium tracking-tight text-primary"}>
                   Stack
                 </h1>
               </div>
@@ -100,7 +100,7 @@ export default function MarqueeStacks() {
                       <BlocksIcon size={"16"} />
                       <h1
                         className={
-                          "text-md font-bold tracking-tight text-primary"
+                          "text-md font-medium tracking-tight text-primary"
                         }
                       >
                         Stack

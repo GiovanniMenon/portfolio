@@ -13,8 +13,7 @@ export function Main() {
         "w-full flex-col flex justify-center items-center p-4 py-2 gap-20 mb-8"
       }
     >
-      <Toaster position="top-center" />
-
+      
       <Hero />
       <Separator className={"h-[2px] rounded opacity-75"} id={"experiences"} />
       <Experiences />
@@ -23,6 +22,7 @@ export function Main() {
       <Separator className={"h-[2px] rounded opacity-75 "} id={"contact"} />
       <ContactMe />
       <Separator className={"h-[2px] rounded opacity-75 "} />
+      <Toaster position="top-center" />
     </main>
   );
 }

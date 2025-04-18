@@ -60,7 +60,7 @@ async function MyBio() {
             <AvatarImage src="/icon1.jpg" alt="@shadcn" className={""} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <h1 className={"text-xl font-bold text-neutral-300"}>
+          <h1 className={"text-xl font-medium text-neutral-300"}>
             Giovanni Menon
           </h1>
         </div>
@@ -108,7 +108,7 @@ async function MyBio() {
           </div>
         </div>
         <div className={"flex flex-col justify-start pt-3.5"}>
-          <h1 className={"justify-start text-xl font-bold"}>Me</h1>
+          <h1 className={"justify-start text-xl font-medium"}>Me</h1>
           <p className={"text-muted-foreground font-light text-sm"}>
             I graduated in Computer Science from the University of Padua, and
             I&apos;m now pursuing a{" "}

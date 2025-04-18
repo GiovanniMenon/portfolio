@@ -11,7 +11,7 @@ export default async function NotFound() {
     >
       <CardTitle
         className={
-          "text-9xl text-accent-foreground font-bold flex justify-center items-center"
+          "text-9xl text-accent-foreground font-medium flex justify-center items-center"
         }
       >
         404

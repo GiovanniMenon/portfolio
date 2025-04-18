@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BracesIcon } from "lucide-react";
-
-import { motion } from "framer-motion";
 import ProjectsList from "@/config/project";
 import Project from "@/components/projects/project";
 

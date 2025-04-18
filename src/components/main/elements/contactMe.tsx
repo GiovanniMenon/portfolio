@@ -9,7 +9,6 @@ import {
   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -100,7 +99,7 @@ export default function ContactMe() {
               {" "}
               Please contact me directly at{" "}
             </span>
-            <span className={"font-bold"}>giovanni.menon.dev@gmail.com</span>
+            <span className={""}>giovanni.menon.dev@gmail.com</span>
             <span className={"text-muted-foreground"}>
               {" "}
               or through this form.

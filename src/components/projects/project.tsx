@@ -39,8 +39,8 @@ export default function Project({
         style={{ scale: scaleProgress, opacity: opacityProgress }}
       >
         <Link
-          href={`/projects/${project.title.replaceAll(" ", "_")}`}
-          className={"hidden lg:block h-full"}
+          href={`/projects/${project.title.toLowerCase().replaceAll(" ", "-")}`}
+          className={"h-full"}
         >
           <Card
             className={
@@ -65,12 +65,12 @@ export default function Project({
                 <div className={"flex justify-between items-center w-full"}>
                   <h1
                     className={
-                      "text-3xl tracking-tight font-black group-hover:text-tiolet/90 transition-all ease-linear "
+                      "text-3xl tracking-tight font-bold group-hover:text-tiolet/90 transition-all ease-linear "
                     }
                   >
                     {project.title}
                   </h1>
-                  <p className={"text-muted-foreground font-bold text-xs"}>
+                  <p className={"text-muted-foreground font-medium text-xs"}>
                     {project.year}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ export default function Project({
                   {project.tag?.slice(0, 5).map((tag, index) => (
                     <Badge
                       key={index}
-                      className={"w-fit p-1.5 font-bold "}
+                      className={"w-fit p-1.5"}
                       variant={"secondary"}
                     >
                       {tag}
@@ -95,7 +95,7 @@ export default function Project({
             </CardContent>
           </Card>
         </Link>
-        <Card
+        {/* <Card
           className={
             `bg-card/30 border-white border-opacity-5 rounded p-1 group hover:bg-card/90 hover:cursor-pointer ` +
             `transition-all ease-linear  md:h-full  block lg:hidden`
@@ -117,12 +117,12 @@ export default function Project({
               <div className={"flex justify-between items-center w-full"}>
                 <h1
                   className={
-                    "text-3xl tracking-tight font-black group-hover:text-tiolet/90 transition-all ease-linear "
+                    "text-3xl tracking-tight font-bold group-hover:text-tiolet/90 transition-all ease-linear "
                   }
                 >
                   {project.title}
                 </h1>
-                <p className={"text-muted-foreground font-bold text-xs"}>
+                <p className={"text-muted-foreground font-medium text-xs"}>
                   {project.year}
                 </p>
               </div>
@@ -132,13 +132,13 @@ export default function Project({
               </p>
               <Link
                 className={`mx-auto block  ${isGridView ? "mt-3" : "mt-auto"} `}
-                href={`/projects/${project.title.replaceAll(" ", "_")}`}
+                href={`/projects/${project.title.toLowerCase().replaceAll(" ", "-")}`}
               >
                 <Button>Explore Project</Button>
               </Link>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </motion.div>
     </>
   );

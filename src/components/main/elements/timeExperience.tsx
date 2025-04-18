@@ -25,7 +25,7 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"font-bold text-base tracking-tight "}>
+              <p className={"font-medium text-base tracking-tight "}>
                 High School Diploma in Administration, Finance, and Marketing{" "}
                 <span className={"font-normal text-muted-foreground"}>at </span>
                 ITET Einaudi.
@@ -56,13 +56,13 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"font-bold text-base tracking-tight"}>
+              <p className={"font-medium text-base tracking-tight"}>
                 Started Computer Science degree{" "}
                 <span className={"font-normal text-muted-foreground"}>at </span>
                 University of Padua.
               </p>
               <div className={"flex gap-2 "}>
-                <Badge variant={"secondary"} className={"font-bold text-sm"}>
+                <Badge variant={"secondary"} className={"font-medium text-sm"}>
                   C
                 </Badge>
                 <Badge variant={"secondary"} className={"text-sm"}>
@@ -92,7 +92,7 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"font-bold text-base tracking-tight"}>
+              <p className={"font-medium text-base tracking-tight"}>
                 Intern{" "}
                 <span className={"font-normal text-muted-foreground"}>
                   {" "}
@@ -107,7 +107,7 @@ export default function TimeExperience() {
                 company&apos;s operations .
               </p>
               <div className={"flex gap-2 "}>
-                <Badge variant={"secondary"} className={"font-bold text-sm"}>
+                <Badge variant={"secondary"} className={"font-medium text-sm"}>
                   Python
                 </Badge>
                 <Badge variant={"secondary"} className={"text-sm"}>
@@ -137,7 +137,7 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={"font-bold text-base tracking-tight"}>
+              <p className={"font-medium text-base tracking-tight"}>
                 Undergraduate Student Researcher{" "}
                 <span className={"font-normal text-muted-foreground"}>at </span>{" "}
                 University of Padua.
@@ -147,7 +147,7 @@ export default function TimeExperience() {
                 the QUIC protocol against selective traffic manipulation.
               </p>
               <div className={"flex gap-2 "}>
-                <Badge variant={"secondary"} className={"font-bold text-sm"}>
+                <Badge variant={"secondary"} className={"font-medium text-sm"}>
                   Go
                 </Badge>
                 <Badge variant={"secondary"} className={"text-sm"}>
@@ -174,18 +174,18 @@ export default function TimeExperience() {
             }}
           >
             <div className="flex flex-col gap-2.5">
-              <p className={" font-bold text-base"}>
+              <p className={" font-medium text-base"}>
                 Enrolled in the Master&apos;s Programme in International
                 Cybersecurity and Cyberintelligence
               </p>
               <p className={"text-muted-foreground text-xs"}>
                 University of{" "}
-                <span className={"text-white font-bold"}>Granada</span>,
+                <span className={"text-white font-medium"}>Granada</span>,
                 University of{" "}
-                <span className={"text-white  font-bold"}>Minho</span>,
+                <span className={"text-white  font-medium"}>Minho</span>,
                 University of{" "}
-                <span className={"text-white font-bold"}>Padua</span> and
-                <span className={"text-white font-bold"}> Vilnius</span>{" "}
+                <span className={"text-white font-medium"}>Padua</span> and
+                <span className={"text-white font-medium"}> Vilnius</span>{" "}
                 University
               </p>
             </div>

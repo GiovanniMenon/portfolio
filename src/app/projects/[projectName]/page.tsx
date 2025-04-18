@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: { projectName: string };
 }) {
   const project = ProjectsList.find(
-    (item) => item.title === params.projectName.replaceAll("_", " "),
+    (item) => item.title.toLowerCase() === params.projectName.replaceAll("-", " "),
   );
 
   if (!project) {
@@ -30,7 +30,7 @@ export async function generateMetadata({
 
 export default function Page({ params }: { params: { projectName: string } }) {
   const project = ProjectsList.find(
-    (item) => item.title === params.projectName.replaceAll("_", " "),
+    (item) => item.title.toLowerCase() === params.projectName.replaceAll("-", " "),
   );
 
   if (!project) {
@@ -43,8 +43,8 @@ export default function Page({ params }: { params: { projectName: string } }) {
       }
     >
       <div className={"flex w-full justify-between items-center mt-2"}>
-        <h1 className={"leading-none text-4xl font-bold"}>{project?.title}</h1>
-        <p className={"leading-none text-sm text-muted-foreground font-bold"}>
+        <h1 className={"leading-none text-4xl font-medium"}>{project?.title}</h1>
+        <p className={"leading-none text-sm text-muted-foreground font-medium"}>
           {project?.year}
         </p>
       </div>
@@ -67,7 +67,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
       </div>
       <Separator className={"h-[2px] rounded opacity-75"} />
       <div className={"flex flex-col w-full gap-5"}>
-        <h1 className={"leading-none text-2xl font-bold"}>Description</h1>
+        <h1 className={"leading-none text-2xl font-medium"}>Description</h1>
         <div className={"text-muted-foreground text-base"}>
           {project.longDescription}
         </div>
@@ -91,7 +91,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                     orientation={"vertical"}
                     className={"w-[2px] rounded"}
                   />
-                  <p className={"text-sm font-bold"}>Research Document</p>
+                  <p className={"text-sm font-medium"}>Research Document</p>
                 </Button>
               </Link>
             )}
@@ -113,7 +113,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                     orientation={"vertical"}
                     className={"w-[2px] rounded"}
                   />
-                  <p className={"text-sm font-bold"}>
+                  <p className={"text-sm font-medium"}>
                     {project.contributorName}
                   </p>
                 </Button>
@@ -136,7 +136,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   orientation={"vertical"}
                   className={"w-[2px] rounded"}
                 />
-                <p className={"text-sm font-bold"}>GitHub page</p>
+                <p className={"text-sm font-medium"}>GitHub page</p>
               </Button>
             </Link>
 
@@ -158,7 +158,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                     orientation={"vertical"}
                     className={"w-[2px] rounded"}
                   />
-                  <p className={"text-sm font-bold"}>Website</p>
+                  <p className={"text-sm font-medium"}>Website</p>
                 </Button>
               </Link>
             )}
@@ -167,14 +167,14 @@ export default function Page({ params }: { params: { projectName: string } }) {
       </div>
       <Separator className={"h-[2px] rounded opacity-75"} />
       <div className={"flex flex-col w-full gap-5"}>
-        <h1 className={"leading-none text-2xl font-bold rounded"}>
+        <h1 className={"leading-none text-2xl font-medium rounded"}>
           Technologies used
         </h1>
-        <div className={"flex flex-row gap-2"}>
+        <div className={"flex flex-row flex-wrap gap-2"}>
           {project.tag?.map((tag, index) => (
             <Badge
               key={index}
-              className={"w-fit p-2 font-bold text-sm"}
+              className={"w-fit p-2 font-medium text-sm"}
               variant={"secondary"}
             >
               {tag}
