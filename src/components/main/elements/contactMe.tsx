@@ -94,7 +94,7 @@ export default function ContactMe() {
           <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
             Contact Me
           </h1>
-          <p className={"font-[200] text-xs"}>
+          <p className={"font-[200] text-sm"}>
             <span className={"text-muted-foreground"}>
               {" "}
               Please contact me directly at{" "}

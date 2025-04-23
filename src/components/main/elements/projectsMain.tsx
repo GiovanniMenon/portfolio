@@ -35,7 +35,7 @@ export default function ProjectsMain() {
             </Link>
           </div>
 
-          <p className={"text-muted-foreground font-[200] text-xs"}>
+          <p className={"text-muted-foreground font-[200] text-sm"}>
             Here is a selection of my best projects.
           </p>
         </div>

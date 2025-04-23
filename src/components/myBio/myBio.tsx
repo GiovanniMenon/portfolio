@@ -25,18 +25,24 @@ import {
 import { DiscordLink } from "@/components/myBio/discordLink";
 
 async function MyBio() {
-  const data = await fetch(
-    "https://wakatime.com/api/v1/users/current/all_time_since_today",
-    {
-      headers: {
-        Authorization: `Basic ${Buffer.from(process.env.WAKATIME_API!).toString("base64")}`,
-      },
-    },
-  );
   let hours = null;
-  if (data.ok) {
-    hours = (await data.json()).data.text;
+  try {
+    const data = await fetch(
+      "https://wakatime.com/api/v1/users/current/all_time_since_today",
+      {
+        headers: {
+          Authorization: `Basic ${Buffer.from(process.env.WAKATIME_API!).toString("base64")}`,
+        },
+      },
+    );
+    
+    if (data.ok) {
+      hours = (await data.json()).data.text;
+    }
+  }catch(e){
+    console.error(e)
   }
+
   const githubLink = "https://github.com/GiovanniMenon";
   const instagramLink = "https://www.instagram.com/menon.giovanni";
   const linkedinLink = "https://www.linkedin.com/in/giovanni-menon/";

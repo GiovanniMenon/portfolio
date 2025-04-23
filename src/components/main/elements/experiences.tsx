@@ -21,7 +21,7 @@ export default function Experiences() {
           <h1 className={"text-3xl font-bold tracking-tight text-primary"}>
             Experiences
           </h1>
-          <p className={"text-muted-foreground font-[200] text-xs"}>
+          <p className={"text-muted-foreground font-[200] text-sm"}>
             Explore my educational background and work experiences that have
             shaped my skills.
           </p>
