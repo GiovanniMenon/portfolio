@@ -168,7 +168,7 @@ export default function ContactMe() {
                   <FormControl className="w-fit">
 
                   <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
                     {...field}
                   />
                   </FormControl>
