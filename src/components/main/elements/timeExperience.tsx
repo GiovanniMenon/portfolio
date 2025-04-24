@@ -178,7 +178,7 @@ export default function TimeExperience() {
                 Enrolled in the Master&apos;s Programme in International
                 Cybersecurity and Cyberintelligence
               </p>
-              <p className={"text-muted-foreground text-xs"}>
+              <p className={"text-muted-foreground"}>
                 University of{" "}
                 <span className={"text-white font-medium"}>Granada</span>,
                 University of{" "}
