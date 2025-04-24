@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ArrowRightIcon, MailsIcon } from "lucide-react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
 import {
   Form,
@@ -17,15 +17,18 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { send } from "@/serverActions/send";
+import { submitEmailWithCaptcha } from "@/serverActions/send";
 import confetti from "canvas-confetti";
 import { toast } from "sonner";
 
 const FormSchema = z.object({
+  ReCAPTCHA : z.string({
+    message: "Captcha required"
+  }),
   email: z.string().email({
     message: "Email must be contain correct email format",
   }),
-  body: z
+  message: z
     .string()
     .min(5, {
       message: "Message can be empty.",
@@ -34,49 +37,58 @@ const FormSchema = z.object({
       message: "Message is too long",
     }),
 });
+
+
 export default function ContactMe() {
   const [disable, setDisable] = useState(false);
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    setDisable(true);
-    send({ email: data.email, message: data.body })
-      .then(() => {
-        const end = Date.now() + 1.5 * 1000; // 3 seconds
-        const colors = ["#c4b5fd", "#e9d5ff", "#a855f7", "#8b5cf6"];
 
-        const frame = () => {
-          if (Date.now() > end) return;
+  const onSubmit = async (data :z.infer<typeof FormSchema>) => {
+    setDisable(true)
+    const res = await submitEmailWithCaptcha({
+      email: data.email,
+      message: data.message,
+      captchaValue: data.ReCAPTCHA,
+    });
 
-          confetti({
-            particleCount: 3,
-            angle: 60,
-            spread: 55,
-            startVelocity: 60,
-            origin: { x: 0, y: 0.5 },
-            colors: colors,
-          });
-          confetti({
-            particleCount: 3,
-            angle: 120,
-            spread: 55,
-            startVelocity: 60,
-            origin: { x: 1, y: 0.5 },
-            colors: colors,
-          });
+    if (!res.success) {
+      toast.error(res.error || "Error occurred sending the email. Try later");
+      setDisable(false)
+      return;
+    }
+    const end = Date.now() + 1.5 * 1000; // 3 seconds
+    const colors = ["#c4b5fd", "#e9d5ff", "#a855f7", "#8b5cf6"];
 
-          requestAnimationFrame(frame);
-        };
+    const frame = () => {
+      if (Date.now() > end) return;
 
-        frame();
-        toast.success("Email sent correctly");
-        form.reset({ email: "", body: "" });
-        setDisable(false);
-      })
-      .catch(() => {
-        toast.error("Error occurred sending the email. Try later");
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors: colors,
       });
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors: colors,
+      });
+
+      requestAnimationFrame(frame);
+    };
+
+    frame()
+    toast.success("Email Sent");
+    form.reset({ email: "", message: "" , ReCAPTCHA : "" });
+    setDisable(false)
   }
 
   return (
@@ -132,7 +144,7 @@ export default function ContactMe() {
 
             <FormField
               control={form.control}
-              name={"body"}
+              name={"message"}
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
@@ -147,15 +159,42 @@ export default function ContactMe() {
                 </FormItem>
               )}
             />
+            <div className="flex flex-col md:flex-row items-center gap-7 md:gap-0 justify-between w-full"> 
+            <FormField
+              control={form.control}
+              name={"ReCAPTCHA"}
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormControl className="w-fit">
 
-            <Button
+                  <ReCAPTCHA
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    {...field}
+                  />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="px-2 w-full md:w-fit"><Button
               type="submit"
-              className={"flex justify-center items-center gap-2 w-fit mx-auto"}
+              className={"flex justify-center items-center gap-5 py-5 md:py-7  mx-auto w-full text-lg font-bold"}
               disabled={disable}
+              size={"default"}
             >
-              Submit
-              <ArrowRightIcon className={"size-4"} />
+              <h1>Submit</h1>
+              <ArrowRightIcon className={"size-6"} />
             </Button>
+            </div>
+            
+            
+            
+            </div>
+            
+            
+      
+        
+          
           </form>
         </Form>
       </div>
